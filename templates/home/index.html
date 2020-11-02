@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Amazon</title>
+  </head>
+  <body>
+    <div class="app">
+      <!--Header Of The Page-->
+      <div class="header">
+        <img
+          class="header__logo"
+          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+        />
+
+        <div class="header__search">
+          <input class="header__searchInput" type="text" />
+          <i class="fa fa-search header__searchIcon" aria-hidden="true"/></i>
+        </div>
+
+        <div class="header__nav">
+          <div class="header__option">
+            <span class="header__optionLineOne">Hello Guest</span>
+            <span class="header__optionLineTwo">Sign In</span>
+          </div>
+
+          <div class="header__option">
+            <span class="header__optionLineOne">Returns</span>
+            <span class="header__optionLineTwo">& Orders</span>
+          </div>
+
+          <div class="header__option">
+            <span class="header__optionLineOne">Your</span>
+            <span class="header__optionLineTwo">Prime</span>
+          </div>
+
+          <div class="header__optionBasket">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            <span class="header__optionLineTwo header__basketCount"> </span>
+          </div>
+        </div>
+      </div>
+      <!--Ends Here-->
+    </div>
+  </body>
+</html>
