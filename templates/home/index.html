@@ -25,6 +25,7 @@
   <!-- StyleSheets -->
   <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
     <!--Header Of The Page-->
     <div class="header">
       <!-- Menu And Logo -->
-      <div class="header-menu-button">
+      <div class="header-menu-button" onclick="w3_open()">
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill menu__button" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
         style="color: white;
         width: 1.2rem;
@@ -51,7 +52,7 @@
 
       <!-- Search Bar -->
       <div class="header__search">
-        <input class="header__searchInput" type="text" />
+        <input class="header__searchInput" placeholder="Search For Products" type="text" />
         <i class="fa fa-search header__searchIcon" aria-hidden="true" /></i>
       </div>
 
@@ -78,6 +79,14 @@
       </div>
     </div>
     <!--Ends Here-->
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="width:300px;display:none;" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
 
     <!--Slider Starts-->
     <div class="home">
@@ -137,6 +146,17 @@
       <!--Loading All The Js Files-->
       <script src="{% static 'home/js/slider.js' %}"></script>
       <!--Ends Here-->
+
+      <!-- Scripts -->
+      <script>
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+        }
+        
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+        }
+      </script>
 </body>
 
 </html>
