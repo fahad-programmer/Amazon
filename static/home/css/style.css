@@ -12,7 +12,38 @@
   width: 100px;
   object-fit: contain;
   margin: 0 20px;
-  margin-top: 18px;
+  margin-top: 5px;
+  padding: 10px 10px 0 5px;
+}
+
+.right__gap {
+  margin-right: 1px;
+}
+.top__gap {
+  margin-top: 1px;
+}
+.left__gap {
+  margin-left: 1px;
+}
+.bottom__gap {
+  margin-bottom: 1px;
+}
+
+.header-menu-button {
+  border: 1px solid #5a5a5a;
+  margin: auto -5px auto 10px;
+  padding: 8px 8px 5px 8px;
+}
+
+.header-menu-button:hover {
+  cursor: pointer;
+  border: 1px solid #ffffff;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 10px 9px 0 4px;
 }
 
 .header__search {

@@ -1,113 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% load static %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>Amazon</title>
-  </head>
-  <body>
-    <div class="app">
-      <!--Header Of The Page-->
-      <div class="header">
-        <img
-          class="header__logo"
-          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-        />
 
-        <div class="header__search">
-          <input class="header__searchInput" type="text" />
-          <i class="fa fa-search header__searchIcon" aria-hidden="true"/></i>
+<head>
+  {% load static %}
+  <!-- Title -->
+  <title>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more</title>
+  <!-- Meta Information -->
+  <meta name="description"
+    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else.">
+  <meta name="keywords"
+    content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL">
+  <meta name="google" content="nositelinkssearchbox">
+  <link rel="canonical" href="https://www.amazon.com/">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta property="og:image"
+    content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+    xmlns:og="http://opengraphprotocol.org/schema/">
+  <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+  <meta property="og:description"
+    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+    xmlns:og="http://opengraphprotocol.org/schema/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <!-- Main Body -->
+  <div class="app">
+
+    <!--Header Of The Page-->
+    <div class="header">
+      <!-- Menu And Logo -->
+      <div class="header-menu-button">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill menu__button" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+        style="color: white;
+        width: 1.2rem;
+        height: 1.2rem;">
+          <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+        </svg>
+      </div>
+      <div class="header_logo_div">
+        <a href="/">
+          <img class="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+        </a>
+      </div>
+      <div class="right__gap"></div>
+
+      <!-- Search Bar -->
+      <div class="header__search">
+        <input class="header__searchInput" type="text" />
+        <i class="fa fa-search header__searchIcon" aria-hidden="true" /></i>
+      </div>
+
+      <div class="header__nav">
+        <div class="header__option">
+          <span class="header__optionLineOne">Hello Guest</span>
+          <span class="header__optionLineTwo">Sign In</span>
         </div>
 
-        <div class="header__nav">
-          <div class="header__option">
-            <span class="header__optionLineOne">Hello Guest</span>
-            <span class="header__optionLineTwo">Sign In</span>
-          </div>
+        <div class="header__option">
+          <span class="header__optionLineOne">Returns</span>
+          <span class="header__optionLineTwo">& Orders</span>
+        </div>
 
-          <div class="header__option">
-            <span class="header__optionLineOne">Returns</span>
-            <span class="header__optionLineTwo">& Orders</span>
-          </div>
+        <div class="header__option">
+          <span class="header__optionLineOne">Your</span>
+          <span class="header__optionLineTwo">Prime</span>
+        </div>
 
-          <div class="header__option">
-            <span class="header__optionLineOne">Your</span>
-            <span class="header__optionLineTwo">Prime</span>
-          </div>
-
-          <div class="header__optionBasket">
-            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-            <span class="header__optionLineTwo header__basketCount"> </span>
-          </div>
+        <div class="header__optionBasket">
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          <span class="header__optionLineTwo header__basketCount"> </span>
         </div>
       </div>
+    </div>
+    <!--Ends Here-->
+
+    <!--Slider Starts-->
+    <div class="home">
+      <div class="home__container">
+        <a name="slider__link" href="">
+          <img class="home__image" name="slider" src="" alt="" />
+        </a>
+      </div>
+    </div>
+    <!--Ends Here-->
+
+    <!--Products Start From Here (Simple => Dynamic and will be connected to database later)-->
+    <!--First Line-->
+    <div class="home__row">
+      <div class="product">
+        <div class="product__info">
+          <p>The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback</p>
+          <p class="product__price">
+            <small>$</small>
+            <strong>11.96</strong>
+          </p>
+          <div class="product__rating">
+
+            <p>🌟🌟🌟🌟</p>
+
+          </div>
+        </div>
+
+        <img src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg" alt="" />
+
+        <button>Add to Basket</button>
+      </div>
+      <!--2nd-->
+      <div class="product">
+        <div class="product__info">
+          <p>Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre
+            Glass Bowl</p>
+          <p class="product__price">
+            <small>$</small>
+            <strong>12.96</strong>
+          </p>
+          <div class="product__rating">
+
+            <p>🌟🌟🌟🌟</p>
+
+          </div>
+        </div>
+
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg" alt="" />
+
+        <button>Add to Basket</button>
+      </div>
+
       <!--Ends Here-->
 
-      <!--Slider Starts-->
-       <div class="home">
-      <div class="home__container">
-        <img
-          class="home__image"
-          name = "slider"
-          src=""
-          alt=""
-        />
-        </div>
-          </div>
-          <!--Ends Here-->
 
-          <!--Products Start From Here (Simple => Dynamic and will be connected to database later)-->
-            <!--First Line-->
-            <div class="home__row">
-         <div class="product">
-      <div class="product__info">
-        <p>The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback</p>
-        <p class="product__price">
-          <small>$</small>
-          <strong>11.96</strong>
-        </p>
-        <div class="product__rating">
-         
-              <p>🌟🌟🌟🌟</p>
-            
-        </div>
-      </div>
+      <!--Loading All The Js Files-->
+      <script src="{% static 'home/js/slider.js' %}"></script>
+      <!--Ends Here-->
+</body>
 
-      <img src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg" alt="" />
-
-      <button>Add to Basket</button>
-    </div>
-          <!--2nd-->
-           <div class="product">
-      <div class="product__info">
-        <p>Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl</p>
-        <p class="product__price">
-          <small>$</small>
-          <strong>12.96</strong>
-        </p>
-        <div class="product__rating">
-         
-              <p>🌟🌟🌟🌟</p>
-            
-        </div>
-      </div>
-
-      <img src="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg" alt="" />
-
-      <button>Add to Basket</button>
-    </div>
-      
-          <!--Ends Here-->
-
-
-          <!--Loading All The Js Files-->
-          <script src="{% static 'home/js/slider.js' %}"></script>
-          <!--Ends Here-->
-  </body>
 </html>
