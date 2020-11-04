@@ -17,7 +17,7 @@
 }
 
 .right__gap {
-  margin-right: 25px;
+  margin-right: 5px;
 }
 .top__gap {
   margin-top: 1px;
@@ -45,6 +45,13 @@
   border: 1px solid white;
   padding: 10px 9px 0 4px;
 }
+
+.header__option:hover {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 9px 4px 9px 4px;
+}
+
 
 .header__search {
   display: flex;
@@ -90,6 +97,13 @@
   display: flex;
   align-items: center;
   color: white;
+  padding: 10px 5px 10px 5px;
+}
+
+.header__optionBasket:hover {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 9px 4px 9px 4px;
 }
 
 .header__basketCount {
@@ -105,10 +119,18 @@
 .header__option {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
-  margin-right: 10px;
   color: white;
+  padding: 10px 5px 10px 5px;
 }
+
+.margin__right {
+  margin-right: 10px;
+}
+
+.margin__left {
+  margin-left: 10px;
+}
+
 
 * {
   margin: 0;
