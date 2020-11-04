@@ -26,6 +26,98 @@
   <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Styles -->
+  <style>
+    .dropdown {
+      overflow: hidden;
+      background-color: #f3f3f3;
+      color: #555;
+      height: 40px;
+      width: auto;
+      font-size: 12px;
+      border-radius: 10px 0 0 10px;
+      border-right: 1px solid #d0d0d0;
+    }
+
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 14px;
+      border: none;
+      color: #555;
+      padding: 11px 10px 11.5px 10px;
+      background-color: inherit;
+      font-family: inherit;
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+    }
+
+    .dropdown:hover .dropbtn,
+    .dropbtn:focus {
+      background-color: #e4e4e4;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+
+  <style>
+    .dropdown__country {
+      position: relative;
+    }
+
+    .dropdown-content__country {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      margin-top: 47px;
+      margin-left: -5px;
+    }
+
+    .dropdown-content__country a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content__country a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown__country:hover .dropdown-content__country {
+      display: block;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -36,11 +128,12 @@
     <div class="header">
       <!-- Menu And Logo -->
       <div class="header-menu-button" onclick="w3_open()">
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill menu__button" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-        style="color: white;
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill menu__button"
+          fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: white;
         width: 1.2rem;
         height: 1.2rem;">
-          <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+          <path
+            d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
         </svg>
       </div>
       <div class="header_logo_div">
@@ -52,37 +145,70 @@
 
       <!-- Search Bar -->
       <div class="header__search">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">All
+            <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="#">Toys</a>
+            <a href="#">Women Cloathes</a>
+            <a href="#">Electronics</a>
+          </div>
+        </div>
         <input class="header__searchInput" placeholder="Search For Products" type="text" />
         <i class="fa fa-search header__searchIcon" aria-hidden="true" /></i>
       </div>
 
       <div class="header__nav">
-        <div class="header__option">
-          <span class="header__optionLineOne">Hello Guest</span>
-          <span class="header__optionLineTwo">Sign In</span>
+        <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()" onmouseout="bg__light()">
+          <span class="header__optionLineOne" style="height: 10px;"></span>
+          <span class="header__optionLineTwo dropbtn__country"><img
+              src="{% static 'home\img\flags\united-states-of-america.png' %}" style="width: 25px;">
+            <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
+          </span>
+          <div class="dropdown-content__country">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
         </div>
 
-        <div class="header__option">
+        <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()" onmouseout="bg__light()">
+          <span class="header__optionLineOne">Hello, Sign in</span>
+          <span class="header__optionLineTwo dropbtn__country">Account & Lists
+            <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
+          </span>
+          <div class="dropdown-content__country">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+
+        <div class="header__option margin__left">
           <span class="header__optionLineOne">Returns</span>
           <span class="header__optionLineTwo">& Orders</span>
         </div>
 
-        <div class="header__option">
+        <div class="header__option margin__left">
           <span class="header__optionLineOne">Your</span>
           <span class="header__optionLineTwo">Prime</span>
         </div>
 
-        <div class="header__optionBasket">
-          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        <div class="header__optionBasket margin__left">
+          <i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right: 5px;"></i> 0
           <span class="header__optionLineTwo header__basketCount"> </span>
         </div>
       </div>
     </div>
     <!--Ends Here-->
 
+    <div class="bg-mana" id="bg-changing" style="display: none;"></div>
+    <div class="bg-mana__dropdown" id="bg-changing__dropdown" style="display: none;"></div>
+
     <!-- Sidebar -->
-    <div class="w3-sidebar w3-bar-block w3-animate-left" style="width:300px;display:none;" id="mySidebar">
-      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="width:300px;z-index:9999;display:none;" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large xolo__butt" onclick="w3_close()">Close &times;</button>
       <a href="#" class="w3-bar-item w3-button">Link 1</a>
       <a href="#" class="w3-bar-item w3-button">Link 2</a>
       <a href="#" class="w3-bar-item w3-button">Link 3</a>
@@ -139,26 +265,26 @@
 
         <button>Add to Basket</button>
       </div>
-        <!--3rd-->
-        <div class="product">
-          <div class="product__info">
-            <p>Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre
-              Glass Bowl</p>
-            <p class="product__price">
-              <small>$</small>
-              <strong>12.96</strong>
-            </p>
-            <div class="product__rating">
-  
-              <p>🌟🌟🌟🌟</p>
-  
-            </div>
+      <!--3rd-->
+      <div class="product">
+        <div class="product__info">
+          <p>Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre
+            Glass Bowl</p>
+          <p class="product__price">
+            <small>$</small>
+            <strong>12.96</strong>
+          </p>
+          <div class="product__rating">
+
+            <p>🌟🌟🌟🌟</p>
+
           </div>
-  
-          <img src="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg" alt="" />
-  
-          <button>Add to Basket</button>
         </div>
+
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg" alt="" />
+
+        <button>Add to Basket</button>
+      </div>
 
       <!--Ends Here-->
 
@@ -171,10 +297,40 @@
       <script>
         function w3_open() {
           document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("bg-changing").style.display = "block";
         }
-        
+
         function w3_close() {
           document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("bg-changing").style.display = "none";
+        }
+      </script>
+
+      <script>
+        function bg__dark() {
+          document.getElementById("bg-changing__dropdown").style.display = "block";
+        }
+
+        function bg__light() {
+          document.getElementById("bg-changing__dropdown").style.display = "none";
+        }
+      </script>
+
+      <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+          if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
         }
       </script>
 </body>
