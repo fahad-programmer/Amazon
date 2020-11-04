@@ -27,7 +27,11 @@
           <button type="submit" class="login__signInButton">Sign In</button>
         </form>
         <br />
-        <button class="loginBtn loginBtn--facebook">Login with Facebook</button>
+        <a href="{% provider_login_url 'facebook' method='oauth2' %}">
+          <button style="width: 98%" class="loginBtn loginBtn--facebook">
+            Login with Facebook
+          </button>
+        </a>
         <a href="{% provider_login_url 'google' %}">
           <button class="loginBtn loginBtn--google" style="width: 98%">
             Login with Google

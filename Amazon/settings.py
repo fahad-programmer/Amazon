@@ -73,6 +73,32 @@ SOCIALACCOUNT_PROVIDERS = {
             'profile',
             'email',
         ],
+    },  'facebook': {
+
+        'APP': {
+            'client_id': '354272972530936',
+            'secret': '97ac0de3d98c1ca584b0b795bb6fd7df',
+            'key': ''
+        },
+
+        'METHOD': 'oauth2',
+        'SCOPE': ['email', 'public_profile'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'first_name',
+            'last_name',
+            'middle_name',
+            'name',
+            'name_format',
+            'picture',
+            'short_name'
+        ],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': 'path.to.callable',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v7.0',
     }
 }
 
