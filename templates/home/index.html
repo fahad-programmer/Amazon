@@ -26,6 +26,65 @@
   <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Styles -->
+  <style>
+    .dropdown {
+      overflow: hidden;
+      background-color: #f3f3f3;
+      color: #555;
+      height: 40px;
+      width: auto;
+      font-size: 12px;
+      border-radius: 10px 0 0 10px;
+      border-right: 1px solid #d0d0d0;
+    }
+
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 14px;
+      border: none;
+      color: #555;
+      padding: 11px 10px 11.5px 10px;
+      background-color: inherit;
+      font-family: inherit;
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+    }
+
+    .dropdown:hover .dropbtn, .dropbtn:focus {
+      background-color: #e4e4e4;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -52,6 +111,16 @@
 
       <!-- Search Bar -->
       <div class="header__search">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">All
+            <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="#">Toys</a>
+            <a href="#">Women Cloathes</a>
+            <a href="#">Electronics</a>
+          </div>
+          </div>
         <input class="header__searchInput" placeholder="Search For Products" type="text" />
         <i class="fa fa-search header__searchIcon" aria-hidden="true" /></i>
       </div>
@@ -80,9 +149,11 @@
     </div>
     <!--Ends Here-->
 
+    <div class="bg-mana" id="bg-changing" style="display: none;"></div>
+
     <!-- Sidebar -->
-    <div class="w3-sidebar w3-bar-block w3-animate-left" style="width:300px;display:none;" id="mySidebar">
-      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="width:300px;z-index:9999;display:none;" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large xolo__butt" onclick="w3_close()">Close &times;</button>
       <a href="#" class="w3-bar-item w3-button">Link 1</a>
       <a href="#" class="w3-bar-item w3-button">Link 2</a>
       <a href="#" class="w3-bar-item w3-button">Link 3</a>
@@ -171,12 +242,32 @@
       <script>
         function w3_open() {
           document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("bg-changing").style.display = "block";
         }
         
         function w3_close() {
           document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("bg-changing").style.display = "none";
         }
       </script>
+
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+        }
+      }
+    </script>
 </body>
 
 </html>
