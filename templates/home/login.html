@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% load static %}
+    {% load static %} {% load socialaccount %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login To Your Account</title>
@@ -28,8 +28,11 @@
         </form>
         <br />
         <button class="loginBtn loginBtn--facebook">Login with Facebook</button>
-
-        <button class="loginBtn loginBtn--google">Login with Google</button>
+        <a href="{% provider_login_url 'google' %}">
+          <button class="loginBtn loginBtn--google" style="width: 98%">
+            Login with Google
+          </button>
+        </a>
 
         <p>
           By signing-in you agree to the AMAZON Conditions of Use & Sale. Please

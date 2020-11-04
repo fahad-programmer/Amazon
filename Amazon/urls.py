@@ -20,5 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Sending To Home Directory Where Ever The Link Is Empty
-    path('', include('Home.urls'))
+    path('', include('Home.urls')),
+    # Including The Social Authentication
+    path('accounts/', include('allauth.urls')),
 ]
