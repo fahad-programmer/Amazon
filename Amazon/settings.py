@@ -197,6 +197,12 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
+# Managing Media Files
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Authentication Backends Are Given Below
 AUTHENTICATION_BACKENDS = [
 

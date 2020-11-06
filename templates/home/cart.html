@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% load cart_tag %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
@@ -143,6 +144,38 @@
   border-bottom: 1px solid lightgray;
 }
 
+.checkoutProduct {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.checkoutProduct__info {
+    padding-left: 20px
+}
+
+.checkoutProduct__info > button {
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+
+.checkoutProduct__image {
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+  }
+
+.checkoutProduct__rating {
+    display: flex;
+  }
+
+.checkoutProduct__title {
+    font-size: 17px;
+    font-weight: 800;
+}
       </style>
     
     </head>
@@ -233,7 +266,8 @@
             </div>
     
             <div class="header__optionBasket margin__left">
-              <i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right: 5px;"></i> 0
+              <a href="/shop/cart/cart-detail">
+              <i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right: 5px;"></i></a> {{request.session.cart|length}}
               <span class="header__optionLineTwo header__basketCount"> </span>
             </div>
           </div>
@@ -263,10 +297,34 @@
               <div>
                 <h3>Hello, {{user.username}}</h3>
                 <h2 class="checkout__title">Your shopping Basket</h2>
-      
+                
+                {% for key,value in request.session.cart.items %}
+                <div class="checkoutProduct">
+                  <div class="checkoutProduct__info">
+                    <p class="checkoutProduct__title">{{value.name}}</p>
+                    <p class="checkoutProduct__price">
+                      <small>$</small>
+                      <strong>{{value.price}}</strong>
+                    </p>
+                    <div class="checkoutProduct__rating">
+          
+                      <p>🌟🌟🌟🌟</p>
+          
+                    </div>
+                  
+          
+                  <img class="checkoutProduct__image" src="{{value.image}}" alt="" />
+          
+                  <button class="checkoutProduct__button"><a href="{% url 'item_clear' value.product_id %}">Remove From Basket</a></button>
+                </div>
+                </div>
+                <hr>
+                {% endfor %}
       
               </div>
             </div>
+            
+        </div>
       
             <div class="checkout__right">
               

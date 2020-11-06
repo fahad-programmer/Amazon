@@ -12,3 +12,6 @@ class Product(models.Model):
     price = models.FloatField()
     image = models.ImageField(upload_to="Shop/images")
     pub_date = models.DateField()
+
+    def __str__(self):
+        return self.name

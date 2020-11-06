@@ -123,6 +123,7 @@
 <body>
   <!-- Main Body -->
   <div class="app">
+  {% load cart_tag %}
 
     <!--Header Of The Page-->
     <div class="header">
@@ -206,7 +207,8 @@
         </div>
 
         <div class="header__optionBasket margin__left">
-          <i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right: 5px;"></i> 0
+        <a href="/shop/cart/cart-detail">
+          <i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right: 5px;"></i></a> {{request.session.cart|length}}
           <span class="header__optionLineTwo header__basketCount"> </span>
         </div>
       </div>
@@ -237,12 +239,13 @@
     <!--Products Start From Here (Simple => Dynamic and will be connected to database later)-->
     <!--First Line-->
     <div class="home__row">
+      {% for product in products %}
       <div class="product">
         <div class="product__info">
-          <p>The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback</p>
+          <p>{{product.name}}</p>
           <p class="product__price">
             <small>$</small>
-            <strong>11.96</strong>
+            <strong>{{product.price}}</strong>
           </p>
           <div class="product__rating">
 
@@ -251,32 +254,12 @@
           </div>
         </div>
 
-        <img src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg" alt="" />
+        <img src="media/{{product.image}}" alt="" />
 
-        <button>Add to Basket</button>
+        <button><a href="{% url 'cart_add' product.id %}">Add to Basket</a></button>
       </div>
-      <!--2nd-->
-      <div class="product">
-        <div class="product__info">
-          <p>Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre
-            Glass Bowl</p>
-          <p class="product__price">
-            <small>$</small>
-            <strong>12.96</strong>
-          </p>
-          <div class="product__rating">
-
-            <p>🌟🌟🌟🌟</p>
-
-          </div>
-        </div>
-
-        <img src="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg" alt="" />
-
-        <button>Add to Basket</button>
-      </div>
-      <!--3rd-->
-      
+      {% endfor %}
+        
       </div>
 
       <!--Ends Here-->

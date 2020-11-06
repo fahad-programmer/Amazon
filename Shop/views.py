@@ -5,10 +5,6 @@ from Shop.models import Product
 
 # Create your views here.
 
-
-def cart(request):
-    return render(request, 'home/cart.html')
-
 # Cart Views
 
 
@@ -17,30 +13,30 @@ def cart_add(request, id):
     cart = Cart(request)
     product = Product.objects.get(id=id)
     cart.add(product=product)
-    return redirect("home")
+    return redirect("Home")
 
 
 @login_required(login_url="/account/login")
 def item_clear(request, id):
     cart = Cart(request)
-    # product = Product.objects.get(id=id)
-    # cart.remove(product)
+    product = Product.objects.get(id=id)
+    cart.remove(product)
     return redirect("cart_detail")
 
 
 @login_required(login_url="/account/login")
 def item_increment(request, id):
     cart = Cart(request)
-    # product = Product.objects.get(id=id)
-    # cart.add(product=product)
+    product = Product.objects.get(id=id)
+    cart.add(product=product)
     return redirect("cart_detail")
 
 
 @login_required(login_url="/account/login")
 def item_decrement(request, id):
     cart = Cart(request)
-    # product = Product.objects.get(id=id)
-    # cart.decrement(product=product)
+    product = Product.objects.get(id=id)
+    cart.decrement(product=product)
     return redirect("cart_detail")
 
 
@@ -53,4 +49,4 @@ def cart_clear(request):
 
 @login_required(login_url="/account/login")
 def cart_detail(request):
-    return render(request, 'cart/cart_detail.html')
+    return render(request, 'home/cart.html')
