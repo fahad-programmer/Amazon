@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('Home.urls')),
     # Including The Social Authentication
     path('accounts/', include('allauth.urls')),
+    path('shop/', include('Shop.urls'))
 ]

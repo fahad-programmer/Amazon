@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from cart.cart import Cart
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -33,7 +35,7 @@ def handlelogin(request):
         else:
             messages.error(request, 'Invalid Crenditials Please Try Again')
 
-    return render(request, 'Home/login.html')
+    return render(request, 'home/login.html')
 
 
 # Handling The Login Using The Email, Username And Password
