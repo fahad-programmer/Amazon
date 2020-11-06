@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
+# Error Tracking (Sentry SDK)
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -40,8 +44,69 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "Blog",
     "Home",
-    "Shop"
+    "Shop",
+    'cart',
+
+    # For The Social Login
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # Sites Used For Social Login (Facebook And Google)
+    'allauth.socialaccount.providers.facebook',  # Facebook
+    'allauth.socialaccount.providers.google',
+
 ]
+
+# Site Id
+SITE_ID = 1
+
+# Provider specific settings
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '805663397466-g2jblik0dnhfm0bit60dq7t0e7fc7265.apps.googleusercontent.com',
+            'secret': 'qhv-3E4_20IthPYbeY054joq',
+            'key': ''
+        },
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+    },  'facebook': {
+
+        'APP': {
+            'client_id': '354272972530936',
+            'secret': '97ac0de3d98c1ca584b0b795bb6fd7df',
+            'key': ''
+        },
+
+        'METHOD': 'oauth2',
+        'SCOPE': ['email', 'public_profile'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'first_name',
+            'last_name',
+            'middle_name',
+            'name',
+            'name_format',
+            'picture',
+            'short_name'
+        ],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': 'path.to.callable',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v7.0',
+    }
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -67,10 +132,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processor.cart_total_amount'
             ],
         },
     },
 ]
+
+CART_SESSION_ID = 'cart'
 
 WSGI_APPLICATION = 'Amazon.wsgi.application'
 
@@ -128,3 +196,25 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
 ]
+
+# Authentication Backends Are Given Below
+AUTHENTICATION_BACKENDS = [
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+]
+
+# Connection To Sentry Server
+sentry_sdk.init(
+    dsn="https://de78fa71c1a64aea95cda70b2cfc97a9@o472385.ingest.sentry.io/5505935",
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True
+)
