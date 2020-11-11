@@ -248,8 +248,9 @@
             <strong>{{product.price}}</strong>
           </p>
           <div class="product__rating">
-
+          
             <p>🌟🌟🌟🌟</p>
+            
 
           </div>
         </div>
@@ -266,12 +267,13 @@
 
       <!--2nd Row-->
       <div class="home__row">
+      {% for products in accProd %}
         <div class="product">
           <div class="product__info">
-            <p>The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback</p>
+            <p>{{products.name}}</p>
             <p class="product__price">
               <small>$</small>
-              <strong>11.96</strong>
+              <strong>{{products.price}}</strong>
             </p>
             <div class="product__rating">
   
@@ -280,49 +282,12 @@
             </div>
           </div>
   
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg" alt="" />
+          <img src="/media/{{products.image}}" alt="" />
   
-          <button>Add to Basket</button>
+          <button><a href="{% url 'cart_add' products.id %}">Add to Basket</a></button>
         </div>
-        <!--2nd-->
-        <div class="product">
-          <div class="product__info">
-            <p>Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre
-              Glass Bowl</p>
-            <p class="product__price">
-              <small>$</small>
-              <strong>12.96</strong>
-            </p>
-            <div class="product__rating">
-  
-              <p>🌟🌟🌟🌟</p>
-  
-            </div>
-          </div>
-  
-          <img src="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg" alt="" />
-  
-          <button>Add to Basket</button>
-        </div>
-        <!--3rd-->
-        <div class="product">
-          <div class="product__info">
-            <p>Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric</p>
-            <p class="product__price">
-              <small>$</small>
-              <strong>12.96</strong>
-            </p>
-            <div class="product__rating">
-  
-              <p>🌟🌟🌟🌟</p>
-  
-            </div>
-          </div>
-  
-          <img src="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$" alt="" />
-  
-          <button>Add to Basket</button>
-        </div>
+        {% endfor %}
+     
 </div>  
       <!--Ends Here-->
 
