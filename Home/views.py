@@ -10,8 +10,9 @@ from Shop.models import Product
 
 
 def index(request):
-    products = Product.objects.all()
-    main_products = {'products': products}
+    products = Product.objects.all()[:2]
+    accessories_product = Product.objects.filter(category="Accessories")[:3]
+    main_products = {'products': products, 'accProd': accessories_product}
     return render(request, 'home/index.html', main_products)
 
 
