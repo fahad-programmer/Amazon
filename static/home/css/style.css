@@ -8,6 +8,81 @@
   z-index: 100;
 }
 
+.sub-header {
+  height: 39px;
+  display: flex;
+  align-items: center;
+  background-color: #232f3e;
+  z-index: 99;
+}
+
+.left-header-side {
+  width: 300px;
+}
+
+.center-header-side {
+  width: 100%;
+}
+
+.right-header-side {
+  width: 450px;
+}
+
+.buyer-location {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  padding: 1px 2px 1px 2px;
+  width: 110px;
+}
+
+.buyer-location:hover {
+  border: 1px solid #fff;
+  width: 110px;
+  cursor: pointer;
+  padding: 1px 1px 1px 1px;
+}
+
+.obj-menu {
+  color: #fff;
+  margin: 5px 1px 6px 0;
+  padding: 4px 9px 4px 9px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.amz-covid {
+  font-weight: 600;
+}
+
+.obj-menu:hover {
+  border: 1px solid #fff;
+  padding: 4px 8px 4px 8px;
+  cursor: pointer;
+}
+
+.location-of-user {
+  margin-left: 5px;
+  line-height: 15px;
+}
+
+.deliver {
+  color: white;
+  font-size: 11px;
+}
+
+.deliver-to {
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+#geo-marker {
+  color: White;
+  width: 25px;
+  height: 20px;
+}
+
 .header__logo {
   width: 100px;
   object-fit: contain;
@@ -242,10 +317,4 @@ code {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
-}
-
-.xolo__butt {
-  background: #131921;
-  color: #fff;
-  border-top: 1px solid rgba(225, 225, 225, 0.1);
 }

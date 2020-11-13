@@ -4,12 +4,16 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
+from Shop.models import Product
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'home/index.html')
+    products = Product.objects.all()[:2]
+    accessories_product = Product.objects.filter(category="Accessories")[:3]
+    main_products = {'products': products, 'accProd': accessories_product}
+    return render(request, 'home/index.html', main_products)
 
 
 def SignIn(request):
