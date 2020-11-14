@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',  # Facebook
     'allauth.socialaccount.providers.google',
 
+    # User-Visit (Tracking The Client To Server Request)
+    'user_visit',
 ]
 
 # Site Id
@@ -116,6 +118,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # User Tracking Middleware
+    'user_visit.middleware.UserVisitMiddleware',
 ]
 
 ROOT_URLCONF = 'Amazon.urls'

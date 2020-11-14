@@ -28,5 +28,9 @@ class Order(models.Model):
     state = models.CharField(max_length=100)
     zip_code = models.IntegerField(default=0)
 
-    def __str__(self) -> str:
-        return self.order_id
+    def __str__(self):
+        return self.city
+
+
+class OrderTracker(models.Model):
+    pass
