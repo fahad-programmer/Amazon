@@ -59,6 +59,9 @@ INSTALLED_APPS = [
 
     # User-Visit (Tracking The Client To Server Request)
     'user_visit',
+
+    # Google Captcha
+    'captcha',
 ]
 
 # Site Id
@@ -227,3 +230,8 @@ sentry_sdk.init(
     # django.contrib.auth) you may enable sending PII data.
     send_default_pii=True
 )
+
+
+# Recaptcha Api
+RECAPTCHA_PUBLIC_KEY = '6LfGAeMZAAAAAJy49OPGSr2cjm4t9MEzAqSwHkaW'
+RECAPTCHA_PRIVATE_KEY = '6LfGAeMZAAAAAM1GIRNKlE4OuIcptBcuy7fjP2Og'
