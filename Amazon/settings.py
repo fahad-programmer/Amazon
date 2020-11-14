@@ -30,7 +30,7 @@ SECRET_KEY = 'jzgr*8ak&pe4$e4b5ytm0y)29%v=!qw5msy_%i#7kb@ngttze$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,8 +81,8 @@ SOCIALACCOUNT_PROVIDERS = {
     },  'facebook': {
 
         'APP': {
-            'client_id': '354272972530936',
-            'secret': '97ac0de3d98c1ca584b0b795bb6fd7df',
+            'client_id': '1096504117449006',
+            'secret': '4458fb4d143ee6294058ef5ac29d5b70',
             'key': ''
         },
 
@@ -194,7 +194,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    '/var/www/static/',
 ]
 
 # Managing Media Files
