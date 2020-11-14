@@ -1,0 +1,1 @@
+web: gunicorn Famzaa.wsgi
