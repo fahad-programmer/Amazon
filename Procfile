@@ -1,1 +1,1 @@
-web: gunicorn Famzaa.wsgi
+web: gunicorn Amazon.wsgi
