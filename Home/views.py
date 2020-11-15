@@ -8,9 +8,9 @@ from Shop.models import Product
 
 
 def index(request):
-    products = Product.objects.all()[:3]
-    main_products = {'products': products}
-    return render(request, 'home/index.html', main_products)
+    # products = Product.objects.all()[:3]
+    # main_products = {'products': products}
+    return render(request, 'home/index.html')
 
 
 def SignIn(request):

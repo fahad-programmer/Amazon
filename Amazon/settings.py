@@ -62,6 +62,9 @@ INSTALLED_APPS = [
 
     # Google Captcha
     'captcha',
+
+    # Sitemap
+    'django.contrib.sitemaps'
 ]
 
 # Site Id

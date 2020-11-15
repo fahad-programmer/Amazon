@@ -17,7 +17,19 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from Amazon.sitemaps import StaticViewSitemap
+from django.contrib.sitemaps.views import sitemap
 
+
+admin.site.site_header = "Amazon Control Panel"
+admin.site.site_title = "Amazon Control Panel"
+admin.site.index_title = "Welcome To Amazon Control Panel"
+
+
+# Sitemap Integration
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +37,8 @@ urlpatterns = [
     path('', include('Home.urls')),
     # Including The Social Authentication
     path('accounts/', include('allauth.urls')),
-    path('shop/', include('Shop.urls'))
+    # Shop Urls
+    path('shop/', include('Shop.urls')),
+    # Sitemap
+    path("sitemap.xml", sitemap, {'sitemaps': sitemaps}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
