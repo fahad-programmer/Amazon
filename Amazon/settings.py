@@ -57,6 +57,14 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',  # Facebook
     'allauth.socialaccount.providers.google',
 
+    # User-Visit (Tracking The Client To Server Request)
+    'user_visit',
+
+    # Google Captcha
+    'captcha',
+
+    # Sitemap
+    'django.contrib.sitemaps'
 ]
 
 # Site Id
@@ -116,6 +124,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # User Tracking Middleware
+    'user_visit.middleware.UserVisitMiddleware',
 ]
 
 ROOT_URLCONF = 'Amazon.urls'
@@ -223,3 +233,8 @@ sentry_sdk.init(
     # django.contrib.auth) you may enable sending PII data.
     send_default_pii=True
 )
+
+
+# Recaptcha Api
+RECAPTCHA_PUBLIC_KEY = '6LfGAeMZAAAAAJy49OPGSr2cjm4t9MEzAqSwHkaW'
+RECAPTCHA_PRIVATE_KEY = '6LfGAeMZAAAAAM1GIRNKlE4OuIcptBcuy7fjP2Og'

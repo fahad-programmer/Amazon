@@ -280,38 +280,19 @@
 
     <!--Products Start From Here (Simple => Dynamic and will be connected to database later)-->
 
-    <!--First Line-->
-    <div class="home__row">
-      {% for product in products %}
-      <div class="product">
-        <div class="product__info">
-          <p>{{product.name}}</p>
-          <p class="product__price">
-            <small>$</small>
-            <strong>{{product.price}}</strong>
-          </p>
-          <div class="product__rating">
-
-            <p>🌟🌟🌟🌟</p>
-
-
-          </div>
-        </div>
-
-        <img src="media/{{product.image}}" alt="" />
-
-        <button><a href="{% url 'cart_add' product.id %}">Add to Basket</a></button>
-      </div>
-      {% endfor %}
-
-    </div>
+    
 
     <!--Ends Here-->
 
+<<<<<<< HEAD
     <div class="main__body__section">
 
     <!--Fisrt Row-->
     <div class="home__row" style="margin-top: -140px;">
+=======
+    <!--Last Row-->
+    <div class="home__row" style="margin-top: -50px;">
+>>>>>>> dc0cb827c498aa61d30e8534ba798965df72679c
       <div class="product">
         <h2 class="card-heading">Shop By Category</h2>
 
