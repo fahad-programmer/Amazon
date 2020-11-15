@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "Home",
     "Shop",
     'cart',
+    # Geoip
+    'geoip2',
 
     # For The Social Login
     'django.contrib.sites',

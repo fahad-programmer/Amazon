@@ -5,8 +5,8 @@ from django.contrib.auth import authenticate, login
 from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
 from Shop.models import Product
-import geoip2.database
-import socket
+# import geoip2.database
+# import socket
 
 
 def index(request):
@@ -14,10 +14,10 @@ def index(request):
     # main_products = {'products': products}
 
     # Getting The Ip Address
-    hostname = socket.gethostname()
-    ip_address = socket.gethostbyname(hostname)
+    # hostname = socket.gethostname()
+    # ip_address = socket.gethostbyname(hostname)
 
-    # Fetching The Country
+    # # Fetching The Country
     # reader = geoip2.database.Reader('./GeoLite2-Country.mmdb')
     # response = reader.country(ip_address=ip_address)
     # print(response)
