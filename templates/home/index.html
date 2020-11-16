@@ -95,24 +95,21 @@
     .dropdown-content__country {
       display: none;
       position: absolute;
-      background-color: #f1f1f1;
+      background-color: #ffffff;
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 9999;
-      margin-top: 47px;
+      margin-top: 45px;
       margin-left: -5px;
+      left: -1px;
+      border-radius: 3px;
     }
 
     .dropdown-content__country a {
-      color: black;
-      padding: 12px 16px;
       text-decoration: none;
       display: block;
     }
 
-    .dropdown-content__country a:hover {
-      background-color: #ddd;
-    }
 
     .dropdown__country:hover .dropdown-content__country {
       display: block;
@@ -175,11 +172,21 @@
               src="{% static 'home\img\flags\united-states-of-america.png' %}" style="width: 25px;">
             <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
           </span>
-          <div class="dropdown-content__country">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+          <!-- Language and Country Dropdown Menu-->
+          <div class="dropdown-content__country" style="padding: 14px;width: 250px;">
+            <div class="dropdown__content">
+              <div class="drop_label">
+                <span class="drop_text" style="display: flex;align-items: center;">
+                  <p class="drop_maintext">Change Language</p>
+                  <a href="#" class="card-shop-link drop_mainlink" style="font-size: 11px;margin-left: 5px;">Learn More</a>
+                </span>
+              </div>
+              <div class="drop__languages">
+                
+              </div>
+            </div>
           </div>
+          <!-- Ends Here -->
         </div>
 
         <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()" onmouseout="bg__light()">
@@ -191,15 +198,166 @@
           <span class="header__optionLineTwo dropbtn__country">Account & Lists
             <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
           </span>
-          <div class="dropdown-content__country">
+          <div class="dropdown-content__country"
+          style="width: 470px;
+          left: -150px;
+          padding: 15px;">
             {% if user.is_authenticated %}
             <a href="/accounts/profile">Profile</a>
             <a href="/accounts/logout">Logout</a>
             <a href="/cart">Cart</a>
             {% else %}
-            <a href="/account/login">Login</a>
-            <a href="/account/signup">SignUp</a>
-            <a>Link 3</a>
+            <div class="product" style="margin: 0;padding: 0 120px;">
+              <button style="margin: 0;">Sign in</button>
+              <div style="display: flex;
+              justify-content: center;">
+              <p class="drop_maintext" style="font-size: 11px;">New customer?</p>
+                  <a href="#" class="card-shop-link drop_mainlink" style="font-size: 11px;margin-left: 5px;">Start Here</a>
+                  </div>
+            </div>
+            <hr style="margin: 8px;">
+            <div class="y__menu">
+              <div class="y__content">
+
+                <div class="y__title" id="">Your Lists</div>
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Create a List
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Find a List or Registry
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Find a Gift
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Save Items from the Web
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Wedding Registry
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Baby Registry
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Friends &amp; Family Gifting
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    AmazonSmile Charity Lists
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Hearts
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Explore Idea Lists
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Explore Showroom
+                  </span>
+                </a>
+
+              </div>
+              <div class="y__content" style="border-left: 1px solid #eaeaea;">
+
+                <div class="y__title" id="">Your Account</div>
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Account
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Orders
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Recommendations
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Memberships &amp; Subscriptions
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Garage
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Fanshop
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Pets
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Content and Devices
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Music Library
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Amazon Drive
+                  </span>
+                </a> 
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Prime Video
+                  </span>
+                </a>
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Kindle Unlimited
+                  </span>
+                </a>
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Watchlist
+                  </span>
+                </a>
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Video Purchases &amp; Rentals
+                  </span>
+                </a>
+                <a href="#" class="y__item">
+                  <span class="y__text">
+                    Your Android Apps &amp; Devices
+                  </span>
+                </a>
+                
+              </div>
+            </div>
             {% endif %}
           </div>
         </div>
