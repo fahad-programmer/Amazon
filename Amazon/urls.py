@@ -33,12 +33,18 @@ sitemaps = {
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+
     # Sending To Home Directory Where Ever The Link Is Empty
     path('', include('Home.urls')),
+
     # Including The Social Authentication
     path('accounts/', include('allauth.urls')),
+
     # Shop Urls
     path('shop/', include('Shop.urls')),
+
     # Sitemap
     path("sitemap.xml", sitemap, {'sitemaps': sitemaps}),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -50,3 +50,17 @@ def cart_clear(request):
 @login_required(login_url="/account/login")
 def cart_detail(request):
     return render(request, 'home/cart.html')
+
+
+def search(request):
+
+    if request.method == "POST":
+        global query
+        query = request.POST['query']
+        # category = request.POST['category']
+
+    filtered_product = Product.objects.filter(
+        name__icontains=query)
+    print(filtered_product)
+    params = {'products': filtered_product}
+    return render(request, 'Shop/search.html', params)

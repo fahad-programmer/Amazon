@@ -1,5 +1,5 @@
 from django.urls import path
-from Shop.views import cart_add, cart_clear, cart_detail, item_clear, item_decrement, item_increment
+from Shop.views import cart_add, cart_clear, cart_detail, item_clear, item_decrement, item_increment, search
 
 urlpatterns = [
     # Cart Urls
@@ -11,4 +11,5 @@ urlpatterns = [
          item_decrement, name='item_decrement'),
     path('cart/cart_clear/', cart_clear, name='cart_clear'),
     path('cart/cart-detail/', cart_detail, name='cart_detail'),
+    path('product/search', search, name='search')
 ]

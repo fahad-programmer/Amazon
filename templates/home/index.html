@@ -1,992 +1,1211 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    {% load static %}
+    <!-- Title -->
+    <title>
+      Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books,
+      DVDs & more
+    </title>
+    <!-- Meta Information -->
+    <meta
+      name="description"
+      content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+    />
+    <meta
+      name="keywords"
+      content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL"
+    />
+    <meta name="google" content="nositelinkssearchbox" />
+    <link rel="canonical" href="https://www.amazon.com/" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      property="og:image"
+      content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+      xmlns:og="http://opengraphprotocol.org/schema/"
+    />
+    <link
+      rel="icon"
+      href="{% static 'home/img/amazon-logo-favicon.png' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'home/img/amazon-logo-favicon.png' %}"
+      type="image/x-icon"
+    />
+    <meta
+      property="og:description"
+      content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+      xmlns:og="http://opengraphprotocol.org/schema/"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-<head>
-  {% load static %}
-  <!-- Title -->
-  <title>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more</title>
-  <!-- Meta Information -->
-  <meta name="description"
-    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else.">
-  <meta name="keywords"
-    content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL">
-  <meta name="google" content="nositelinkssearchbox">
-  <link rel="canonical" href="https://www.amazon.com/">
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta property="og:image"
-    content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
-    xmlns:og="http://opengraphprotocol.org/schema/">
-  <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
-  <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
-  <meta property="og:description"
-    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
-    xmlns:og="http://opengraphprotocol.org/schema/">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- StyleSheets -->
-  <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Styles -->
+    <style>
+      .dropdown {
+        overflow: hidden;
+        background-color: #f3f3f3;
+        color: #555;
+        height: 40px;
+        width: auto;
+        font-size: 12px;
+        border-radius: 10px 0 0 10px;
+        border-right: 1px solid #d0d0d0;
+      }
 
-  <!-- Styles -->
-  <style>
-    .dropdown {
-      overflow: hidden;
-      background-color: #f3f3f3;
-      color: #555;
-      height: 40px;
-      width: auto;
-      font-size: 12px;
-      border-radius: 10px 0 0 10px;
-      border-right: 1px solid #d0d0d0;
-    }
+      .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 14px;
+        border: none;
+        color: #555;
+        padding: 11px 10px 11.5px 10px;
+        background-color: inherit;
+        font-family: inherit;
+        display: flex;
+        font-size: 12px;
+        align-items: center;
+      }
 
-    .dropdown .dropbtn {
-      cursor: pointer;
-      font-size: 14px;
-      border: none;
-      color: #555;
-      padding: 11px 10px 11.5px 10px;
-      background-color: inherit;
-      font-family: inherit;
-      display: flex;
-      font-size: 12px;
-      align-items: center;
-    }
+      .dropdown:hover .dropbtn,
+      .dropbtn:focus {
+        background-color: #e4e4e4;
+        outline: none;
+      }
 
-    .dropdown:hover .dropbtn,
-    .dropbtn:focus {
-      background-color: #e4e4e4;
-      outline: none;
-    }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
 
-    .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
 
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
+      .show {
+        display: block;
+      }
+    </style>
 
-    .show {
-      display: block;
-    }
-  </style>
+    <style>
+      .dropdown__country {
+        position: relative;
+      }
 
-  <style>
-    .dropdown__country {
-      position: relative;
-    }
+      .dropdown-content__country {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        margin-top: 45px;
+        margin-left: -5px;
+        left: -1px;
+        border-radius: 3px;
+      }
 
-    .dropdown-content__country {
-      display: none;
-      position: absolute;
-      background-color: #ffffff;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 9999;
-      margin-top: 45px;
-      margin-left: -5px;
-      left: -1px;
-      border-radius: 3px;
-    }
+      .dropdown-content__country a {
+        text-decoration: none;
+        display: block;
+      }
 
-    .dropdown-content__country a {
-      text-decoration: none;
-      display: block;
-    }
+      .dropdown__country:hover .dropdown-content__country {
+        display: block;
+      }
 
+      .xolo__butt {
+        background: #131921;
+        color: #fff;
+        border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+      }
+    </style>
+  </head>
 
-    .dropdown__country:hover .dropdown-content__country {
-      display: block;
-    }
+  <body>
+    <!-- Main Body -->
+    <div class="app">
+      {% load cart_tag %}
 
-
-    .xolo__butt {
-      background: #131921;
-      color: #fff;
-      border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
-    }
-  </style>
-
-</head>
-
-<body>
-  <!-- Main Body -->
-  <div class="app">
-    {% load cart_tag %}
-
-    <!--Header Of The Page-->
-    <div class="header">
-      <!-- Menu And Logo -->
-      <div class="header-menu-button" onclick="w3_open()">
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill menu__button"
-          fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: white;
-        width: 1.2rem;
-        height: 1.2rem;">
-          <path
-            d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
-        </svg>
-      </div>
-      <div class="header_logo_div">
-        <a href="/">
-          <img class="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
-        </a>
-      </div>
-      <div class="right__gap"></div>
-
-      <!-- Search Bar -->
-      <div class="header__search">
-        <div class="dropdown">
-          <button class="dropbtn" onclick="myFunction()">All
-            <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
-          </button>
-          <div class="dropdown-content" id="myDropdown">
-            <a href="#">Toys</a>
-            <a href="#">Women Cloathes</a>
-            <a href="#">Electronics</a>
-          </div>
-        </div>
-        <input class="header__searchInput" placeholder="Search For Products" type="text" />
-        <i class="fa fa-search header__searchIcon" aria-hidden="true" /></i>
-      </div>
-
-      <div class="header__nav">
-        <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()" onmouseout="bg__light()">
-          <span class="header__optionLineOne" style="height: 10px;"></span>
-          <span class="header__optionLineTwo dropbtn__country"><img
-              src="{% static 'home\img\flags\united-states-of-america.png' %}" style="width: 25px;">
-            <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
-          </span>
-          <!-- Language and Country Dropdown Menu-->
-          <div class="dropdown-content__country" style="padding: 14px;width: 250px;">
-            <div class="dropdown__content">
-              <div class="drop_label">
-                <span class="drop_text" style="display: flex;align-items: center;">
-                  <p class="drop_maintext">Change Language</p>
-                  <a href="#" class="card-shop-link drop_mainlink" style="font-size: 11px;margin-left: 5px;">Learn More</a>
-                </span>
-              </div>
-              <div class="drop__languages">
-                
-              </div>
-            </div>
-          </div>
-          <!-- Ends Here -->
-        </div>
-
-        <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()" onmouseout="bg__light()">
-          {% if user.is_authenticated %}
-          <span class="header__optionLineOne">Hello, {{user.username}}</span>
-          {% else %}
-          <span class="header__optionLineOne">Hello, Guest</span>
-          {% endif %}
-          <span class="header__optionLineTwo dropbtn__country">Account & Lists
-            <i class="fa fa-caret-down" style="margin-left: 8px;"></i>
-          </span>
-          <div class="dropdown-content__country"
-          style="width: 470px;
-          left: -150px;
-          padding: 15px;">
-            {% if user.is_authenticated %}
-            <a href="/accounts/profile">Profile</a>
-            <a href="/accounts/logout">Logout</a>
-            <a href="/cart">Cart</a>
-            {% else %}
-            <div class="product" style="margin: 0;padding: 0 120px;">
-              <button style="margin: 0;">Sign in</button>
-              <div style="display: flex;
-              justify-content: center;">
-              <p class="drop_maintext" style="font-size: 11px;">New customer?</p>
-                  <a href="#" class="card-shop-link drop_mainlink" style="font-size: 11px;margin-left: 5px;">Start Here</a>
-                  </div>
-            </div>
-            <hr style="margin: 8px;">
-            <div class="y__menu">
-              <div class="y__content">
-
-                <div class="y__title" id="">Your Lists</div>
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Create a List
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Find a List or Registry
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Find a Gift
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Save Items from the Web
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Wedding Registry
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Baby Registry
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Friends &amp; Family Gifting
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    AmazonSmile Charity Lists
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Hearts
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Explore Idea Lists
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Explore Showroom
-                  </span>
-                </a>
-
-              </div>
-              <div class="y__content" style="border-left: 1px solid #eaeaea;">
-
-                <div class="y__title" id="">Your Account</div>
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Account
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Orders
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Recommendations
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Memberships &amp; Subscriptions
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Garage
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Fanshop
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Pets
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Content and Devices
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Music Library
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Amazon Drive
-                  </span>
-                </a> 
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Prime Video
-                  </span>
-                </a>
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Kindle Unlimited
-                  </span>
-                </a>
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Watchlist
-                  </span>
-                </a>
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Video Purchases &amp; Rentals
-                  </span>
-                </a>
-                <a href="#" class="y__item">
-                  <span class="y__text">
-                    Your Android Apps &amp; Devices
-                  </span>
-                </a>
-                
-              </div>
-            </div>
-            {% endif %}
-          </div>
-        </div>
-
-        <div class="header__option margin__left">
-          <span class="header__optionLineOne">Returns</span>
-          <span class="header__optionLineTwo">& Orders</span>
-        </div>
-
-        <div class="header__option margin__left">
-          <span class="header__optionLineOne">Your</span>
-          <span class="header__optionLineTwo">Prime</span>
-        </div>
-
-        <div class="header__optionBasket margin__left">
-          <a href="/shop/cart/cart-detail">
-            <i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right: 5px;"></i></a>
-          {{request.session.cart|length}}
-          <span class="header__optionLineTwo header__basketCount"> </span>
-        </div>
-      </div>
-    </div>
-    <!--Ends Here-->
-
-    <div class="bg-mana" id="bg-changing" style="display: none;"></div>
-    <div class="bg-mana__dropdown" id="bg-changing__dropdown" style="display: none;"></div>
-
-    <!-- Sidebar -->
-    <div class="w3-sidebar w3-bar-block w3-animate-left" style="width:300px;z-index:9999;display:none;" id="mySidebar">
-      <button class="w3-bar-item w3-button w3-large xolo__butt" onclick="w3_close()">Close &times;</button>
-      <a href="#" class="w3-bar-item w3-button">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button">Link 2</a>
-      <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    </div>
-
-    <!-- Second Header -->
-
-    <div class="sub-header">
-      <div class="left-header-side">
-        <div class="buyer-location">
-          <svg width="1em" height="1em" viewBox="0 0 16 16" id="geo-marker" class="bi bi-geo-alt" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-            <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+      <!--Header Of The Page-->
+      <div class="header">
+        <!-- Menu And Logo -->
+        <div class="header-menu-button" onclick="w3_open()">
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-grid-3x3-gap-fill menu__button"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            style="color: white; width: 1.2rem; height: 1.2rem"
+          >
+            <path
+              d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"
+            />
           </svg>
-          <div class="location-of-user">
-            <p class="deliver">Deliver to</p>
-            <p class="deliver-to">Pakistan</p>
+        </div>
+        <div class="header_logo_div">
+          <a href="/">
+            <img
+              class="header__logo"
+              src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+            />
+          </a>
+        </div>
+        <div class="right__gap"></div>
+
+        <!-- Search Bar -->
+        <div class="header__search">
+          <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">
+              All
+              <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+            </button>
+            <form method="POST" action="{% url 'search' %}">
+              {% csrf_token %}
+            <div class="dropdown-content" id="myDropdown">
+              <a href="#">Toys</a>
+              <a href="#">Women Cloathes</a>
+              <a href="#">Electronics</a>
+            </div>
+          </div>
+          <input
+            class="header__searchInput"
+            placeholder="Search For Products"
+            type="text"
+            name="query"
+          />
+          <input type="hidden" value="Electronics" name="category">
+          <button type="submit">
+            <i class="fa fa-search header__searchIcon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </form>
+        <div class="header__nav">
+          <div
+            class="header__option margin__left dropdown__country"
+            onmouseover="bg__dark()"
+            onmouseout="bg__light()"
+          >
+            <span class="header__optionLineOne" style="height: 10px"></span>
+            <span class="header__optionLineTwo dropbtn__country"
+              ><img
+                src="{% static 'home\img\flags\united-states-of-america.png' %}"
+                style="width: 25px"
+              />
+              <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+            </span>
+            <!-- Language and Country Dropdown Menu-->
+            <div
+              class="dropdown-content__country"
+              style="padding: 14px; width: 250px"
+            >
+              <div class="dropdown__content">
+                <div class="drop_label">
+                  <span
+                    class="drop_text"
+                    style="display: flex; align-items: center"
+                  >
+                    <p class="drop_maintext">Change Language</p>
+                    <a
+                      href="#"
+                      class="card-shop-link drop_mainlink"
+                      style="font-size: 11px; margin-left: 5px"
+                      >Learn More</a
+                    >
+                  </span>
+                </div>
+                <div class="drop__languages"></div>
+              </div>
+            </div>
+            <!-- Ends Here -->
+          </div>
+
+          <div
+            class="header__option margin__left dropdown__country"
+            onmouseover="bg__dark()"
+            onmouseout="bg__light()"
+          >
+            {% if user.is_authenticated %}
+            <span class="header__optionLineOne">Hello, {{user.username}}</span>
+            {% else %}
+            <span class="header__optionLineOne">Hello, Guest</span>
+            {% endif %}
+            <span class="header__optionLineTwo dropbtn__country"
+              >Account & Lists
+              <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+            </span>
+            <div
+              class="dropdown-content__country"
+              style="width: 470px; left: -150px; padding: 15px"
+            >
+              {% if user.is_authenticated %}
+              <a href="/accounts/profile">Profile</a>
+              <a href="/accounts/logout">Logout</a>
+              <a href="/cart">Cart</a>
+              {% else %}
+              <div class="product" style="margin: 0; padding: 0 120px">
+                <button style="margin: 0">Sign in</button>
+                <div style="display: flex; justify-content: center">
+                  <p class="drop_maintext" style="font-size: 11px">
+                    New customer?
+                  </p>
+                  <a
+                    href="#"
+                    class="card-shop-link drop_mainlink"
+                    style="font-size: 11px; margin-left: 5px"
+                    >Start Here</a
+                  >
+                </div>
+              </div>
+              <hr style="margin: 8px" />
+              <div class="y__menu">
+                <div class="y__content">
+                  <div class="y__title" id="">Your Lists</div>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Create a List </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Find a List or Registry </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Find a Gift </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Save Items from the Web </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Wedding Registry </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Baby Registry </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Friends &amp; Family Gifting </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> AmazonSmile Charity Lists </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Hearts </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Explore Idea Lists </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Explore Showroom </span>
+                  </a>
+                </div>
+                <div class="y__content" style="border-left: 1px solid #eaeaea">
+                  <div class="y__title" id="">Your Account</div>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Account </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Orders </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Recommendations </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text">
+                      Memberships &amp; Subscriptions
+                    </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Garage </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Fanshop </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Pets </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Content and Devices </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Music Library </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Amazon Drive </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Prime Video </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Kindle Unlimited </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text"> Your Watchlist </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text">
+                      Your Video Purchases &amp; Rentals
+                    </span>
+                  </a>
+                  <a href="#" class="y__item">
+                    <span class="y__text">
+                      Your Android Apps &amp; Devices
+                    </span>
+                  </a>
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="header__option margin__left">
+            <span class="header__optionLineOne">Returns</span>
+            <span class="header__optionLineTwo">& Orders</span>
+          </div>
+
+          <div class="header__option margin__left">
+            <span class="header__optionLineOne">Your</span>
+            <span class="header__optionLineTwo">Prime</span>
+          </div>
+
+          <div class="header__optionBasket margin__left">
+            <a href="/shop/cart/cart-detail">
+              <i
+                class="fa fa-shopping-basket"
+                aria-hidden="true"
+                style="margin-right: 5px"
+              ></i
+            ></a>
+            {{request.session.cart|length}}
+            <span class="header__optionLineTwo header__basketCount"> </span>
           </div>
         </div>
       </div>
-      <div class="center-header-side">
-        <div class="sub-header-menu">
-          <a href="#" class="obj-menu">Today's Deal</a>
-          <a href="#" class="obj-menu">Customer Service</a>
-          <a href="#" class="obj-menu">Gift Cards</a>
-          <a href="#" class="obj-menu">Sell</a>
-          <a href="#" class="obj-menu">Registry</a>
-        </div>
+      <!--Ends Here-->
+
+      <div class="bg-mana" id="bg-changing" style="display: none"></div>
+      <div
+        class="bg-mana__dropdown"
+        id="bg-changing__dropdown"
+        style="display: none"
+      ></div>
+
+      <!-- Sidebar -->
+      <div
+        class="w3-sidebar w3-bar-block w3-animate-left"
+        style="width: 300px; z-index: 9999; display: none"
+        id="mySidebar"
+      >
+        <button
+          class="w3-bar-item w3-button w3-large xolo__butt"
+          onclick="w3_close()"
+        >
+          Close &times;
+        </button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
       </div>
-      <div class="right-header-side">
-        <a href="#" class="obj-menu amz-covid">Amazon's response to COVID-19</a>
-      </div>
-    </div>
 
-    <!-- Ends Here-->
+      <!-- Second Header -->
 
-    <!--Slider Starts-->
-    <div class="home">
-      <div class="home__container">
-        <a name="slider__link" href="">
-          <img class="home__image" name="slider" src="" alt="" />
-        </a>
-      </div>
-    </div>
-    <!--Ends Here-->
-
-    <!--Products Start From Here (Simple => Dynamic and will be connected to database later)-->
-
-    
-
-    <!--Ends Here-->
-
-    <div class="main__body__section">
-
-    <!--Fisrt Row-->
-    <div class="home__row" style="margin-top: -140px;">
-      <div class="product">
-        <h2 class="card-heading">Shop By Category</h2>
-
-        <div class="columns-container">
-          <div class="first-one">
-            <div class="first-product">
-              <div class="image-container">
-                <img
-                  src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/computer120x._SY85_CB468850970_.jpg"
-                  alt="Computer And Accessories" class="image-product">
-              </div>
-              <div class="label-container">
-                <p class="label-product">Computer And Accessories</p>
-              </div>
-            </div>
-            <div class="second-product">
-              <div class="image-container">
-                <img
-                  src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/August/DashboardCard/PS4_120X._SY85_CB438749318_.jpg"
-                  alt="Video Games" class="image-product">
-              </div>
-              <div class="label-container">
-                <p class="label-product">Video Games</p>
-              </div>
-            </div>
-          </div>
-          <div class="first-one">
-            <div class="first-product">
-              <div class="image-container">
-                <img
-                  src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/Baby120X._SY85_CB468850882_.jpg"
-                  alt="Baby" class="image-product">
-              </div>
-              <div class="label-container">
-                <p class="label-product">Baby</p>
-              </div>
-            </div>
-            <div class="second-product">
-              <div class="image-container">
-                <img
-                  src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/Toys120X._SY85_CB468851693_.jpg"
-                  alt="Toys & Games" class="image-product">
-              </div>
-              <div class="label-container">
-                <p class="label-product">Toys & Games</p>
-              </div>
+      <div class="sub-header">
+        <div class="left-header-side">
+          <div class="buyer-location">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              id="geo-marker"
+              class="bi bi-geo-alt"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+              />
+            </svg>
+            <div class="location-of-user">
+              <p class="deliver">Deliver to</p>
+              <p class="deliver-to">Pakistan</p>
             </div>
           </div>
         </div>
-
-        <a href="#" class="card-shop-link">Shop now</a>
+        <div class="center-header-side">
+          <div class="sub-header-menu">
+            <a href="#" class="obj-menu">Today's Deal</a>
+            <a href="#" class="obj-menu">Customer Service</a>
+            <a href="#" class="obj-menu">Gift Cards</a>
+            <a href="#" class="obj-menu">Sell</a>
+            <a href="#" class="obj-menu">Registry</a>
+          </div>
+        </div>
+        <div class="right-header-side">
+          <a href="#" class="obj-menu amz-covid"
+            >Amazon's response to COVID-19</a
+          >
+        </div>
       </div>
 
-      <div class="product">
-        <h2 class="card-heading">AmazonBasics</h2>
+      <!-- Ends Here-->
 
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg"
-          alt="" />
-
-        <a href="#" class="card-shop-link">Shop now</a>
+      <!--Slider Starts-->
+      <div class="home">
+        <div class="home__container">
+          <a name="slider__link" href="">
+            <img class="home__image" name="slider" src="" alt="" />
+          </a>
+        </div>
       </div>
+      <!--Ends Here-->
 
+      <!--Products Start From Here (Simple => Dynamic and will be connected to database later)-->
 
-      <div class="product">
-        <h2 class="card-heading">Electronics</h2>
+      <!--Ends Here-->
 
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
-          alt="" />
+      <div class="main__body__section">
+        <!--Fisrt Row-->
+        <div class="home__row" style="margin-top: -140px">
+          <div class="product">
+            <h2 class="card-heading">Shop By Category</h2>
 
-        <a href="#" class="card-shop-link">Shop now</a>
+            <div class="columns-container">
+              <div class="first-one">
+                <div class="first-product">
+                  <div class="image-container">
+                    <img
+                      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/computer120x._SY85_CB468850970_.jpg"
+                      alt="Computer And Accessories"
+                      class="image-product"
+                    />
+                  </div>
+                  <div class="label-container">
+                    <p class="label-product">Computer And Accessories</p>
+                  </div>
+                </div>
+                <div class="second-product">
+                  <div class="image-container">
+                    <img
+                      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/August/DashboardCard/PS4_120X._SY85_CB438749318_.jpg"
+                      alt="Video Games"
+                      class="image-product"
+                    />
+                  </div>
+                  <div class="label-container">
+                    <p class="label-product">Video Games</p>
+                  </div>
+                </div>
+              </div>
+              <div class="first-one">
+                <div class="first-product">
+                  <div class="image-container">
+                    <img
+                      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/Baby120X._SY85_CB468850882_.jpg"
+                      alt="Baby"
+                      class="image-product"
+                    />
+                  </div>
+                  <div class="label-container">
+                    <p class="label-product">Baby</p>
+                  </div>
+                </div>
+                <div class="second-product">
+                  <div class="image-container">
+                    <img
+                      src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/Toys120X._SY85_CB468851693_.jpg"
+                      alt="Toys & Games"
+                      class="image-product"
+                    />
+                  </div>
+                  <div class="label-container">
+                    <p class="label-product">Toys & Games</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="card-shop-link">Shop now</a>
+          </div>
+
+          <div class="product">
+            <h2 class="card-heading">AmazonBasics</h2>
+
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg"
+              alt=""
+            />
+
+            <a href="#" class="card-shop-link">Shop now</a>
+          </div>
+
+          <div class="product">
+            <h2 class="card-heading">Electronics</h2>
+
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+              alt=""
+            />
+
+            <a href="#" class="card-shop-link">Shop now</a>
+          </div>
+
+          {% if user.is_authenticated %}
+          <div class="product">
+            <h2 class="card-heading">More Than 15M Products</h2>
+
+            <button>Shop Here</button>
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_1x._CB418309979_.jpg"
+              style="height: auto"
+            />
+          </div>
+
+          {% else %}
+          <div class="product">
+            <h2 class="card-heading">Sign in for the best experience</h2>
+
+            <button>Sign In Securly</button>
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_1x._CB418309979_.jpg"
+              style="height: auto"
+            />
+          </div>
+          {% endif %}
+        </div>
       </div>
+      <!--Ends Here-->
 
+      <!--Second Row-->
+      <div class="home__row">
+        <div class="product">
+          <h2 class="card-heading">Start On Holiday List</h2>
 
-      <div class="product">
-        <h2 class="card-heading">Sign in for the best experience</h2>
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2020/PrimeDay/Fuji_Dash_PD_Nonprime__1x._SY304_CB403084762_.jpg"
+            alt=""
+          />
 
-        <button>Sign in Securely</button>
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_1x._CB418309979_.jpg"
-          style="
-    height: auto;
-">
+          <a href="#" class="card-shop-link">Shop now</a>
+        </div>
+
+        <div class="product">
+          <h2 class="card-heading">Computer & Accessories</h2>
+
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg"
+            alt=""
+          />
+
+          <a href="#" class="card-shop-link">Shop now</a>
+        </div>
+
+        <div class="product">
+          <h2 class="card-heading">Beauty Picks</h2>
+
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg"
+            alt=""
+          />
+
+          <a href="#" class="card-shop-link">Shop now</a>
+        </div>
+
+        <div class="product">
+          <h2 class="card-heading">Get Fit At Home</h2>
+
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg"
+            alt=""
+          />
+
+          <a href="#" class="card-shop-link">Shop now</a>
+        </div>
       </div>
-</div>
-    </div>
-    <!--Ends Here-->
+      <!--Ends Here-->
 
-    <!--Second Row-->
-    <div class="home__row">
-      <div class="product">
-        <h2 class="card-heading">Start On Holiday List</h2>
+      <!--Second Main Container-->
 
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2020/PrimeDay/Fuji_Dash_PD_Nonprime__1x._SY304_CB403084762_.jpg"
-          alt="" />
-
-        <a href="#" class="card-shop-link">Shop now</a>
-      </div>
-
-      <div class="product">
-        <h2 class="card-heading">Computer & Accessories</h2>
-
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg"
-          alt="" />
-
-        <a href="#" class="card-shop-link">Shop now</a>
-      </div>
-
-
-      <div class="product">
-        <h2 class="card-heading">Beauty Picks</h2>
-
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg"
-          alt="" />
-
-        <a href="#" class="card-shop-link">Shop now</a>
-      </div>
-
-
-      <div class="product">
-        <h2 class="card-heading">Get Fit At Home</h2>
-
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg"
-          alt="" />
-
-        <a href="#" class="card-shop-link">Shop now</a>
-      </div>
-
-    </div>
-    <!--Ends Here-->
-
-    <!--Second Main Container-->
-
-    <!-- Fist Products List -->
+      <!-- Fist Products List -->
       <div class="products_list_bar">
         <div class="products_list_main">
           <div class="x__product_labels">
-            <h2 class="x__product__title">
-              Amazon Top Sellers
-            </h2>
-            <a href="#" class="x__product__morelink">
-              Shop now
-            </a>
+            <h2 class="x__product__title">Amazon Top Sellers</h2>
+            <a href="#" class="x__product__morelink"> Shop now </a>
           </div>
           <div class="x__products">
             <div class="x__products_items">
               <li class="x__items">
                 <a href="#">
-                  <img src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
+                  <img
+                    src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
                 </a>
               </li>
               <li class="x__items">
                 <a href="#">
-                <img src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
                 </a>
               </li>
               <li class="x__items">
                 <a href="#">
-                <img src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
+                  <img
+                    src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
                 </a>
               </li>
               <li class="x__items">
                 <a href="#">
-                <img src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
                 </a>
               </li>
               <li class="x__items">
                 <a href="#">
-                <img src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
+                  <img
+                    src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
                 </a>
               </li>
               <li class="x__items">
                 <a href="#">
-                <img src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
                 </a>
               </li>
               <li class="x__items">
-                <img src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
+                <img
+                  src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg"
+                  alt="Charger"
+                  class="x__items__lists"
+                />
               </li>
               <li class="x__items">
-                <img src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
+                <img
+                  src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg"
+                  alt="Charger"
+                  class="x__items__lists"
+                />
               </li>
             </div>
           </div>
         </div>
       </div>
-    <!-- Ends Here -->
+      <!-- Ends Here -->
 
-    <!-- Fist Products List -->
-    <div class="products_list_bar">
-      <div class="products_list_main">
-        <div class="x__product_labels">
-          <h2 class="x__product__title">
-            Trending In Video Games
-          </h2>
-          <a href="#" class="x__product__morelink">
-            Shop now
-          </a>
-        </div>
-        <div class="x__products">
-          <div class="x__products_items">
-            <li class="x__items">
-              <a href="#">
-                <img src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-              </a>
-            </li>
-            <li class="x__items">
-              <a href="#">
-              <img src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-              </a>
-            </li>
-            <li class="x__items">
-              <a href="#">
-              <img src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-              </a>
-            </li>
-            <li class="x__items">
-              <a href="#">
-              <img src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-              </a>
-            </li>
-            <li class="x__items">
-              <a href="#">
-              <img src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-              </a>
-            </li>
-            <li class="x__items">
-              <a href="#">
-              <img src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-              </a>
-            </li>
+      <!-- Fist Products List -->
+      <div class="products_list_bar">
+        <div class="products_list_main">
+          <div class="x__product_labels">
+            <h2 class="x__product__title">Trending In Video Games</h2>
+            <a href="#" class="x__product__morelink"> Shop now </a>
           </div>
-        </div>
-      </div>
-    </div>
-  <!-- Ends Here -->
-
-  <!--Fisrt Row-->
-  <div class="home__row">
-    <div class="product">
-      <h2 class="card-heading">Comfy styles for her</h2>
-
-      <div class="columns-container">
-        <div class="first-one">
-          <div class="first-product" style="width: 47.7%;">
-            <div class="image-container" style="height: auto;overflow: hidden;">
-              <img
-                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Sweatshirt_Quad_Cat_1x._SY116_CB418609101_.jpg"
-                alt="Sweatshirts" class="image-product"
-                style="max-width: none;">
-            </div>
-            <div class="label-container">
-              <p class="label-product" style="line-height: 28px;">Sweatshirts</p>
-            </div>
-          </div>
-          <div class="second-product" style="width: 47.7%;">
-            <div class="image-container" style="height: auto;overflow: hidden;">
-              <img
-                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Joggers_Quad_Cat_1x._SY116_CB418608748_.jpg"
-                alt="Joggers" class="image-product"
-                style="max-width: none;">
-            </div>
-            <div class="label-container">
-              <p class="label-product" style="line-height: 28px;">Joggers</p>
-            </div>
-          </div>
-        </div>
-        <div class="first-one">
-          <div class="first-product" style="width: 47.7%;">
-            <div class="image-container" style="height: auto;overflow: hidden;">
-              <img
-                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Cardigans_Quad_Cat_1x._SY116_CB418608722_.jpg"
-                alt="Cardigans" class="image-product"
-                style="max-width: none;">
-            </div>
-            <div class="label-container">
-              <p class="label-product" style="line-height: 28px;">Cardigans</p>
-            </div>
-          </div>
-          <div class="second-product" style="width: 47.7%;">
-            <div class="image-container" style="height: auto;overflow: hidden;">
-              <img
-                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Tees_Quad_Cat_1x._SY116_CB418608878_.jpg"
-                alt="Easy tees" class="image-product"
-                style="max-width: none;">
-            </div>
-            <div class="label-container">
-              <p class="label-product" style="line-height: 28px;">Easy tees</p>
+          <div class="x__products">
+            <div class="x__products_items">
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
             </div>
           </div>
         </div>
       </div>
+      <!-- Ends Here -->
 
-      <a href="#" class="card-shop-link">Shop now</a>
-    </div>
+      <!--Fisrt Row-->
+      <div class="home__row">
+        <div class="product">
+          <h2 class="card-heading">Comfy styles for her</h2>
 
-    <div class="product">
-      <h2 class="card-heading">Shop Laptops & Tablets</h2>
+          <div class="columns-container">
+            <div class="first-one">
+              <div class="first-product" style="width: 47.7%">
+                <div
+                  class="image-container"
+                  style="height: auto; overflow: hidden"
+                >
+                  <img
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Sweatshirt_Quad_Cat_1x._SY116_CB418609101_.jpg"
+                    alt="Sweatshirts"
+                    class="image-product"
+                    style="max-width: none"
+                  />
+                </div>
+                <div class="label-container">
+                  <p class="label-product" style="line-height: 28px">
+                    Sweatshirts
+                  </p>
+                </div>
+              </div>
+              <div class="second-product" style="width: 47.7%">
+                <div
+                  class="image-container"
+                  style="height: auto; overflow: hidden"
+                >
+                  <img
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Joggers_Quad_Cat_1x._SY116_CB418608748_.jpg"
+                    alt="Joggers"
+                    class="image-product"
+                    style="max-width: none"
+                  />
+                </div>
+                <div class="label-container">
+                  <p class="label-product" style="line-height: 28px">Joggers</p>
+                </div>
+              </div>
+            </div>
+            <div class="first-one">
+              <div class="first-product" style="width: 47.7%">
+                <div
+                  class="image-container"
+                  style="height: auto; overflow: hidden"
+                >
+                  <img
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Cardigans_Quad_Cat_1x._SY116_CB418608722_.jpg"
+                    alt="Cardigans"
+                    class="image-product"
+                    style="max-width: none"
+                  />
+                </div>
+                <div class="label-container">
+                  <p class="label-product" style="line-height: 28px">
+                    Cardigans
+                  </p>
+                </div>
+              </div>
+              <div class="second-product" style="width: 47.7%">
+                <div
+                  class="image-container"
+                  style="height: auto; overflow: hidden"
+                >
+                  <img
+                    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Tees_Quad_Cat_1x._SY116_CB418608878_.jpg"
+                    alt="Easy tees"
+                    class="image-product"
+                    style="max-width: none"
+                  />
+                </div>
+                <div class="label-container">
+                  <p class="label-product" style="line-height: 28px">
+                    Easy tees
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Laptops_379x304_1X_en_US._SY304_CB418608471_.jpg"
-        alt="" />
+          <a href="#" class="card-shop-link">Shop now</a>
+        </div>
 
-      <a href="#" class="card-shop-link">Shop now</a>
-    </div>
+        <div class="product">
+          <h2 class="card-heading">Shop Laptops & Tablets</h2>
 
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Laptops_379x304_1X_en_US._SY304_CB418608471_.jpg"
+            alt=""
+          />
 
-    <div class="product">
-      <h2 class="card-heading">Explore home bedding</h2>
+          <a href="#" class="card-shop-link">Shop now</a>
+        </div>
 
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_HomeBedding_Single_Cat_1x._SY304_CB418596953_.jpg"
-        alt="" />
+        <div class="product">
+          <h2 class="card-heading">Explore home bedding</h2>
 
-      <a href="#" class="card-shop-link">Shop now</a>
-    </div>
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_HomeBedding_Single_Cat_1x._SY304_CB418596953_.jpg"
+            alt=""
+          />
 
+          <a href="#" class="card-shop-link">Shop now</a>
+        </div>
 
-    <div class="product">
-      <h2 class="card-heading">Create with strip lights</h2>
+        <div class="product">
+          <h2 class="card-heading">Create with strip lights</h2>
 
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_StripLighting_379x304_1X_en_US._SY304_CB418597476_.jpg"
-        alt="" />
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_StripLighting_379x304_1X_en_US._SY304_CB418597476_.jpg"
+            alt=""
+          />
 
-      <a href="#" class="card-shop-link">Shop now</a>
-    </div>
-
-  </div>
-  <!--Ends Here-->
-
-  <!-- Fist Products List -->
-  <div class="products_list_bar">
-    <div class="products_list_main">
-      <div class="x__product_labels">
-        <h2 class="x__product__title">
-          Men's Dress Shirts under $30
-        </h2>
-        <a href="#" class="x__product__morelink">
-          Shop now
-        </a>
-      </div>
-      <div class="x__products">
-        <div class="x__products_items">
-          <li class="x__items">
-            <a href="#">
-              <img src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-            </a>
-          </li>
-          <li class="x__items">
-            <a href="#">
-            <img src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-            </a>
-          </li>
-          <li class="x__items">
-            <a href="#">
-            <img src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-            </a>
-          </li>
-          <li class="x__items">
-            <a href="#">
-            <img src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-            </a>
-          </li>
-          <li class="x__items">
-            <a href="#">
-            <img src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-            </a>
-          </li>
-          <li class="x__items">
-            <a href="#">
-            <img src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-            </a>
-          </li>
+          <a href="#" class="card-shop-link">Shop now</a>
         </div>
       </div>
-    </div>
-  </div>
-<!-- Ends Here -->
+      <!--Ends Here-->
 
-<!-- Fist Products List -->
-<div class="products_list_bar">
-  <div class="products_list_main">
-    <div class="x__product_labels">
-      <h2 class="x__product__title">
-        Stuffed Animals & Toys under $10
-      </h2>
-      <a href="#" class="x__product__morelink">
-        Shop now
-      </a>
-    </div>
-    <div class="x__products">
-      <div class="x__products_items">
-        <li class="x__items">
-          <a href="#">
-            <img src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
+      <!-- Fist Products List -->
+      <div class="products_list_bar">
+        <div class="products_list_main">
+          <div class="x__product_labels">
+            <h2 class="x__product__title">Men's Dress Shirts under $30</h2>
+            <a href="#" class="x__product__morelink"> Shop now </a>
+          </div>
+          <div class="x__products">
+            <div class="x__products_items">
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<!-- Ends Here -->
+      <!-- Ends Here -->
 
-<!-- Fist Products List -->
-<div class="products_list_bar">
-  <div class="products_list_main">
-    <div class="x__product_labels">
-      <h2 class="x__product__title">
-        Best Sellers in Kitchen
-      </h2>
-      <a href="#" class="x__product__morelink">
-        Shop now
-      </a>
-    </div>
-    <div class="x__products">
-      <div class="x__products_items">
-        <li class="x__items">
-          <a href="#">
-            <img src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
+      <!-- Fist Products List -->
+      <div class="products_list_bar">
+        <div class="products_list_main">
+          <div class="x__product_labels">
+            <h2 class="x__product__title">Stuffed Animals & Toys under $10</h2>
+            <a href="#" class="x__product__morelink"> Shop now </a>
+          </div>
+          <div class="x__products">
+            <div class="x__products_items">
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<!-- Ends Here -->
+      <!-- Ends Here -->
 
-<!-- Fist Products List -->
-<div class="products_list_bar">
-  <div class="products_list_main">
-    <div class="x__product_labels">
-      <h2 class="x__product__title">
-        Best Sellers in Baby
-      </h2>
-      <a href="#" class="x__product__morelink">
-        Shop now
-      </a>
-    </div>
-    <div class="x__products">
-      <div class="x__products_items">
-        <li class="x__items">
-          <a href="#">
-            <img src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
-        <li class="x__items">
-          <a href="#">
-          <img src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg" alt="Charger" class="x__items__lists">
-          </a>
-        </li>
+      <!-- Fist Products List -->
+      <div class="products_list_bar">
+        <div class="products_list_main">
+          <div class="x__product_labels">
+            <h2 class="x__product__title">Best Sellers in Kitchen</h2>
+            <a href="#" class="x__product__morelink"> Shop now </a>
+          </div>
+          <div class="x__products">
+            <div class="x__products_items">
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<!-- Ends Here -->
+      <!-- Ends Here -->
 
+      <!-- Fist Products List -->
+      <div class="products_list_bar">
+        <div class="products_list_main">
+          <div class="x__product_labels">
+            <h2 class="x__product__title">Best Sellers in Baby</h2>
+            <a href="#" class="x__product__morelink"> Shop now </a>
+          </div>
+          <div class="x__products">
+            <div class="x__products_items">
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/11tEFlSGn6L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41kaOFDXzSL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/31pEe2taIPL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41yavwjp-8L._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/416IxcmUpGL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+              <li class="x__items">
+                <a href="#">
+                  <img
+                    src="https://m.media-amazon.com/images/I/41V4eXt+eXL._AC_SY200_.jpg"
+                    alt="Charger"
+                    class="x__items__lists"
+                  />
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Ends Here -->
 
-
-    <!--Ends Here-->
-
+      <!--Ends Here-->
     </div>
 
     <!-- Footer -->
     <footer>
-      <div class="top text-center" style="text-align: center;">
+      <div class="top text-center" style="text-align: center">
         <a href="#nav-top">Back to top</a>
       </div>
 
@@ -1025,7 +1244,7 @@
             <li><a href="#">Reload Your Balance</a></li>
             <li><a href="#">Amazon Currency Converter</a></li>
           </ul>
-          <ul style="width: 190px;">
+          <ul style="width: 190px">
             <li>
               <h3>Let Us Help You</h3>
             </li>
@@ -1041,84 +1260,348 @@
         </div>
 
         <ul class="copy text-center">
-          <li style="width: 50px;"><a href="#" class="logo"><img class="footer__logo" style="width: 80px;"
-                src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" /></a></li>
-          <li><a href="#" class="select"><i class="fa fa-globe" aria-hidden="true"></i> English</a></li>
-          <li><a href="#" class="select"><i class="fa fa-dollar-sign" aria-hidden="true"></i> USD - U.S. Dollar</a></li>
-          <li><a href="#" class="select"><i class="flag-icon-us"></i>United States</a></li>
+          <li style="width: 50px">
+            <a href="#" class="logo"
+              ><img
+                class="footer__logo"
+                style="width: 80px"
+                src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="select"
+              ><i class="fa fa-globe" aria-hidden="true"></i> English</a
+            >
+          </li>
+          <li>
+            <a href="#" class="select"
+              ><i class="fa fa-dollar-sign" aria-hidden="true"></i> USD - U.S.
+              Dollar</a
+            >
+          </li>
+          <li>
+            <a href="#" class="select"
+              ><i class="flag-icon-us"></i>United States</a
+            >
+          </li>
         </ul>
       </div>
 
       <div class="bottom">
         <div class="center">
           <ul class="other_brands">
-            <li><a href="#">Amazon Music<br /><span>Stream millions<br> of songs</span></a></li>
-            <li><a href="#">AmazonFresh<br /><span>Groceries &amp; More<br> Right To Your Door</span></a></li>
-            <li><a href="#">Amazon Web Services<br /><span>Scalable Cloud<br> Computing Services</span></a></li>
-            <li><a href="#">East Dane<br /><span>Designer Men's<br> Fashion</span></a></li>
-            <li><a href="#">Prime Now<br /><span>FREE 2-Hour Delivery<br> on Everyday Items</span></a></li>
-          </ul>
-
-          <ul class="other_brands">
-            <li><a href="#">Amazon Drive<br /><span>Cloud storage<br> from Amazon</span></a></li>
-            <li><a href="#">AmazonGlobal<br /><span>Ship Orders<br> Internationally</span></a></li>
-            <li><a href="#">Audible<br /><span>Download<br> Audio Books</span></a></li>
-            <li><a href="#">Fabric<br /><span>Sewing, Quilting<br> &amp; Knitting</span></a></li>
-            <li><a href="#">Woot!<br /><span>Deals and <br> Shenanigans</span></a></li>
-          </ul>
-
-          <ul class="other_brands">
-            <li><a href="#">6pm<br /><span>Score deals<br> on fashion brands</span></a></li>
-            <li><a href="#">Home Services<br /><span>Handpicked Pros<br> Happiness Guarantee</span></a></li>
-            <li><a href="#">Book Depository<br /><span>Books With Free<br> Delivery Worldwide</span></a></li>
-            <li><a href="#">Shopbop<br /><span>Designer<br> Fashion Brands</span></a></li>
-            <li><a href="#">Zappos<br /><span>Shoes &amp;<br> Clothing</span></a></li>
-          </ul>
-
-          <ul class="other_brands">
-            <li><a href="#">AbeBooks<br /><span>Books, art<br> &amp; collectibles</span></a></li>
-            <li><a href="#">Amazon Inspire<br /><span>Free Digital Educational<br> Resources</span></a></li>
-            <li><a href="#">Box Office Mojo<br /><span>Find Movie<br> Box Office Data</span></a></li>
-            <li><a href="#">IMDb<br /><span>Movies, TV<br> &amp; Celebrities</span></a></li>
-            <li><a href="#">Souq.com<br /><span>Shop Online in<br> the Middle East</span></a></li>
-          </ul>
-
-          <ul class="other_brands">
-            <li><a href="#">ACX <br /><span>Audiobook Publishing<br> Made Easy</span></a></li>
-            <li><a href="#">Amazon Rapids<br /><span>Fun stories for<br> kids on the go</span></a></li>
-            <li><a href="#">ComiXology<br /><span>Thousands of<br> Digital Comics</span></a></li>
-            <li><a href="#">IMDbPro<br /><span>Get Info Entertainment<br> Professionals Need</span></a></li>
-            <li><a href="#">Subscribe with Amazon<br /><span>Discover &amp; try<br> subscription services</span></a>
+            <li>
+              <a href="#"
+                >Amazon Music<br /><span
+                  >Stream millions<br />
+                  of songs</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >AmazonFresh<br /><span
+                  >Groceries &amp; More<br />
+                  Right To Your Door</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Amazon Web Services<br /><span
+                  >Scalable Cloud<br />
+                  Computing Services</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >East Dane<br /><span
+                  >Designer Men's<br />
+                  Fashion</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Prime Now<br /><span
+                  >FREE 2-Hour Delivery<br />
+                  on Everyday Items</span
+                ></a
+              >
             </li>
           </ul>
 
           <ul class="other_brands">
-            <li><a href="#">Alexa<br /><span>Actionable Analytics<br> for the Web</span></a></li>
-            <li><a href="#">Amazon Restaurants<br /><span>Food delivery from<br> local restaurants</span></a></li>
-            <li><a href="#">CreateSpace<br /><span>Indie Print Publishing<br> Made Easy</span></a></li>
-            <li><a href="#">Junglee.com<br /><span>Shop Online<br> in India</span></a></li>
-            <li><a href="#">Whispercast<br /><span>Discover &amp; Distribute<br> Digital Content</span></a></li>
+            <li>
+              <a href="#"
+                >Amazon Drive<br /><span
+                  >Cloud storage<br />
+                  from Amazon</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >AmazonGlobal<br /><span
+                  >Ship Orders<br />
+                  Internationally</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Audible<br /><span
+                  >Download<br />
+                  Audio Books</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Fabric<br /><span
+                  >Sewing, Quilting<br />
+                  &amp; Knitting</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Woot!<br /><span
+                  >Deals and <br />
+                  Shenanigans</span
+                ></a
+              >
+            </li>
           </ul>
 
           <ul class="other_brands">
-            <li><a href="#">Amazon Business<br /><span>Everything For<br> Your Business</span></a></li>
-            <li><a href="#">Amazon Video Direct<br /><span>Video Distribution<br> Made Easy</span></a></li>
-            <li><a href="#">DPReview<br /><span>Digital<br> Photography</span></a></li>
-            <li><a href="#">Kindle Direct Publishing<br /><span>Indie Digital Publishing<br> Made Easy</span></a></li>
-            <li><a href="#">Withoutabox<br /><span>Submit to<br> Film Festivals</span></a></li>
+            <li>
+              <a href="#"
+                >6pm<br /><span
+                  >Score deals<br />
+                  on fashion brands</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Home Services<br /><span
+                  >Handpicked Pros<br />
+                  Happiness Guarantee</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Book Depository<br /><span
+                  >Books With Free<br />
+                  Delivery Worldwide</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Shopbop<br /><span
+                  >Designer<br />
+                  Fashion Brands</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Zappos<br /><span
+                  >Shoes &amp;<br />
+                  Clothing</span
+                ></a
+              >
+            </li>
           </ul>
 
-          <ul class="copy text-center" style="text-align: center;">
-            <li style="height: 0;"><a href="#">Conditions of Use</a></li>
-            <li style="height: 0;"><a href="#">Privacy Notice</a></li>
-            <li style="height: 0;"><a href="#">Interest-Based Ads</a></li>
-            <li style="height: 0;">&copy; 1996-2017, Amazon.com, Inc. or its affiliates</li>
+          <ul class="other_brands">
+            <li>
+              <a href="#"
+                >AbeBooks<br /><span
+                  >Books, art<br />
+                  &amp; collectibles</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Amazon Inspire<br /><span
+                  >Free Digital Educational<br />
+                  Resources</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Box Office Mojo<br /><span
+                  >Find Movie<br />
+                  Box Office Data</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >IMDb<br /><span
+                  >Movies, TV<br />
+                  &amp; Celebrities</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Souq.com<br /><span
+                  >Shop Online in<br />
+                  the Middle East</span
+                ></a
+              >
+            </li>
+          </ul>
+
+          <ul class="other_brands">
+            <li>
+              <a href="#"
+                >ACX <br /><span
+                  >Audiobook Publishing<br />
+                  Made Easy</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Amazon Rapids<br /><span
+                  >Fun stories for<br />
+                  kids on the go</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >ComiXology<br /><span
+                  >Thousands of<br />
+                  Digital Comics</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >IMDbPro<br /><span
+                  >Get Info Entertainment<br />
+                  Professionals Need</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Subscribe with Amazon<br /><span
+                  >Discover &amp; try<br />
+                  subscription services</span
+                ></a
+              >
+            </li>
+          </ul>
+
+          <ul class="other_brands">
+            <li>
+              <a href="#"
+                >Alexa<br /><span
+                  >Actionable Analytics<br />
+                  for the Web</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Amazon Restaurants<br /><span
+                  >Food delivery from<br />
+                  local restaurants</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >CreateSpace<br /><span
+                  >Indie Print Publishing<br />
+                  Made Easy</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Junglee.com<br /><span
+                  >Shop Online<br />
+                  in India</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Whispercast<br /><span
+                  >Discover &amp; Distribute<br />
+                  Digital Content</span
+                ></a
+              >
+            </li>
+          </ul>
+
+          <ul class="other_brands">
+            <li>
+              <a href="#"
+                >Amazon Business<br /><span
+                  >Everything For<br />
+                  Your Business</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Amazon Video Direct<br /><span
+                  >Video Distribution<br />
+                  Made Easy</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >DPReview<br /><span
+                  >Digital<br />
+                  Photography</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Kindle Direct Publishing<br /><span
+                  >Indie Digital Publishing<br />
+                  Made Easy</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                >Withoutabox<br /><span
+                  >Submit to<br />
+                  Film Festivals</span
+                ></a
+              >
+            </li>
+          </ul>
+
+          <ul class="copy text-center" style="text-align: center">
+            <li style="height: 0"><a href="#">Conditions of Use</a></li>
+            <li style="height: 0"><a href="#">Privacy Notice</a></li>
+            <li style="height: 0"><a href="#">Interest-Based Ads</a></li>
+            <li style="height: 0">
+              &copy; 1996-2017, Amazon.com, Inc. or its affiliates
+            </li>
           </ul>
         </div>
       </div>
     </footer>
     <!-- Ends Here -->
-
 
     <!--Loading All The Js Files-->
     <script src="{% static 'home/js/slider.js' %}"></script>
@@ -1139,7 +1622,8 @@
 
     <script>
       function bg__dark() {
-        document.getElementById("bg-changing__dropdown").style.display = "block";
+        document.getElementById("bg-changing__dropdown").style.display =
+          "block";
       }
 
       function bg__light() {
@@ -1156,14 +1640,13 @@
 
       // Close the dropdown if the user clicks outside of it
       window.onclick = function (e) {
-        if (!e.target.matches('.dropbtn')) {
+        if (!e.target.matches(".dropbtn")) {
           var myDropdown = document.getElementById("myDropdown");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
           }
         }
-      }
+      };
     </script>
-</body>
-
+  </body>
 </html>

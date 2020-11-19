@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "Home",
     "Shop",
     'cart',
+
     # Geoip
     'geoip2',
 
@@ -224,6 +225,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 
 ]
+
 
 # Connection To Sentry Server
 sentry_sdk.init(
