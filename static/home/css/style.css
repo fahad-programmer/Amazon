@@ -292,6 +292,11 @@ code {
   padding: 6px;
   border-radius: 5px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.product > button:hover {
+  background: linear-gradient(to bottom,#f5d17f,#f3ba29);
 }
 
 .product__price {
@@ -398,6 +403,10 @@ span.y__text:hover {
 .card-shop-link:hover {
   text-decoration: underline;
   cursor: pointer;
+  color: #C7511F;
+}
+
+label.main__label {
   color: #C7511F;
 }
 

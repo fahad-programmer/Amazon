@@ -1,0 +1,136 @@
+.top__section {
+    margin-top: 8px!important;
+    padding: 0 16px;
+}
+
+.breadcrumbs_product {
+    margin-left: 0;
+    display: flex;
+    list-style: none;
+}
+
+li.path__breadcrumb {
+    display: block;
+    line-height: 14px;
+}
+
+li.breadcrumb_divider {
+    display: block;
+    color: #565959!important;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+a.breadcrumb__link {
+    color: #565959!important;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+a.breadcrumb__link:hover {
+    text-decoration: underline;
+}
+
+.product__detail__section {
+    margin-top: 20px;
+    padding: 0 2px;
+    display: flex;
+}
+
+div#leftcol {
+    width: 33.4%;
+}
+
+div#centercol {
+    width: 547px;
+}
+
+div#rightcol {
+    width: 244px;
+}
+
+.shareit {
+    text-align-last: center;
+}
+
+img.share__photo {
+    width: 20px;
+    height: 20px;
+}
+
+.product__buy {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.border__buy {
+    border-radius: 8px;
+    border: 1px #D5D9D9 solid;
+}
+
+.inner__section__product__buy {
+    padding: 14px 18px;
+}
+
+.product__count {
+    margin-bottom: 4px;
+}
+
+.product__Section__count {
+    margin-right: 2%;
+    float: left;
+    min-height: 1px;
+    overflow: visible;
+    width: 100%;
+}
+
+.prduct__section__count {
+    margin-bottom: 12px;
+    margin-right: 2%;
+    float: left;
+    min-height: 1px;
+    overflow: visible;
+}
+
+span.dropdpwn__product {
+    position: relative;
+}
+
+label {
+    font-size: 12px;
+}
+
+select#product__countselect {
+    border: 1px solid #DDD;
+    border-radius: 4px 4px 4px 4px;
+    padding: 3px;
+}
+
+.transaction__label {
+    display:flex;
+}
+
+.access__story {
+    margin-top: 20px;
+}
+
+span.label__access {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+span.access__list {
+    display: inline-flex;
+    position: relative;
+}
+
+span.access__list__content {
+    margin-left: 4px;
+    margin-top: -6px;
+}
+
+.buy__it__location:hover {
+    border: none !important;
+    padding: 1px 2px 1px 2px;
+}
