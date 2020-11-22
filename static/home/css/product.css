@@ -313,3 +313,92 @@ li.a__left__imgs {
 img.right__aimg {
     width: 100%;
 }
+
+h2.main__heading {
+    color: #C60!important;
+    font-size: 16px!important;
+    font-weight: 700;
+    font-family: verdana,arial,helvetica,sans-serif!important;
+}
+
+p.main__sponsor {
+    font-size: 11px;
+}
+
+a.sponsor__link {
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+}
+
+.brand__related__cards {
+    padding: 10px 40px;
+}
+
+ul.brands__cards {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+li.brand__card {
+    width: 552.5px;
+    margin-right: 10px;
+    border: 1px solid;
+    border-color: #cacaca;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.brand____container {
+    display: flex;
+}
+
+.main__brand__image {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.camuta {
+    max-width: 135px;
+    max-height: 135px;
+}
+
+.main__brand__info {
+    align-self: center;
+    margin-left: 10px;
+}
+
+span.brand__logo {
+    display: block;
+}
+
+span.brand__product__desc {
+    display: block;
+    line-height: 44px;
+}
+
+.related__products__items {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li.product__list__related {
+    cursor: pointer;
+    width: 160px;
+    margin-left: 37px;
+}
+
+.multiple__container {
+    padding: 20px;
+    align-items: center;
+    display: flex;
+}
+
+span.multiple__info {
+    margin-left: 10px;
+}
