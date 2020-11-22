@@ -48,6 +48,7 @@ div#centercol {
 
 div#rightcol {
     width: 244px;
+    margin-left: 25px;
 }
 
 .shareit {
@@ -134,3 +135,115 @@ span.access__list__content {
     border: none !important;
     padding: 1px 2px 1px 2px;
 }
+
+.dp__conatiner {
+    color: #007600!important;
+    font-weight: 700;
+}
+
+span.d__conatiner {
+    display: flex;
+    font-size: 13px;
+}
+
+span.h__container {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.checked {
+    color: orange;
+}
+
+h1.he__contain {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+span.platform__container {
+    display: flex;
+}
+
+span.raiting__container {
+    display: flex;
+    align-items: center;
+}
+
+.stars__contain {
+    margin-right: 20px;
+}
+
+span.amazon__choice__container {
+    margin: 5px 0 10px;
+    display: flex;
+}
+
+span.choice__container {
+    height: 22px;
+    background-color: #232F3E;
+    border-color: #232F3E;
+    display: flex;
+    width: 130px;
+}
+
+span.amazon__contain {
+    line-height: 22px;
+    margin-left: 8px;
+    margin-right: 3px;
+    color: #fff;
+    font-family: "Amazon Ember",Arial!important;
+    min-width: 36px;
+}
+
+span.choice__container1 {
+    line-height: 22px;
+    margin-right: 8px;
+    color: #F69931;
+    font-family: "Amazon Ember",Arial!important;
+    min-width: 24px;
+}
+
+span.choice__triangle__container {
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-top: 22px solid;
+    color: #232F3E;
+}
+
+td.price__label__content {
+    color: #565959!important;
+}
+
+span.arrival__date__container {
+    color: #565959!important;
+    line-height: 28px;
+    display: block;
+}
+
+.product__colors__list__contain {
+    display: flex;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+li.picture__contain {
+    margin: 5px;
+}
+
+span.color__label {
+    color: #565959!important;
+}
+
+span.color__label__contain {
+    line-height: 28px;
+    display: block;
+}
+
+span.shipper__container {
+    line-height: 28px;
+    display: block;
+}
+

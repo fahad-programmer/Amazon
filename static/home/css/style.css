@@ -221,9 +221,8 @@
 body {
   background-color: rgb(234, 237, 237);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Arial, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -406,8 +405,8 @@ span.y__text:hover {
   color: #C7511F;
 }
 
-label.main__label {
-  color: #C7511F;
+.main__label {
+  color: #B12704!important;
 }
 
 .w3-animate-left {
