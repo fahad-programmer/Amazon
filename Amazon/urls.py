@@ -47,4 +47,8 @@ urlpatterns = [
     # Sitemap
     path("sitemap.xml", sitemap, {'sitemaps': sitemaps}),
 
+    # Activity Stream
+    path('activity/', include('actstream.urls')),
+
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

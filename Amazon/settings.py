@@ -63,11 +63,11 @@ INSTALLED_APPS = [
     # User-Visit (Tracking The Client To Server Request)
     'user_visit',
 
-    # Google Captcha
-    'captcha',
-
     # Sitemap
-    'django.contrib.sitemaps'
+    'django.contrib.sitemaps',
+
+    # Activity Stream
+    'actstream'
 ]
 
 # Site Id
@@ -238,7 +238,10 @@ sentry_sdk.init(
     send_default_pii=True
 )
 
-
-# Recaptcha Api
-RECAPTCHA_PUBLIC_KEY = '6LfGAeMZAAAAAJy49OPGSr2cjm4t9MEzAqSwHkaW'
-RECAPTCHA_PRIVATE_KEY = '6LfGAeMZAAAAAM1GIRNKlE4OuIcptBcuy7fjP2Og'
+# ActStream Settings
+ACTSTREAM_SETTINGS = {
+    'FETCH_RELATIONS': True,
+    'USE_PREFETCH': True,
+    'USE_JSONFIELD': True,
+    'GFK_FETCH_DEPTH': 1,
+}

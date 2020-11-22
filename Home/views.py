@@ -80,3 +80,7 @@ def handleSignup(request):
                 request, 'Something Else Occured! Please Try Again....')
 
     return render(request, 'home/signup.html')
+
+
+def activity(request):
+    return render(request, 'home/activity.html')

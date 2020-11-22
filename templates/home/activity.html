@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Dummy Template For Testing Only-->
+  <head>
+    <meta charset="UTF-8" />
+    {% load activity_tags %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% activity_stream 'actor' user %} {% for action in stream %}
+
+    <h1>{{action.description}}</h1>
+
+    {% endfor %}
+  </body>
+</html>
