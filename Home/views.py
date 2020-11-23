@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate, login
 from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
 from Shop.models import Product
+from notifications.models import Notification
+
 # import geoip2.database
 # import socket
 
@@ -82,5 +84,7 @@ def handleSignup(request):
     return render(request, 'home/signup.html')
 
 
-def activity(request):
-    return render(request, 'home/activity.html')
+def user_notification(request):
+    user_notifications = request.user.notifications.unread()
+    params = {'notifications': user_notifications}
+    return render(request, 'home/activity.html', params)

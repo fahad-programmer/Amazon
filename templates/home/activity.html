@@ -3,15 +3,14 @@
   <!--Dummy Template For Testing Only-->
   <head>
     <meta charset="UTF-8" />
-    {% load activity_tags %}
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    {% activity_stream 'actor' user %} {% for action in stream %}
-
-    <h1>{{action.description}}</h1>
-
+    {% for notification in notifications %}
+    <h1>{{notification.verb}}</h1>
+    <p>{{notification.description}}</p>
     {% endfor %}
   </body>
 </html>

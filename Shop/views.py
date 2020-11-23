@@ -3,6 +3,7 @@ from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
 from Shop.models import Product
 from actstream import action
+from notifications.signals import notify
 
 
 # Create your views here.
@@ -17,6 +18,9 @@ def cart_add(request, id):
     cart.add(product=product)
     action.send(request.user, verb="Product Has Been Added",
                 description=f"The User {request.user} has added the product {product} in his cart", action_object=product)
+    notify.send(request.user, verb="Product Has Been Added In Your Cart",
+                recipient=request.user, level="success", action_object=product, description=f"The User {request.user} has added the product {product} in his cart")
+    print(request.user.notifications.unread())
     return redirect("Home")
 
 

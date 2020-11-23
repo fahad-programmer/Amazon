@@ -67,7 +67,14 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
 
     # Activity Stream
-    'actstream'
+    'actstream',
+
+    # Notification System
+    'notifications',
+
+    # Django Cleaner (Cleans Unused Files)
+    'django_cleanup.apps.CleanupConfig',
+
 ]
 
 # Site Id
@@ -245,3 +252,6 @@ ACTSTREAM_SETTINGS = {
     'USE_JSONFIELD': True,
     'GFK_FETCH_DEPTH': 1,
 }
+
+# Adding Extra Data To Notification
+DJANGO_NOTIFICATIONS_CONFIG = {'USE_JSONFIELD': True}

@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from Amazon.sitemaps import StaticViewSitemap
 from django.contrib.sitemaps.views import sitemap
+import notifications.urls
 
 
 admin.site.site_header = "Amazon Control Panel"
@@ -49,6 +50,10 @@ urlpatterns = [
 
     # Activity Stream
     path('activity/', include('actstream.urls')),
+
+    # Notification Urls
+    path('inbox/notifications/',
+         include(notifications.urls, namespace='notifications')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
