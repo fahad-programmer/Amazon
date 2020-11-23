@@ -402,3 +402,231 @@ li.product__list__related {
 span.multiple__info {
     margin-left: 10px;
 }
+
+.article__video {
+    width: 100%;
+    height: 500px;
+    background: #000;
+}
+
+span.second__container__info {
+    display: flex;
+    width: 100%;
+}
+
+.content__ {
+    width: 50%;
+    padding: 80px;
+    align-self: center;
+}
+
+h3.content__heading3 {
+    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.4rem;
+    font-weight: 700;
+}
+
+h1.content__heading1 {
+    font-size: 32px;
+    line-height: 1.2rem;
+    font-weight: 700;
+}
+
+p.content__para {
+    font-size: 16px;
+    line-height: 1.4rem;
+    font-weight: 300;
+    margin: 0 0 14px 0;
+}
+
+.video__ {
+    width: 50%;
+}
+
+.video__main {
+    width: 92%;
+    height: 430px;
+    background-color: #000;
+}
+.productdesc__ {
+    padding: 20px;
+}
+
+span.desc__color {
+    display: block;
+    font-size: small;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+span.desc__main {
+    display: block;
+    font-size: small;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+span.desc__llists {
+    display: flex;
+    font-size: small;
+    color: #333333;
+}
+
+ul.desl__list__items {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.product__table {
+    margin-left: 12px;
+    width: 50%;
+    margin-right: 2%;
+}
+
+table.main__table {
+    border-bottom: 1px solid #e7e7e7;
+    width: 100%;
+}
+
+th.table_head {
+    border-top: 1px solid #e7e7e7;
+    font-weight: 400;
+    color: #565959!important;
+    background-color: #f3f3f3;
+    width: 50%;
+    padding: 5px;
+    text-align-last: left;
+}
+
+td.tabe__body {
+    border-top: 1px solid #e7e7e7;
+    font-weight: 400;
+    color: #565959!important;
+    width: 50%;
+    padding: 5px;
+    align-items: center;
+}
+
+.f-5 {
+    font-weight: 500;
+}
+
+.video__frame__container:before {
+    content: "";
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/vse/Discovery/vse_play_icon_2x.png);
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    background-size: 100%;
+    margin: 45px 100px;
+}
+
+.product__list__related1:hover {
+    text-decoration: none;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
+}
+
+.product__list__related1:hover .card_hover {
+    display: block;
+}
+
+.product__list__related1:hover .video__frame__container:before {
+    display: none;
+}
+
+.product__list__related1 {
+    cursor: pointer;
+    width: 248px;
+    margin-left: 37px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video__frame__container {
+    width: 100%;
+}
+
+p.video__duration {
+    position: absolute;
+    color: #fff;
+    background-color: rgba(0,0,0,.75);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#c0000000', endColorstr='#c0000000');
+    padding: 4px 6px 3px;
+    border-radius: 0 8px 0 0;
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-top: -24px;
+}
+
+p.card_hover {
+    position: absolute;
+    display: none;
+    padding-top: 120px;
+    color: #fff;
+    margin-top: -141px;
+    background-image: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,.6));
+    width: 247px;
+    text-align: center;
+}
+
+a.video__url__frame {
+    text-decoration: none;
+}
+
+.video__credentials__container {
+    display: inline-block;
+    width: 100%;
+    padding: 4px 7px 10px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+h4.video__title {
+    color: #111;
+    overflow: hidden;
+    max-height: 3em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: -o-ellipsis-lastline;
+    height: 3em;
+    position: relative;
+    text-decoration: inherit;
+    font-size: 14px;
+    line-height: 1.21em;
+}
+
+span.video__uploader {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    padding-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #555;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.46em;
+}
+
+span.life__quote {
+    font-size: 21px;
+    line-height: 27px;
+    color: #333;
+    font-style: italic;
+    min-width: 0;
+    word-break: break-word;
+    font-weight: normal;
+}
+
+.life__ {
+    text-align: center;
+    margin-top: -20px;
+    min-width: 0;
+}
