@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     "Shop",
     'cart',
 
+    # Geoip
+    'geoip2',
+
     # For The Social Login
     'django.contrib.sites',
     'allauth',
@@ -60,11 +63,18 @@ INSTALLED_APPS = [
     # User-Visit (Tracking The Client To Server Request)
     'user_visit',
 
-    # Google Captcha
-    'captcha',
-
     # Sitemap
-    'django.contrib.sitemaps'
+    'django.contrib.sitemaps',
+
+    # Activity Stream
+    'actstream',
+
+    # Notification System
+    'notifications',
+
+    # Django Cleaner (Cleans Unused Files)
+    'django_cleanup.apps.CleanupConfig',
+
 ]
 
 # Site Id
@@ -223,6 +233,7 @@ AUTHENTICATION_BACKENDS = [
 
 ]
 
+
 # Connection To Sentry Server
 sentry_sdk.init(
     dsn="https://de78fa71c1a64aea95cda70b2cfc97a9@o472385.ingest.sentry.io/5505935",
@@ -234,7 +245,13 @@ sentry_sdk.init(
     send_default_pii=True
 )
 
+# ActStream Settings
+ACTSTREAM_SETTINGS = {
+    'FETCH_RELATIONS': True,
+    'USE_PREFETCH': True,
+    'USE_JSONFIELD': True,
+    'GFK_FETCH_DEPTH': 1,
+}
 
-# Recaptcha Api
-RECAPTCHA_PUBLIC_KEY = '6LfGAeMZAAAAAJy49OPGSr2cjm4t9MEzAqSwHkaW'
-RECAPTCHA_PRIVATE_KEY = '6LfGAeMZAAAAAM1GIRNKlE4OuIcptBcuy7fjP2Og'
+# Adding Extra Data To Notification
+DJANGO_NOTIFICATIONS_CONFIG = {'USE_JSONFIELD': True}

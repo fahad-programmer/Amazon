@@ -5,11 +5,24 @@ from django.contrib.auth import authenticate, login
 from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
 from Shop.models import Product
+from notifications.models import Notification
+
+# import geoip2.database
+# import socket
 
 
 def index(request):
     # products = Product.objects.all()[:3]
     # main_products = {'products': products}
+
+    # Getting The Ip Address
+    # hostname = socket.gethostname()
+    # ip_address = socket.gethostbyname(hostname)
+
+    # # Fetching The Country
+    # reader = geoip2.database.Reader('./GeoLite2-Country.mmdb')
+    # response = reader.country(ip_address=ip_address)
+    # print(response)
     return render(request, 'home/index.html')
 
 
@@ -71,3 +84,9 @@ def handleSignup(request):
                 request, 'Something Else Occured! Please Try Again....')
 
     return render(request, 'home/signup.html')
+
+
+def user_notification(request):
+    user_notifications = request.user.notifications.unread()
+    params = {'notifications': user_notifications}
+    return render(request, 'home/activity.html', params)

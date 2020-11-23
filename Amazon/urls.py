@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from Amazon.sitemaps import StaticViewSitemap
 from django.contrib.sitemaps.views import sitemap
+import notifications.urls
 
 
 admin.site.site_header = "Amazon Control Panel"
@@ -33,12 +34,26 @@ sitemaps = {
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+
     # Sending To Home Directory Where Ever The Link Is Empty
     path('', include('Home.urls')),
+
     # Including The Social Authentication
     path('accounts/', include('allauth.urls')),
+
     # Shop Urls
     path('shop/', include('Shop.urls')),
+
     # Sitemap
     path("sitemap.xml", sitemap, {'sitemaps': sitemaps}),
+
+    # Activity Stream
+    path('activity/', include('actstream.urls')),
+
+    # Notification Urls
+    path('inbox/notifications/',
+         include(notifications.urls, namespace='notifications')),
+
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
