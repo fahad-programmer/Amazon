@@ -75,6 +75,9 @@ INSTALLED_APPS = [
     # Django Cleaner (Cleans Unused Files)
     'django_cleanup.apps.CleanupConfig',
 
+    # User-Feedback
+    'tellme',
+
 ]
 
 # Site Id
@@ -213,7 +216,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # Managing Media Files
