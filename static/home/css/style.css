@@ -1,3 +1,7 @@
+.app {
+  background-color: #fff;
+}
+
 .header {
   height: 60px;
   display: flex;
@@ -555,7 +559,6 @@ footer .middle li {
 }
 
 footer .middle .logo {
-  background: transparent url('../img/logo.png') no-repeat 0 0;
   background-size: 76px;
   width: 76px;
   height: 23px;

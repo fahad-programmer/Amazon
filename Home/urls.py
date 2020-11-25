@@ -1,5 +1,5 @@
 from django.urls import path, include
-from Home.views import index, SignIn, signup, handleSignup, handlelogin, user_notification, product_view
+from Home.views import index, SignIn, signup, search_result, handleSignup, handlelogin, user_notification, product_view
 
 
 urlpatterns = [
@@ -9,7 +9,8 @@ urlpatterns = [
     path('account/signup/handle', handleSignup, name="handlesignup"),
     path('account/login/handle', handlelogin, name="handlelogin"),
     path('product/', product_view, name="Product View"),
-    path('user', user_notification, name="activity")
+    path('user', user_notification, name="activity"),
+    path('search', search_result, name="search")
 
 
 ]
