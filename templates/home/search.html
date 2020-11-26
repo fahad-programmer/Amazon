@@ -2669,21 +2669,42 @@
                 </div>
 
                 <ul class="copy text-center">
-                    <li style="width: 50px">
-                        <a href="#" class="logo"><img class="footer__logo" style="width: 80px"
-                                src="{% static 'home/img/logo.png' %}" /></a>
+                    <li style="width: 50px;">
+                      <a href="#" class="logo">
+                        <img class="footer__logo" style="width: 80px;" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+                      </a>
                     </li>
-                    <li>
-                        <a href="#" class="select"><i class="fa fa-globe" aria-hidden="true"></i> English</a>
+                    <li class="dropdown__country">
+                      <a href="#" class="select" style="padding: 7px 10px 7px 10px;">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        English
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                      </a>
+                      <!-- Language and Country Dropdown Menu-->
+                      <div class="dropdown-content__country" style="padding: 14px;width: 250px;margin: 0;">
+                        <div class="dropdown__content">
+                          <div class="drop_label">
+                            <span class="drop_text" style="display: flex;align-items: center;">
+                              <p class="drop_maintext">Change Language</p>
+                              <a href="#" class="card-shop-link drop_mainlink" style="margin-left: 5px;
+                              margin-left: 5px;
+                              text-decoration: none;
+                              color: #007185;
+                              font-size: 11px;
+                              padding: 0;
+                              border: none;">Learn More</a>
+                            </span>
+                          </div>
+                          <div class="drop__languages">
+          
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Ends Here -->
                     </li>
-                    <li>
-                        <a href="#" class="select"><i class="fa fa-dollar-sign" aria-hidden="true"></i> USD - U.S.
-                            Dollar</a>
-                    </li>
-                    <li>
-                        <a href="#" class="select"><i class="flag-icon-us"></i>United States</a>
-                    </li>
-                </ul>
+                    <li><a href="#" class="select"><i class="fa fa-dollar" aria-hidden="true"></i> USD - U.S. Dollar</a></li>
+                    <li><a href="#" class="select"><i class="flag-icon-us"></i>United States</a></li>
+                  </ul>
             </div>
 
             <div class="bottom">
