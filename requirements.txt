@@ -19,6 +19,7 @@ django-jsonfield-compat==0.4.4
 django-model-utils==4.0.0
 django-notifications-hq==1.6.0
 django-shopping-cart==0.1
+django-tellme==0.6.5
 django-user-visit==0.4.1
 geoip2==4.1.0
 gunicorn==20.0.4

@@ -32,7 +32,7 @@ def item_clear(request, id):
     cart.remove(product)
     action.send(request.user, verb="Product Has Been Removed",
                 description=f"The User {request.user} has removed the product {product} from the cart", action_object=product)
-    notify.send(request.user, verb="Product Has Been Added In Your Cart",
+    notify.send(request.user, verb="Product Has Been Removed From Your Cart",
                 recipient=request.user, level="success", action_object=product, description=f"The User {request.user} has added the product {product} in his cart")
     return redirect("cart_detail")
 
@@ -81,10 +81,12 @@ def search(request):
     filtered_product = Product.objects.filter(
         name__icontains=query)
 
+    # Only Sending Action When User Is (Authenticated)
     if request.user.is_authenticated:
         action.send(request.user, verb="User Has Searched",
                     description=f"{request.user} has searched the term {query} in the category {category}")
 
+    # Context Used In The Template
     params = {'products': filtered_product}
     return render(request, 'Shop/search.html', params)
 

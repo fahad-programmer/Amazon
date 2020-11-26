@@ -45,5 +45,15 @@ class Order(models.Model):
         return self.city
 
 
+class WishList(models.Model):
+    id = models.AutoField(primary_key=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    items = models.ForeignKey(Product, on_delete=models.CASCADE)
+    added_date = models.DateField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.user.username
+
+
 class OrderTracker(models.Model):
     pass
