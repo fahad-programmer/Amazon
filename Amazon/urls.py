@@ -55,5 +55,8 @@ urlpatterns = [
     path('inbox/notifications/',
          include(notifications.urls, namespace='notifications')),
 
+    # User Feedback
+    path('tellme/', include("tellme.urls")),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

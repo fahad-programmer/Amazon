@@ -442,15 +442,12 @@
       <div class="product__card__section">
         <div class="top__section">
           <div class="breadcrumbs_product">
-            <li class="path__breadcrumb"><a class="breadcrumb__link" href="#">Video games</a></li>
+            <li class="path__breadcrumb"><a class="breadcrumb__link" href="#">{{products.category}}</a></li>
             <li class="breadcrumb_divider"> › </li>
-            <li class="path__breadcrumb"><a class="breadcrumb__link" href="#">Playstation 4</a></li>
+            <li class="path__breadcrumb"><a class="breadcrumb__link" href="">{{products.sub_category}}</a></li>
             <li class="breadcrumb_divider"> › </li>
-            <li class="path__breadcrumb"><a class="breadcrumb__link" href="#">Accessories</a></li>
-            <li class="breadcrumb_divider"> › </li>
-            <li class="path__breadcrumb"><a class="breadcrumb__link" href="#">Controllers</a></li>
-            <li class="breadcrumb_divider"> › </li>
-            <li class="path__breadcrumb"><a class="breadcrumb__link" href="#">Gamepad and Standard Controllers</a></li>
+             <li class="path__breadcrumb"><a class="breadcrumb__link" href="">{{products.name}}</a></li>
+  
           </div>
           <div class="product__detail__section">
             <!-- Left column -->
@@ -465,28 +462,28 @@
                       <li class="a__left__imgs">
                         <div class="a__left__border__imgs">
                           <div class="a__imgs">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/41kaOFDXzSL._SX38_SY50_CR,0,0,38,50_.jpg" alt="">
+                            <img src="media/{{products.image}}" alt="">
                           </div>
                         </div>
                       </li>
                       <li class="a__left__imgs">
                         <div class="a__left__border__imgs">
                           <div class="a__imgs">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/315aNx837UL._SX38_SY50_CR,0,0,38,50_.jpg" alt="">
+                            <img src="media/{{products.image_two}}" alt="">
                           </div>
                         </div>
                       </li>
                       <li class="a__left__imgs">
                         <div class="a__left__border__imgs">
                           <div class="a__imgs">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/31PlrGEfruL._SX38_SY50_CR,0,0,38,50_.jpg" alt="">
+                            <img src="media/{{products.image_three}}" alt="">
                           </div>
                         </div>
                       </li>
                       <li class="a__left__imgs">
                         <div class="a__left__border__imgs">
                           <div class="a__imgs">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/41igPj4sG1L._SX38_SY50_CR,0,0,38,50_.jpg" alt="">
+                            <img src="media/{{products.image_four}}" alt="">
                           </div>
                         </div>
                       </li>
@@ -495,7 +492,7 @@
                   <div class="a__right__img__contain">
                     <div class="a__right__img">
                       <div class="a__image__right">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/81L9%2B4dTIgL._SX522_.jpg" alt="" class="right__aimg">
+                        <img src="media/{{product.image}}" alt="" class="right__aimg">
                       </div>
                     </div>
                     <div class="a__right__img__zoom">
@@ -509,7 +506,7 @@
             <div id="centercol" class="product__full__detail">
               <div class="__container">
                 <span class="he__container">
-                  <h1 class="he__contain">DualShock 4 Wireless Controller for PlayStation 4 - Magma Red</h1>
+                  <h1 class="he__contain">{{products.name}}</h1>
                 </span>
                 <span class="official__web__container">
                   <div class="card-shop-link" style="font-size: 13.2px;">
@@ -520,18 +517,35 @@
                   <div class="platform__head__contain">
                     <b>Platform :&nbsp</b>
                   </div>
-                  Playstation 4
+                  {{product.category}}
                 </span>
                 <span class="raiting__container">
                   <div class="stars__contain">
+                  {% if products.rating == 1 %}
                     <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
+                  {% elif products.rating == 2%}
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  {% elif products.rating == 3%}
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  {% elif products.rating == 4%}
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  {% else %}
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                    {% endif %}
+                    
                   </div>
                   <div class="card-shop-link" style="font-size: 14px;">
-                    87,654 ratings
+                    {{products.number_of_ratings}} ratings
                   </div>
                 </span>
                 <span class="amazon__choice__container">
@@ -548,7 +562,7 @@
                       <tr class="table__content">
                         <td class="price__label__content">Price: </td>
                         <td class="price_desc_contain">
-                          <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                          <span class="price__contain main__label" style="font-size: 18px;">${{product.price}} </span>
                           <span class="shipping__price__contain">
                             + $166.46 Shipping & Import Fees Deposit to Pakistan&nbsp
                           </span>
@@ -562,73 +576,31 @@
                   Available at a lower price from <a href="#" class="card-shop-link" style="font-size: 14px;">other seller's</a> that may not offer free Prime shipping.
                 </span>
                 <span class="stock__status__container">
+                {% if products.in_stock %}
                   <div class="dp__conatiner" style="margin-top: 20px;font-size: 20px;font-weight: 500;font-family: Arial,sans-serif;">In Stock.</div>
+                  {% else %}
+                  <div class="dp__conatiner" style="margin-top: 20px;font-size: 20px;font-weight: 500;font-family: Arial,sans-serif; color: red !important;">Out Of Stock.</div>
+                  {% endif %}
                 </span>
                 <span class="arrival__date__container">
-                  Arrives: <b style="color: #000;">Nov 25 - Dec 8</b>
+                  Arrives: <b style="color: #000;">{{products.delievery_Date}}</b>
                 </span>
                 <span class="shipper__container">
                   Ships from and sold by Amazon.com.
                 </span>
-                <span class="product__colors__container">
-                  <span class="color__label__contain">
-                    <span class="color__label">Color: </span>
-                    <span class="color__name"><b>Magenta</b></span>
-                  </span>
-                  <span class="color__pics__contain">
-                    <div class="product__colors__list__contain">
-                      <li class="picture__contain" style="margin-left: 0;">
-                        <a href="#">
-                          <img src="https://images-na.ssl-images-amazon.com/images/I/41Tj5O2AuTL._SS36_.jpg" alt="Click to select Berry Blue">
-                        </a>
-                      </li>
-                      <li class="picture__contain">
-                        <a href="#">
-                          <img src="https://images-na.ssl-images-amazon.com/images/I/41RsfXmxzCL._SS36_.jpg" alt="Click to select Berry Blue">
-                        </a>
-                      </li>
-                      <li class="picture__contain">
-                        <a href="#">
-                          <img src="https://images-na.ssl-images-amazon.com/images/I/41tHDcVGLwL._SS36_.jpg" alt="Click to select Berry Blue">
-                        </a>
-                      </li>
-                      <li class="picture__contain">
-                        <a href="#">
-                          <img src="https://images-na.ssl-images-amazon.com/images/I/31Wz3FWP9PL._SS36_.jpg" alt="Click to select Berry Blue">
-                        </a>
-                      </li>
-                      <li class="picture__contain">
-                        <a href="#">
-                          <img src="https://images-na.ssl-images-amazon.com/images/I/419SZIy9bOL._SS36_.jpg" alt="Click to select Berry Blue">
-                        </a>
-                      </li>
-                      <li class="picture__contain">
-                        <a href="#">
-                          <img src="https://images-na.ssl-images-amazon.com/images/I/31ErIppAijL._SS36_.jpg" alt="Click to select Berry Blue">
-                        </a>
-                      </li>
-                      <li class="picture__contain">
-                        <a href="#">
-                          <img src="https://images-na.ssl-images-amazon.com/images/I/41yIXbCXZWL._SS36_.jpg" alt="Click to select Berry Blue">
-                        </a>
-                      </li>
-                    </div>
-                  </span>
-                </span>
+               
                 <span class="product__information__container">
                   <ul class="product__info__list" style="padding-inline-start: 18px;    margin-bottom: 10px;">
-                    <li class="info__conatainer">The feel, shape, and sensitivity of the dual analog sticks and trigger buttons have been improved to provide a greater sense of control, no matter what you play</li>
-                    <li class="info__conatainer">The new multi touch and clickable touch pad on the face of the DualShock 4 Wireless Controller opens up worlds of new gameplay possibilities for both newcomers and veteran gamers</li>
-                    <li class="info__conatainer">The DualShock 4 Wireless Controller features a built in speaker and stereo headset jack, putting several new audio options in the player's hands</li>
-                    <li class="info__conatainer">The Dualshock 4 wireless controller can be easily recharged by plugging it into your PlayStation 4 system, even when in rest mode, or with any standard charger using a USB cable (type A to micro B sold separately)</li>
+                    {{products.description | safe}}                   
                   </ul>
                 </span>
-                <span class="second__hand__products__container">
+                <!-- <span class="second__hand__products__container">
                   <a href="#" class="card-shop-link" style="font-size: 14px;">New & Used (12) from </a>
                   <label class="main__label" style="font-size: 14px;">$41.85</label>
-                </span>
+                </span> -->
               </div>
             </div>
+         
             <!-- Right column -->
             <div id="rightcol" class="product__functions">
               <div class="socail__sharing">
@@ -660,7 +632,7 @@
                     </div>
                     <span class="buy__cart__button">
                       <div class="product" style="margin: 0;padding: 0;">
-                        <button style="margin-bottom: 10px;">Add To Cart</button>
+                        <button style="margin-bottom: 10px;"><a href="{% url 'cart_add' products.id %}">Add To Cart</a></button>
                         <button
                           style="margin-top: 0px !important;background: linear-gradient(to bottom,#f6c88f,#ed9220);margin-bottom: 10px;">Buy
                           Now</button>
@@ -676,29 +648,7 @@
                         style="font-size: 14px;">Secure transaction</a>
                       </div>
                     </span>
-                    <span class="accessory__section">
-                      <div class="access__story">
-                        <span class="label__access">
-                          Add an Accessory:
-                        </span>
-                        <span class="access__list">
-                          <input type="checkbox" name="checkbox" id="access__checkbox">
-                          <span class="access__list__content">
-                            <a href="#" class="card-shop-link" style="font-size: 14px;">PlayStation Plus: 1 Month Membership</a>
-                            <label for="checkbox" class="main__label" style="font-size: 14px;">$9.99</label>
-                          </span>
-                        </span>
-                      </div>
-                      <div class="access__story" style="margin-top: 2px;">
-                        <span class="access__list">
-                          <input type="checkbox" name="checkbox" id="access__checkbox">
-                          <span class="access__list__content">
-                            <a href="#" class="card-shop-link" style="font-size: 14px;">$20 PlayStation Store Gift Card [Digital Code]</a>
-                            <label for="checkbox" class="main__label" style="font-size: 14px;">$20.00</label>
-                          </span>
-                        </span>
-                      </div>
-                    </span>
+                 
                     <hr style="margin-bottom: 5px;border-top: 1px solid #e0e0e0;">
                     <span class="buying__location">
                       <div class="buyer-location buy__it__location" style="margin-left: 0;width: 100%;">
@@ -789,36 +739,7 @@
               </div>
             </div>
           </div>
-          <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
-          <div class="multiple__products">
-            <div class="head__related">
-              <h2 class="main__heading">Frequently bought together</h2>
-            </div>
-            <div class="multiple__container">
-              <span class="first__product">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/81L9%2B4dTIgL._AC_UL115_.jpg" alt="">
-              </span>
-              <span style="font-size: 20px;margin: 0 5px;">+</span>
-              <span class="second__product">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71dtn2ZMs7L._AC_UL115_.jpg" alt="">
-              </span>
-              <span class="multiple__info">
-                <div class="multiple__info__container">
-                  <span class="price__total">Total Price: </span>
-                  <span class="price__contain main__label" style="font-size: 18px;">$114.98 </span>
-                  <div class="product" style="margin: 0;padding: 0;">
-                    <button style="margin-bottom: 10px;padding: 4px 0;width: 80%;">Add both to Cart</button>
-                    <button
-                          style="margin-top: 0px !important;
-                          background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 10px;    
-                          text-align: center;
-                          padding: 4px 0;
-                          width: 80%;">Add both to List</button>
-                  </div>
-                </div>
-              </span>
-            </div>
-          </div>
+         
           <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
           <div class="related__content__container">
             <div class="related__brands">
@@ -826,12 +747,14 @@
                 <h2 class="main__heading">Brands related to this category on Amazon</h2>
                 <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
               </div>
+            
               <div class="brand__related__cards">
                 <ul class="brands__cards">
+                {% for items in sponsered_products %}
                   <li class="brand__card">
-                    <div class="brand____container">
+                                      <div class="brand____container">
                       <div class="main__brand__image">
-                        <img class="camuta" src="https://m.media-amazon.com/images/I/71dtn2ZMs7L._AC_SL139_QL70_.jpg" alt="">
+                        <img class="camuta" src="/media/{{items.image}}" alt="">
                       </div>
                       <div class="main__brand__info">
                         <span class="brand__logo">
@@ -846,24 +769,8 @@
                       </div>
                     </div>
                   </li>
-                  <li class="brand__card">
-                    <div class="brand____container">
-                      <div class="main__brand__image">
-                        <img class="camuto" src="https://m.media-amazon.com/images/I/71i4+7Gk+kL._AC_SL139_QL70_.jpg" alt="">
-                      </div>
-                      <div class="main__brand__info">
-                        <span class="brand__logo">
-                          <img src="https://images-na.ssl-images-amazon.com/images/S/abs-image-upload-na/4/AmazonStores/ATVPDKIKX0DER/bae44aebb2f8096eb4c63eb213937465.w400.h400._CR0,0,400,400_AC_SX80_SY40_QL70_.jpg" alt="Playstation">
-                        </span>
-                        <span class="brand__product__desc">
-                          YCCSKY Hot Selling Game Controller
-                        </span>
-                        <span class="brand__link">
-                          <a href="#" class="card-shop-link">Shop YCCSKY > </a>
-                        </span>
-                      </div>
-                    </div>
-                  </li>
+                  {% endfor %}
+                 
                 </ul>
               </div>
             </div>
@@ -874,144 +781,47 @@
                 <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
               </div>
               <div class="related__products__items">
-                <li class="product__list__related" style="margin-left: 0;">
+                {% for items in category_product  %}
+                 <li class="product__list__related">
                   <span class="image__realted">
-                    <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    <img src="{{items.image}}" alt="">
                   </span>
                   <span class="related__item__name">
-                    <a href="#" class="card-shop-link">
-                      Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                    <a href="/shop/product/{{items.slug}}" class="card-shop-link">
+                      {{items.name}}
                     </a>
                   </span>
                   <span class="raiting__container">
                     <div class="stars__contain">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
+                         {% if items.rating == 1 %}
+                    <span class="fa fa-star checked"></span>
+                  {% elif items.rating == 2%}
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  {% elif items.rating == 3%}
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  {% elif items.rating == 4%}
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  {% else %}
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                    {% endif %}
                     </div>
                     <div class="card-shop-link" style="font-size: 14px;">
                       87
                     </div>
                   </span>
-                  <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                  <span class="price__contain main__label" style="font-size: 18px;">${{items.price}} </span>
                 </li>
-                <li class="product__list__related">
-                  <span class="image__realted">
-                    <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                  </span>
-                  <span class="related__item__name">
-                    <a href="#" class="card-shop-link">
-                      Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                    </a>
-                  </span>
-                  <span class="raiting__container">
-                    <div class="stars__contain">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </div>
-                    <div class="card-shop-link" style="font-size: 14px;">
-                      87
-                    </div>
-                  </span>
-                  <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                </li>
-                <li class="product__list__related">
-                  <span class="image__realted">
-                    <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                  </span>
-                  <span class="related__item__name">
-                    <a href="#" class="card-shop-link">
-                      Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                    </a>
-                  </span>
-                  <span class="raiting__container">
-                    <div class="stars__contain">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </div>
-                    <div class="card-shop-link" style="font-size: 14px;">
-                      87
-                    </div>
-                  </span>
-                  <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                </li>
-                <li class="product__list__related">
-                  <span class="image__realted">
-                    <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                  </span>
-                  <span class="related__item__name">
-                    <a href="#" class="card-shop-link">
-                      Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                    </a>
-                  </span>
-                  <span class="raiting__container">
-                    <div class="stars__contain">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </div>
-                    <div class="card-shop-link" style="font-size: 14px;">
-                      87
-                    </div>
-                  </span>
-                  <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                </li>
-                <li class="product__list__related">
-                  <span class="image__realted">
-                    <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                  </span>
-                  <span class="related__item__name">
-                    <a href="#" class="card-shop-link">
-                      Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                    </a>
-                  </span>
-                  <span class="raiting__container">
-                    <div class="stars__contain">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </div>
-                    <div class="card-shop-link" style="font-size: 14px;">
-                      87
-                    </div>
-                  </span>
-                  <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                </li>
-                <li class="product__list__related">
-                  <span class="image__realted">
-                    <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                  </span>
-                  <span class="related__item__name">
-                    <a href="#" class="card-shop-link">
-                      Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                    </a>
-                  </span>
-                  <span class="raiting__container">
-                    <div class="stars__contain">
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </div>
-                    <div class="card-shop-link" style="font-size: 14px;">
-                      87
-                    </div>
-                  </span>
-                  <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                </li>
+                {% endfor %}
               </div>
             </div>
           </div>
@@ -1168,8 +978,8 @@
               </div>
               <div class="product__article">
                 <div class="video__article__container">
-                  <video src="https://m.media-amazon.com/images/S/aplus-media/vc/97da50e5-a58d-427b-8b5b-2ba87e7c2f4b.mp4" class="article__video" poster="https://m.media-amazon.com/images/S/aplus-media/vc/b61b2c0f-8f67-4548-b40e-a2acba8127c2.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" controls></video>
-                  <img src="https://scrn.li/uploads/9/9b/9bf/9bfc/9bfc6/9bfc6b/9bfc6b68-1317-0877-bb8e-dc85a3c70be4/ke4Ll0CW53Y3jV" alt="" style="margin-top: -10px;">
+                 <iframe class="article__video" width="1263" height="480" src="{{products.video_url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <img src="media/{{products.main_banner}}" alt="" style="margin-top: -10px;">
                   <span class="second__container__info">
                     <div class="content__">
                       <h3 class="content__heading3">DUALSHOCK 4</h3>
@@ -1190,48 +1000,7 @@
                 <h2 class="main__heading">Product description</h2>
               </div>
               <div class="productdesc__">
-                <span class="desc__color">
-                  Color: <b>Magma Red</b>
-                </span>
-                <span class="desc__main">The DualShock 4 Wireless Controller features familiar controls, and incorporates several innovative features to usher in a new era of interactive experiences. Its definitive analog sticks and trigger buttons have been improved for greater feel and sensitivity. A multi touch, clickable touch pad expands gameplay possibilities, while the incorporated light bar in conjunction with the PlayStation Camera allows for easy player identification and screen adjustment when playing with friends in the same room. The addition of the Share button makes utilizing the social capabilities of the PlayStation 4 as easy as the push of a button. The DualShock 4 Wireless Controller is more than a controller; it's your physical connection to a new era of gaming. Pair your controller you will need to pair your controller when you use it for the first time and when you use it with another PS4 system. Turn on the PS4 system and connect the controller with the USB cable to complete device pairing charging your controller With the PS4 system turned on or in rest mode, connect your controller using the USB cable.</span>
-                <span class="desc__llists">
-                  Buttons:
-                  <ul class="desl__list__items">
-                    <li class="list__desc">PS button</li>
-                    <li class="list__desc">Share button</li>
-                    <li class="list__desc">Options button</li>
-                    <li class="list__desc">D Pad (up, down, right, left)</li>
-                    <li class="list__desc">Action buttons (triangle, circle, cross, square)</li>
-                    <li class="list__desc">Trigger buttons (R1, R2, L1, L2)</li>
-                    <li class="list__desc">Touch Pad button</li>
-                  </ul>
-                </span>
-                <span class="desc__llists">
-                  Touch Pad:
-                  <ul class="desl__list__items">
-                    <li class="list__desc">2 point capacitive touch with click mechanism</li>
-                  </ul>
-                </span>
-                <span class="desc__llists">
-                  Motion Sensor:
-                  <ul class="desl__list__items">
-                    <li class="list__desc">Six axis motion sensing systems (three axis gyroscope, three axis accelerometer)</li>
-                  </ul>
-                </span>
-                <span class="desc__llists">
-                  Ports:
-                  <ul class="desl__list__items">
-                    <li class="list__desc">1 x Micro USB</li>
-                    <li class="list__desc">1 x Extension port</li>
-                    <li class="list__desc">1 x Stereo headset jack</li>
-                  </ul>
-                </span>
-                <span class="desc__llists">
-                  Wireless Connectivity:
-                  <ul class="desl__list__items">
-                    <li class="list__desc">Bluetooth 2.1+EDR</li>
-                  </ul>
-                </span>
+               {{products.main_description | safe}}
               </div>
             </div>
             <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
@@ -1243,77 +1012,13 @@
                 <div class="product__table">
                   <table class="main__table">
                     <tbody>
+                    {% for keys,values in jsonData.items %}
                       <tr class="table__row">
-                        <th class="table_head">ASIN</th>
-                        <td class="tabe__body">B01MD19OI2</td>
+                        <th class="table_head">{{keys}}</th>
+                        <td class="tabe__body">{{values}}</td>
                       </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Release date</th>
-                        <td class="tabe__body">November 21, 2016</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Customer Reviews</th>
-                        <td class="tabe__body">
-                          <span class="raiting__container">
-                            <div class="stars__contain">
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star checked"></span>
-                              <span class="fa fa-star"></span>
-                              <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                              87,500 ratings
-                            </div>
-                          </span>
-                          4.6 out of 5 stars
-                        </td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Best Sellers Rank</th>
-                        <td class="tabe__body">
-                          #160 in Video Games (<a href="#" class="card-shop-link">See Top 100 in Video Games</a>)
-                          <div style="display: block;"></div>
-                          #2 in <a href="#" class="card-shop-link">PlayStation 4 Gamepads & Standard Controllers</a>
-                        </td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Pricing</th>
-                        <td class="tabe__body">The strikethrough price is the List Price. Savings represents a discount off the List Price.</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Product Dimensions</th>
-                        <td class="tabe__body">2 x 2 x 2 inches; 12 Ounces</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Binding</th>
-                        <td class="tabe__body">Video Game</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Item model number</th>
-                        <td class="tabe__body">3001549</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Is Discontinued By Manufacturer</th>
-                        <td class="tabe__body">No</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Item Weight</th>
-                        <td class="tabe__body">12 ounces</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Manufacturer</th>
-                        <td class="tabe__body">Sony Computer Entertainment</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Batteries</th>
-                        <td class="tabe__body">1 Lithium ion batteries required. (included)</td>
-                      </tr>
-                      <tr class="table__row">
-                        <th class="table_head">Date First Available</th>
-                        <td class="tabe__body">December 20, 2016</td>
-                      </tr>
-                    </tbody>
+                      {% endfor %}
+                        </tbody>
                   </table>
                 </div>
                 <div class="warranty">
@@ -1344,7 +1049,7 @@
                 </div>
               </div>
             </div>
-            <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
+            {% comment %} <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
             <div class="related__products">
               <div class="head__related">
                 <h2 class="main__heading">Videos</h2>
@@ -1415,7 +1120,7 @@
                 line-height: 1;
               }
 
-            </style>
+            </style> {% endcomment %}
             <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
             <div class="brand__related__cards">
               <ul class="brands__cards" style="display: block;text-align: -webkit-center;">

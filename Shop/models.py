@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+import jsonfield
 # Create your models here.
 
 
@@ -9,10 +9,22 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     category = models.CharField(max_length=50)
     sub_category = models.CharField(max_length=50)
-    description = models.CharField(max_length=300)
+    description = models.TextField(default="")
     rating = models.IntegerField(default=1)
+    delievery_Date = models.CharField(default="", max_length=100)
+    number_of_ratings = models.IntegerField(default=0)
     price = models.FloatField()
-    image = models.ImageField(upload_to="Shop/images")
+    slug = models.SlugField(default="", max_length=100)
+    image = models.ImageField(upload_to="Shop/images", default=None)
+    image_two = models.ImageField(upload_to="Shop/images", default=None)
+    image_three = models.ImageField(upload_to="Shop/images", default=None)
+    image_four = models.ImageField(upload_to="Shop/images", default=None)
+    main_description = models.TextField(default="")
+    warrenty_support = models.TextField(default="")
+    data = jsonfield.JSONField(default="")
+    video_url = models.URLField(default=None)
+    in_stock = models.BooleanField(default=True)
+    main_banner = models.ImageField(upload_to="Shop/images", default=None)
     pub_date = models.DateField()
 
     def __str__(self):
