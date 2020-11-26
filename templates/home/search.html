@@ -1,0 +1,2933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <!-- Title -->
+    <title>
+        Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books,
+        DVDs & more
+    </title>
+    <!-- Meta Information -->
+    <meta name="description"
+        content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else." />
+    <meta name="keywords"
+        content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <link rel="canonical" href="https://www.amazon.com/" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta property="og:image"
+        content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+        xmlns:og="http://opengraphprotocol.org/schema/" />
+    <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+    <meta property="og:description"
+        content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+        xmlns:og="http://opengraphprotocol.org/schema/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/search.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .link-main:hover {
+            text-decoration: none !important;
+            color: #C7511F;
+        }
+
+        .link-main {
+            color: #0F1111;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .app {
+            background-color: #fff;
+        }
+    </style>
+    <style>
+        .dropdown {
+            overflow: hidden;
+            background-color: #f3f3f3;
+            color: #555;
+            height: 40px;
+            width: auto;
+            font-size: 12px;
+            border-radius: 10px 0 0 10px;
+            border-right: 1px solid #d0d0d0;
+        }
+
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 14px;
+            border: none;
+            color: #555;
+            padding: 11px 10px 11.5px 10px;
+            background-color: inherit;
+            font-family: inherit;
+            display: flex;
+            font-size: 12px;
+            align-items: center;
+        }
+
+        .dropdown:hover .dropbtn,
+        .dropbtn:focus {
+            background-color: #e4e4e4;
+            outline: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+
+    <style>
+        .dropdown__country {
+            position: relative;
+        }
+
+        .dropdown-content__country {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            margin-top: 45px;
+            margin-left: -5px;
+            left: -1px;
+            border-radius: 3px;
+        }
+
+        .dropdown-content__country a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown__country:hover .dropdown-content__country {
+            display: block;
+        }
+
+        .xolo__butt {
+            background: #131921;
+            color: #fff;
+            border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Body -->
+    <div class="app">
+        {% load cart_tag %}
+
+        <!--Header Of The Page-->
+        <div class="header">
+            <!-- Menu And Logo -->
+            <div class="header-menu-button" onclick="w3_open()">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill menu__button"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                    style="color: white; width: 1.2rem; height: 1.2rem">
+                    <path
+                        d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
+                </svg>
+            </div>
+            <div class="header_logo_div">
+                <a href="/">
+                    <img class="header__logo" src="{% static 'home/img/logo.png' %}" />
+                </a>
+            </div>
+            <div class="right__gap"></div>
+
+            <!-- Search Bar -->
+            <div class="header__search">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()">
+                        All
+                        <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+                    </button>
+                    <form method="POST" action="{% url 'search' %}">
+                        {% csrf_token %}
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="#">Toys</a>
+                            <a href="#">Women Cloathes</a>
+                            <a href="#">Electronics</a>
+                        </div>
+                </div>
+                <input class="header__searchInput" placeholder="Search For Products" type="text" name="query" />
+                <input type="hidden" value="Electronics" name="category">
+
+                <i class="fa fa-search header__searchIcon" aria-hidden="true"></i>
+
+            </div>
+            </form>
+            <div class="header__nav">
+                <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()"
+                    onmouseout="bg__light()">
+                    <span class="header__optionLineOne" style="height: 10px"></span>
+                    <span class="header__optionLineTwo dropbtn__country"><img
+                            src="{% static 'home\img\flags\united-states-of-america.png' %}" style="width: 25px" />
+                        <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+                    </span>
+                    <!-- Language and Country Dropdown Menu-->
+                    <div class="dropdown-content__country" style="padding: 14px; width: 250px">
+                        <div class="dropdown__content">
+                            <div class="drop_label">
+                                <span class="drop_text" style="display: flex; align-items: center">
+                                    <p class="drop_maintext">Change Language</p>
+                                    <a href="#" class="card-shop-link drop_mainlink"
+                                        style="font-size: 11px; margin-left: 5px">Learn More</a>
+                                </span>
+                            </div>
+                            <div class="drop__languages"></div>
+                        </div>
+                    </div>
+                    <!-- Ends Here -->
+                </div>
+
+                <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()"
+                    onmouseout="bg__light()">
+                    {% if user.is_authenticated %}
+                    <span class="header__optionLineOne">Hello, {{user.username}}</span>
+                    {% else %}
+                    <span class="header__optionLineOne">Hello, Guest</span>
+                    {% endif %}
+                    <span class="header__optionLineTwo dropbtn__country">Account & Lists
+                        <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+                    </span>
+                    <div class="dropdown-content__country" style="width: 470px; left: -150px; padding: 15px">
+                        {% if user.is_authenticated %}
+                        <a href="/accounts/profile">Profile</a>
+                        <a href="/accounts/logout">Logout</a>
+                        <a href="/cart">Cart</a>
+                        {% else %}
+                        <div class="product" style="margin: 0; padding: 0 120px">
+                            <button style="margin: 0">Sign in</button>
+                            <div style="display: flex; justify-content: center">
+                                <p class="drop_maintext" style="font-size: 11px">
+                                    New customer?
+                                </p>
+                                <a href="#" class="card-shop-link drop_mainlink"
+                                    style="font-size: 11px; margin-left: 5px">Start Here</a>
+                            </div>
+                        </div>
+                        <hr style="margin: 8px" />
+                        <div class="y__menu">
+                            <div class="y__content">
+                                <div class="y__title" id="">Your Lists</div>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Create a List </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Find a List or Registry </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Find a Gift </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Save Items from the Web </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Wedding Registry </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Baby Registry </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Friends &amp; Family Gifting </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> AmazonSmile Charity Lists </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Hearts </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Explore Idea Lists </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Explore Showroom </span>
+                                </a>
+                            </div>
+                            <div class="y__content" style="border-left: 1px solid #eaeaea">
+                                <div class="y__title" id="">Your Account</div>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Account </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Orders </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Recommendations </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text">
+                                        Memberships &amp; Subscriptions
+                                    </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Garage </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Fanshop </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Pets </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Content and Devices </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Music Library </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Amazon Drive </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Prime Video </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Kindle Unlimited </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text"> Your Watchlist </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text">
+                                        Your Video Purchases &amp; Rentals
+                                    </span>
+                                </a>
+                                <a href="#" class="y__item">
+                                    <span class="y__text">
+                                        Your Android Apps &amp; Devices
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="header__option margin__left">
+                    <span class="header__optionLineOne">Returns</span>
+                    <span class="header__optionLineTwo">& Orders</span>
+                </div>
+
+                <div class="header__option margin__left">
+                    <span class="header__optionLineOne">Your</span>
+                    <span class="header__optionLineTwo">Prime</span>
+                </div>
+
+                <div class="header__optionBasket margin__left">
+                    <a href="/shop/cart/cart-detail">
+                        <i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right: 5px"></i></a>
+                    {{request.session.cart|length}}
+                    <span class="header__optionLineTwo header__basketCount"> </span>
+                </div>
+            </div>
+        </div>
+        <!--Ends Here-->
+
+        <div class="bg-mana" id="bg-changing" style="display: none"></div>
+        <div class="bg-mana__dropdown" id="bg-changing__dropdown" style="display: none"></div>
+
+        <!-- Sidebar -->
+        <div class="w3-sidebar w3-bar-block w3-animate-left" style="width: 300px; z-index: 9999; display: none"
+            id="mySidebar">
+            <button class="w3-bar-item w3-button w3-large xolo__butt" onclick="w3_close()">
+                Close &times;
+            </button>
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+
+        <!-- Second Header -->
+
+        <div class="sub-header">
+            <div class="left-header-side">
+                <div class="buyer-location">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" id="geo-marker" class="bi bi-geo-alt"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                        <path fill-rule="evenodd"
+                            d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg>
+                    <div class="location-of-user">
+                        <p class="deliver">Deliver to</p>
+                        <p class="deliver-to">Pakistan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="center-header-side">
+                <div class="sub-header-menu">
+                    <a href="#" class="obj-menu">Today's Deal</a>
+                    <a href="#" class="obj-menu">Customer Service</a>
+                    <a href="#" class="obj-menu">Gift Cards</a>
+                    <a href="#" class="obj-menu">Sell</a>
+                    <a href="#" class="obj-menu">Registry</a>
+                </div>
+            </div>
+            <div class="right-header-side">
+                <a href="#" class="obj-menu amz-covid">Amazon's response to COVID-19</a>
+            </div>
+        </div>
+
+        <!-- Ends Here-->
+
+        <!-- Main Body Container -->
+
+        <!-- Search Header -->
+
+        <div class="search-header">
+            <div class="product__count">
+                <span class="num__search">1-16 of 200 results for</span>
+                <span class="main-red-one">"iphone"</span>
+                <span class="select__cat">
+                    <span class="drop__select">
+                        <span class="a-button-inner">
+                            <span class="a-dropdown-label">Sort by:</span>
+                        </span>
+                    </span>
+                    <select name="cat" id="catego-se">
+                        <option selected="">Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Avg. Customer Review</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+        <!-- Search Header Ends Here-->
+
+        <!-- Products -->
+        <div class="p__container">
+            <div class="p__sidebar">
+                <div class="p__sidebar__container">
+                    <div class="cont">
+                        <div id="condition">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Condition
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">Used</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">New</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">Renewed</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="departments">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Department
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">Cell Phones</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Carrier Cell Phones</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Unlocked Cell Phones</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Cell Phones & Accessories</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Electronics</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Home & Kitchen</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="ratings">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Avg. Customer Review
+                                </span>
+                            </div>
+                            <div class="ratings__stars">
+                                <!-- 1 -->
+                                <span class="raiting__container">
+                                    <div class="stars__contain" style="margin-right: 10px;">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        <a href="#" class="link-main"> & up </a>
+                                    </div>
+                                </span>
+                                <!-- 2 -->
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        <a href="#" class="link-main"> & up </a>
+                                    </div>
+                                </span>
+                                <!-- 3 -->
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        <a href="#" class="link-main"> & up </a>
+                                    </div>
+                                </span>
+                                <!-- 4 -->
+                                <span class="raiting__container" style="margin-bottom: 15px;">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        <a href="#" class="link-main"> & up </a>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="brands">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Brand
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="apple">
+                                        </span>
+                                        <span class="brand__name">Apple</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="google">
+                                        </span>
+                                        <span class="brand__name">Google</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="samsung">
+                                        </span>
+                                        <span class="brand__name">SAMSUNG</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="samsung_electronics">
+                                        </span>
+                                        <span class="brand__name">SAMSUNG Electronics</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="oneplus">
+                                        </span>
+                                        <span class="brand__name">ONEPLUS</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="c-joy">
+                                        </span>
+                                        <span class="brand__name">C-JOY</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="motorola">
+                                        </span>
+                                        <span class="brand__name">Motorola</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="price">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Price
+                                </span>
+                            </div>
+                            <ul class="list__sidebar" style="margin-bottom: 5px;">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">Under $10</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">$10 to $25</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">$25 to $50</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">$50 to $100</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">$100 & Above</a>
+                                </li>
+                            </ul>
+                            <div class="manual__price" style="margin-bottom: 15px;">
+                                <span class="doll-sign">$</span>
+                                <input type="number" name="min-num" id="min-pri" placeholder="Min" class="price-bar"
+                                    style="    margin-right: 12px;">
+                                <span class="doll-sign">$</span>
+                                <input type="number" name="max-num" id="max-pri" placeholder="Max" class="price-bar">
+                                <div class="product" style="margin: 0;padding: 0;min-width: 0;width: auto;">
+                                    <button style="margin-top: 0px !important;
+                                    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 0;    
+                                    text-align: start;
+                                    padding-right: 10px;
+                                    padding-left: 10px;" type="submit">Go</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="operating-sys">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Operating System
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="android">
+                                        </span>
+                                        <span class="brand__name">Android</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="blackberry">
+                                        </span>
+                                        <span class="brand__name">Blackberry</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="ios">
+                                        </span>
+                                        <span class="brand__name">IOS</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="camera-res">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Camera Resolution
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-2mp">
+                                        </span>
+                                        <span class="brand__name">Up to 2.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-4mp">
+                                        </span>
+                                        <span class="brand__name">3 to 4.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-7mp">
+                                        </span>
+                                        <span class="brand__name">5 to 7.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-12mp">
+                                        </span>
+                                        <span class="brand__name">8 to 12.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-19mp">
+                                        </span>
+                                        <span class="brand__name">13 to 19.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-20mp">
+                                        </span>
+                                        <span class="brand__name">20 MP & Above</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="screen-size">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Screen Size
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-3in">
+                                        </span>
+                                        <span class="brand__name">Up to 3.9 in</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-4in">
+                                        </span>
+                                        <span class="brand__name">4 to 4.4 in</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-49in">
+                                        </span>
+                                        <span class="brand__name">4.5 to 4.9 in</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-5in">
+                                        </span>
+                                        <span class="brand__name">5 to 5.4 in</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-55in">
+                                        </span>
+                                        <span class="brand__name">5.5 in & Above</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="features">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Features
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="4k-video">
+                                        </span>
+                                        <span class="brand__name">4K Video Recording</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="bluetooth">
+                                        </span>
+                                        <span class="brand__name">Bluetooth Enabled</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="built-in-gps">
+                                        </span>
+                                        <span class="brand__name">Built-In GPS</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="camera">
+                                        </span>
+                                        <span class="brand__name">Camera</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="dual-camera">
+                                        </span>
+                                        <span class="brand__name">Dual Camera</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="fingerprint">
+                                        </span>
+                                        <span class="brand__name">Fingerprint Sensor</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="lte">
+                                        </span>
+                                        <span class="brand__name">LTE</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="smartphone">
+                                        </span>
+                                        <span class="brand__name">Smartphone</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="touchscreen">
+                                        </span>
+                                        <span class="brand__name">Touchscreen</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="no-contract">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    No-Contract Carrier
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="at-t">
+                                        </span>
+                                        <span class="brand__name">AT&T</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="cricket">
+                                        </span>
+                                        <span class="brand__name">Cricket</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="sprint">
+                                        </span>
+                                        <span class="brand__name">Sprint</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="t-mobile">
+                                        </span>
+                                        <span class="brand__name">T-Mobile</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="tracfone">
+                                        </span>
+                                        <span class="brand__name">TracFone</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="internal-storage">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Internal Storage Memory
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="-4gb">
+                                        </span>
+                                        <span class="brand__name">Under 4 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="4gb">
+                                        </span>
+                                        <span class="brand__name">4 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="8gb">
+                                        </span>
+                                        <span class="brand__name">8 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="16gb">
+                                        </span>
+                                        <span class="brand__name">16 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="32gb">
+                                        </span>
+                                        <span class="brand__name">32 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="64gb">
+                                        </span>
+                                        <span class="brand__name">64 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="128gb">
+                                        </span>
+                                        <span class="brand__name">128 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="256gb">
+                                        </span>
+                                        <span class="brand__name">256 GB & Above</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="internal-storage">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Prime Exclusive
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="-4gb">
+                                        </span>
+                                        <span class="brand__name">Under 4 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="4gb">
+                                        </span>
+                                        <span class="brand__name">4 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="8gb">
+                                        </span>
+                                        <span class="brand__name">8 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="16gb">
+                                        </span>
+                                        <span class="brand__name">16 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="32gb">
+                                        </span>
+                                        <span class="brand__name">32 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="64gb">
+                                        </span>
+                                        <span class="brand__name">64 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="128gb">
+                                        </span>
+                                        <span class="brand__name">128 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="256gb">
+                                        </span>
+                                        <span class="brand__name">256 GB & Above</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="prime-exclusive">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Prime Exclusive
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="prime-exc">
+                                        </span>
+                                        <span class="brand__name">Prime Exclusive Phones</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="seller">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Seller
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="gdoe">
+                                        </span>
+                                        <span class="brand__name">GLOBAL DISTRIBUTORS OF ELECTRONICS</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="us-s">
+                                        </span>
+                                        <span class="brand__name">US Seller/We ship from USA</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="amazon-off">
+                                        </span>
+                                        <span class="brand__name">Amazon.com</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="woodland">
+                                        </span>
+                                        <span class="brand__name">Woodland Cellular</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="vomach">
+                                        </span>
+                                        <span class="brand__name">Vomach Inc.</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="networkstore">
+                                        </span>
+                                        <span class="brand__name">Networkstore</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="ecoomsell">
+                                        </span>
+                                        <span class="brand__name">eCommSell</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="re-cell">
+                                        </span>
+                                        <span class="brand__name">RE-CELL</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="saveoncells">
+                                        </span>
+                                        <span class="brand__name">SaveonCells</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="elabra">
+                                        </span>
+                                        <span class="brand__name">elabra</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p__products__list">
+                <div class="main__search__results">
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/71isxv6Wd-L._AC_UY218_.jpg"
+                                        alt="Apple iPhone XS Max, 64GB, Gold - Fully Unlocked (Renewed)"
+                                        class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone XS Max, 64GB, Gold - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Gold</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">544</span>
+                                    <span class="decimal__value">99</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/516zNBHjG8L._AC_US40_.jpg"
+                                                alt="Space Gray" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41TuhCqRKVL._AC_US40_.jpg"
+                                                alt="Silver" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41CwiQgqBsL._AC_US40_.jpg"
+                                                alt="Gray" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41FOooy0QxL._AC_US40_.jpg"
+                                                alt="Space Gray" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81kiXedOt7L._AC_UY218_.jpg"
+                                        alt="Apple iPhone 8 Plus, GSM Unlocked, 64GB - Space Gray (Refurbished)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone 8 Plus, GSM Unlocked, 64GB - Space Gray (Refurbished)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Office Product</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">328</span>
+                                    <span class="decimal__value">99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/71XeQzRDyML._AC_UY218_.jpg"
+                                        alt="Apple iPhone XS, 64GB, Space Gray - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone XS, 64GB, Space Gray - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Space Gray</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">45</span>
+                                    <span class="decimal__value">99</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 1 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/51tQoNGXegL._AC_US40_.jpg"
+                                                alt="Gold" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/31h6rdm0GyL._AC_US40_.jpg"
+                                                alt="Silver" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41179QBQAXL._AC_US40_.jpg"
+                                                alt="Gray" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/51az5uPx4AL._AC_UY218_.jpg"
+                                        alt="OnePlus 8 Pro Onyx Black,​ 5G Unlocked Android Smartphone U.S Version, 12GB RAM+256GB Storage, 120Hz Fluid Display,Quad Camera, Wireless Charge, with Alexa Built-in..." class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            OnePlus 8 Pro Onyx Black,​ 5G Unlocked Android Smartphone U.S Version, 12GB RAM+256GB Storage, 120Hz Fluid Display,Quad Camera, Wireless Charge, with Alexa Built-in...
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Onyx Black</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">799</span>
+                                    <span class="decimal__value">99</span>
+                                </div>
+                                <div class="__availability__container">
+                                    <span class="ship__availability">Ships to Pakistan</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41iM3tnk8dL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41n3stbx6EL._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/410mmBW-AYL._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__product__s">
+                        <div class="x-comm">
+                            <div class="main__pro__image">
+                                <div class="__image__container">
+                                    <img src="https://m.media-amazon.com/images/I/81sxc08B2QL._AC_UY218_.jpg"
+                                        alt="Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)" class="pro__image">
+                                </div>
+                            </div>
+                            <div class="main__pro__desc">
+                                <div class="__header__container">
+                                    <a class="link-main">
+                                        <span class="main__header__span">
+                                            Apple iPhone SE, 64GB, Red - Fully Unlocked (Renewed)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="__rating__container">
+                                    <span class="raiting__container">
+                                        <div class="stars__contain" style="margin-right: 10px;">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="card-shop-link" style="font-size: 14px;">
+                                            <a href="#" class="card-shop-link"> 4,458 </a>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="__color__container">
+                                    <a href="#" class="card-shop-link">
+                                        <b>Red</b>
+                                    </a>
+                                </div>
+                                <div class="__price__container">
+                                    <span class="doll__sign">$</span>
+                                    <span class="official__product__price">339</span>
+                                    <span class="decimal__value">97</span>
+                                </div>
+                                <div class="__stock__notice__container no-display">
+                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
+                                </div>
+                                <div class="__label__container">
+                                    <span class="main__pro__label">Price may vary by color</span>
+                                </div>
+                                <div class="__pro__colors__container">
+                                    <ul class="colors__list">
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41Zz9n8VRuL._AC_US40_.jpg"
+                                                alt="Black" class="image__color">
+                                        </li>
+                                        <li class="image__color__pro">
+                                            <img src="https://m.media-amazon.com/images/I/41KDL-Nnc4L._AC_US40_.jpg"
+                                                alt="White" class="image__color">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                .active__bread {
+                    background: white!important;
+                    border-color: #e77600!important;
+                    color: #e77600!important;
+                    font-weight: 700!important;
+                }
+
+                .active__bread:hover {
+                    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec)!important;
+                    border-color: #a88734 #9c7e31 #846a29!important;
+                }
+                </style>
+                <div class="__page__breadcrumbe">
+                    <div class="product pages__count" style="margin: 0;padding: 0;min-width: 0;width: auto;">
+                        <span class="previous__count"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Next</span>
+                        <button class="pages__count__num active__bread" 
+                        style="margin-top: 0px !important;
+                        background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 0;    
+                        text-align: start;
+                        padding-right: 10px;
+                        padding-left: 10px;" type="submit">1</button>
+                        <button class="pages__count__num" 
+                        style="margin-top: 0px !important;
+                        background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 0;    
+                        text-align: start;
+                        padding-right: 10px;
+                        padding-left: 10px;" type="submit">2</button>
+                        <button class="pages__count__num" 
+                        style="margin-top: 0px !important;
+                        background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 0;    
+                        text-align: start;
+                        padding-right: 10px;
+                        padding-left: 10px;" type="submit">3</button>
+                        <span class="dots__Count">...</span>
+                        <span class="last__page">13</span>
+                        <button class="pages__count__num" 
+                        style="margin-top: 0px !important;
+                        background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 0;    
+                        text-align: start;
+                        padding-right: 10px;
+                        padding-left: 10px;
+                        width: 70px!important;" type="submit">Next <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <style>
+                    .brand__related__cards {
+                        padding: 20px 0px;
+                    }
+                    li.brand__card {
+                        width: 482.5px;
+                    }
+                    span.brand__product__desc {
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                </style>
+                <div class="__related__brands__container">
+                    <div class="related__brands">
+                        <div class="head__related">
+                          <h2 class="main__heading">Brands related to this category on Amazon</h2>
+                          <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
+                        </div>
+                        <div class="brand__related__cards">
+                          <ul class="brands__cards">
+                            <li class="brand__card">
+                              <div class="brand____container">
+                                <div class="main__brand__image">
+                                  <img class="camuta" src="https://images-na.ssl-images-amazon.com/images/S/gladiator-image-upload-prod/2/ATVPDKIKX0DER/474d15d7ce142f597f7af2caa583ccdf._CR0,0,400,400_AC_SX139_SY100_QL70_.jpg" alt="">
+                                </div>
+                                <div class="main__brand__info">
+                                  <span class="brand__product__desc">
+                                    iPhone 12 Pro. Hello 5G.
+                                  </span>
+                                  <span class="brand__link">
+                                    <a href="#" class="card-shop-link">Shop Apple > </a>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="brand__card">
+                              <div class="brand____container">
+                                <div class="main__brand__image">
+                                  <img class="camuto" src="https://images-na.ssl-images-amazon.com/images/S/gladiator-image-upload-prod/3/ATVPDKIKX0DER/8e9d561c916cb24e766c8c6326aaefbb._CR0,0,0,0_AC_SX139_SY100_QL70_.jpg" alt="">
+                                </div>
+                                <div class="main__brand__info">
+                                  <span class="brand__product__desc">
+                                    Always Stay Connected
+                                  </span>
+                                  <span class="brand__link">
+                                    <a href="#" class="card-shop-link">Shop YCCSKY > </a>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Ends Here -->
+
+        <!-- Related Products -->
+        <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
+        <div class="related__con">
+            <!-- related -->
+            <div class="related__products">
+                <div class="head__related">
+                    <h2 class="main__heading">Sponsored products related to this search</h2>
+                    <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
+                </div>
+                <div class="related__products__items">
+                    <li class="product__list__related" style="margin-left: 0;">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                </div>
+            </div>
+            <!-- Inspired Through Browsing -->
+            <div class="related__products">
+                <div class="head__related">
+                    <h2 class="main__heading">Inspired by your browsing history</h2>
+                    <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
+                </div>
+                <div class="related__products__items">
+                    <li class="product__list__related" style="margin-left: 0;">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                </div>
+            </div>
+            <!-- Browsing History-->
+            <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
+            <div class="related__products">
+                <div class="head__related">
+                    <h2 class="main__heading">Your Browsing History</h2>
+                </div>
+                <div class="related__products__items">
+                    <li class="product__list__related" style="margin-left: 0;">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <!-- Related Products Ends Here-->
+
+        <!-- Main Body Ends Here -->
+
+        <!-- Kindle Section -->
+
+        <div class="footer__kindle">
+            <div class="content__handler">
+                <div class="product" style="margin: 0;
+          padding: 20px 470px;
+          text-align: center;">
+                    <h2 style="line-height: 1;
+            margin: 0;
+            font-size: 20px;">Best Sellers In Kindle eBooks</h2>
+                    <button>Sign in to see Persnalized Recommendations</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ends Here-->
+
+        <!-- Footer -->
+        <footer>
+            <div class="top text-center" style="text-align: center">
+                <a href="#nav-top">Back to top</a>
+            </div>
+
+            <div class="middle">
+                <div class="center">
+                    <ul>
+                        <li>
+                            <h3>Get to Know Us</h3>
+                        </li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About Amazon</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Amazon Devices</a></li>
+                        <li><a href="#">Amazon Tours</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Make Money with Us</h3>
+                        </li>
+                        <li><a href="#">Sell products on Amazon</a></li>
+                        <li><a href="#">Sell apps on Amazon</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Self-Publish with Us</a></li>
+                        <li><a href="#">Host an Amazon Hub</a></li>
+                        <li><a href="#">› See More Make Money with Us</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Amazon Payment Products</h3>
+                        </li>
+                        <li><a href="#">Amazon Business Card</a></li>
+                        <li><a href="#">Shop with Points</a></li>
+                        <li><a href="#">Reload Your Balance</a></li>
+                        <li><a href="#">Amazon Currency Converter</a></li>
+                    </ul>
+                    <ul style="width: 190px">
+                        <li>
+                            <h3>Let Us Help You</h3>
+                        </li>
+                        <li><a href="#">Amazon and COVID-19</a></li>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Shipping Rates &amp; Policies</a></li>
+                        <li><a href="#">Returns &amp; Replacements</a></li>
+                        <li><a href="#">Manage Your Content and Devices</a></li>
+                        <li><a href="#">Amazon Assistant</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+
+                <ul class="copy text-center">
+                    <li style="width: 50px;">
+                      <a href="#" class="logo">
+                        <img class="footer__logo" style="width: 80px;" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+                      </a>
+                    </li>
+                    <li class="dropdown__country">
+                      <a href="#" class="select" style="padding: 7px 10px 7px 10px;">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        English
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                      </a>
+                      <!-- Language and Country Dropdown Menu-->
+                      <div class="dropdown-content__country" style="padding: 14px;width: 250px;margin: 0;">
+                        <div class="dropdown__content">
+                          <div class="drop_label">
+                            <span class="drop_text" style="display: flex;align-items: center;">
+                              <p class="drop_maintext">Change Language</p>
+                              <a href="#" class="card-shop-link drop_mainlink" style="margin-left: 5px;
+                              margin-left: 5px;
+                              text-decoration: none;
+                              color: #007185;
+                              font-size: 11px;
+                              padding: 0;
+                              border: none;">Learn More</a>
+                            </span>
+                          </div>
+                          <div class="drop__languages">
+          
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Ends Here -->
+                    </li>
+                    <li><a href="#" class="select"><i class="fa fa-dollar" aria-hidden="true"></i> USD - U.S. Dollar</a></li>
+                    <li><a href="#" class="select"><i class="flag-icon-us"></i>United States</a></li>
+                  </ul>
+            </div>
+
+            <div class="bottom">
+                <div class="center">
+                    <ul class="other_brands">
+                        <li>
+                            <a href="#">Amazon Music<br /><span>Stream millions<br />
+                                    of songs</span></a>
+                        </li>
+                        <li>
+                            <a href="#">AmazonFresh<br /><span>Groceries &amp; More<br />
+                                    Right To Your Door</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Amazon Web Services<br /><span>Scalable Cloud<br />
+                                    Computing Services</span></a>
+                        </li>
+                        <li>
+                            <a href="#">East Dane<br /><span>Designer Men's<br />
+                                    Fashion</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Prime Now<br /><span>FREE 2-Hour Delivery<br />
+                                    on Everyday Items</span></a>
+                        </li>
+                    </ul>
+
+                    <ul class="other_brands">
+                        <li>
+                            <a href="#">Amazon Drive<br /><span>Cloud storage<br />
+                                    from Amazon</span></a>
+                        </li>
+                        <li>
+                            <a href="#">AmazonGlobal<br /><span>Ship Orders<br />
+                                    Internationally</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Audible<br /><span>Download<br />
+                                    Audio Books</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Fabric<br /><span>Sewing, Quilting<br />
+                                    &amp; Knitting</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Woot!<br /><span>Deals and <br />
+                                    Shenanigans</span></a>
+                        </li>
+                    </ul>
+
+                    <ul class="other_brands">
+                        <li>
+                            <a href="#">6pm<br /><span>Score deals<br />
+                                    on fashion brands</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Home Services<br /><span>Handpicked Pros<br />
+                                    Happiness Guarantee</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Book Depository<br /><span>Books With Free<br />
+                                    Delivery Worldwide</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Shopbop<br /><span>Designer<br />
+                                    Fashion Brands</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Zappos<br /><span>Shoes &amp;<br />
+                                    Clothing</span></a>
+                        </li>
+                    </ul>
+
+                    <ul class="other_brands">
+                        <li>
+                            <a href="#">AbeBooks<br /><span>Books, art<br />
+                                    &amp; collectibles</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Amazon Inspire<br /><span>Free Digital Educational<br />
+                                    Resources</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Box Office Mojo<br /><span>Find Movie<br />
+                                    Box Office Data</span></a>
+                        </li>
+                        <li>
+                            <a href="#">IMDb<br /><span>Movies, TV<br />
+                                    &amp; Celebrities</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Souq.com<br /><span>Shop Online in<br />
+                                    the Middle East</span></a>
+                        </li>
+                    </ul>
+
+                    <ul class="other_brands">
+                        <li>
+                            <a href="#">ACX <br /><span>Audiobook Publishing<br />
+                                    Made Easy</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Amazon Rapids<br /><span>Fun stories for<br />
+                                    kids on the go</span></a>
+                        </li>
+                        <li>
+                            <a href="#">ComiXology<br /><span>Thousands of<br />
+                                    Digital Comics</span></a>
+                        </li>
+                        <li>
+                            <a href="#">IMDbPro<br /><span>Get Info Entertainment<br />
+                                    Professionals Need</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Subscribe with Amazon<br /><span>Discover &amp; try<br />
+                                    subscription services</span></a>
+                        </li>
+                    </ul>
+
+                    <ul class="other_brands">
+                        <li>
+                            <a href="#">Alexa<br /><span>Actionable Analytics<br />
+                                    for the Web</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Amazon Restaurants<br /><span>Food delivery from<br />
+                                    local restaurants</span></a>
+                        </li>
+                        <li>
+                            <a href="#">CreateSpace<br /><span>Indie Print Publishing<br />
+                                    Made Easy</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Junglee.com<br /><span>Shop Online<br />
+                                    in India</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Whispercast<br /><span>Discover &amp; Distribute<br />
+                                    Digital Content</span></a>
+                        </li>
+                    </ul>
+
+                    <ul class="other_brands">
+                        <li>
+                            <a href="#">Amazon Business<br /><span>Everything For<br />
+                                    Your Business</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Amazon Video Direct<br /><span>Video Distribution<br />
+                                    Made Easy</span></a>
+                        </li>
+                        <li>
+                            <a href="#">DPReview<br /><span>Digital<br />
+                                    Photography</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Kindle Direct Publishing<br /><span>Indie Digital Publishing<br />
+                                    Made Easy</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Withoutabox<br /><span>Submit to<br />
+                                    Film Festivals</span></a>
+                        </li>
+                    </ul>
+
+                    <ul class="copy text-center" style="text-align: center">
+                        <li style="height: 0"><a href="#">Conditions of Use</a></li>
+                        <li style="height: 0"><a href="#">Privacy Notice</a></li>
+                        <li style="height: 0"><a href="#">Interest-Based Ads</a></li>
+                        <li style="height: 0">
+                            &copy; 1996-2017, Amazon.com, Inc. or its affiliates
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- Ends Here -->
+
+        <!--Loading All The Js Files-->
+        <script src="{% static 'home/js/slider.js' %}"></script>
+        <!--Ends Here-->
+
+        <!-- Scripts -->
+        <script>
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("bg-changing").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("bg-changing").style.display = "none";
+            }
+        </script>
+
+        <script>
+            function bg__dark() {
+                document.getElementById("bg-changing__dropdown").style.display =
+                    "block";
+            }
+
+            function bg__light() {
+                document.getElementById("bg-changing__dropdown").style.display = "none";
+            }
+        </script>
+
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (e) {
+                if (!e.target.matches(".dropbtn")) {
+                    var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains("show")) {
+                        myDropdown.classList.remove("show");
+                    }
+                }
+            };
+        </script>
+</body>
+
+</html>

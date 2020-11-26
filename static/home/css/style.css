@@ -555,7 +555,6 @@ footer .middle li {
 }
 
 footer .middle .logo {
-  background: transparent url('../img/logo.png') no-repeat 0 0;
   background-size: 76px;
   width: 76px;
   height: 23px;
@@ -668,4 +667,8 @@ footer .bottom a:hover {
 footer .bottom a span {
   color: #999;
   font-size: 10px;
+}
+
+.no-display {
+  display: none;
 }
