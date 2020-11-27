@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from Shop.models import Product
 from actstream import action
 from notifications.signals import notify
-import random
+from django.core.paginator import Paginator
 from actstream.models import Action
 
 # Create your views here.
@@ -71,7 +71,7 @@ def cart_detail(request):
     return render(request, 'Shop/cart.html')
 
 
-def search(request):
+def search(request, page_num):
 
     if request.method == "POST":
         global query, category
@@ -79,54 +79,59 @@ def search(request):
         category = request.POST['category']
 
     filtered_product = Product.objects.filter(
-        name__icontains=query)
+        name__icontains=query, category=category)
 
+    # Pagination
+    page_obj = Paginator(filtered_product, 1, allow_empty_first_page=False)
+    main_page = page_obj.get_page(page_num)
+    print(main_page.count)
     # Only Sending Action When User Is (Authenticated)
     if request.user.is_authenticated:
         action.send(request.user, verb="User Has Searched",
                     description=f"{request.user} has searched the term {query} in the category {category}")
 
     # Context Used In The Template
-    params = {'products': filtered_product}
-    return render(request, 'Shop/search.html', params)
+    params = {'products': main_page}
+    return render(request, 'home/search.html', params)
 
 # Main Function (Product- Page)
 
 
 def main_product(request, slug):
-    product = Product.objects.filter(slug=slug).first()
+    pass
+    # product = Product.objects.filter(slug=slug).first()
 
-    Product_History = []
+    # Product_History = []
 
-    # Sponsered Products
-    sponsered_product = Product.objects.filter(
-        category=product.category).exclude(slug=slug)[:2]
+    # # Sponsered Products
+    # sponsered_product = Product.objects.filter(
+    #     category=product.category).exclude(slug=slug)[:2]
 
-    for items in sponsered_product:
-        Product_History.append(items.id)
+    # for items in sponsered_product:
+    #     Product_History.append(items.id)
 
-    # Json Data Related To Product
-    json_data = product.data
+    # # Json Data Related To Product
+    # json_data = product.data
 
-    # Products Related To The Same Sub-Categories
-    # Sub_Category_Product = Product.objects.filter(
-    #     sub_category=product.sub_category).exclude(id=Product_History[1])[:7]
+    # # Products Related To The Same Sub-Categories
+    # # Sub_Category_Product = Product.objects.filter(
+    # #     sub_category=product.sub_category).exclude(id=Product_History[1])[:7]
 
-    # Products Related To The Same Category
-    # Category_Products = Product.objects.filter(
-    #     category=product.category).exclude(slug=slug)[:7]
+    # # Products Related To The Same Category
+    # # Category_Products = Product.objects.filter(
+    # #     category=product.category).exclude(slug=slug)[:7]
 
-    # Products(User Viewed)
-    user_history = Action.objects.filter(
-        actor_object_id=request.user.id, verb="User Has Viewed Product")[:7]
+    # # Products(User Viewed)
+    # user_history = Action.objects.filter(
+    #     actor_object_id=request.user.id, verb="User Has Viewed Product")[:7]
 
-    # Sending the action to the database
-    if request.user.is_authenticated:
-        action.send(request.user, verb="User Has Viewed Product",
-                    description=f"{request.user} has viewed the product {product} with the slug {slug} and id of {product.id}", action_object=product, slug=slug, product_histotry=Product_History, product_data=json_data)
+    # # Sending the action to the database
+    # if request.user.is_authenticated:
+    #     action.send(request.user, verb="User Has Viewed Product",
+    #                 description=f"{request.user} has viewed the product {product} with the slug {slug} and id of {product.id}", action_object=product, slug=slug, product_histotry=Product_History, product_data=json_data)
 
-    # Context Used In The Template
-    params = {'products': product,
-              'jsonData': json_data, 'user_history': user_history, }
+    # # Context Used In The Template
+    # params = {'products': product,
+    #           'jsonData': json_data, 'user_history': user_history, }
 
-    return render(request, 'home/product.html', params)
+    # return render(request, 'home/product.html', params)

@@ -11,6 +11,6 @@ urlpatterns = [
          item_decrement, name='item_decrement'),
     path('cart/cart_clear/', cart_clear, name='cart_clear'),
     path('cart/cart-detail/', cart_detail, name='cart_detail'),
-    path('product/search', search, name='search'),
+    path('product/search/<int:page_num>', search, name='search'),
     path('product/<str:slug>', main_product, name="main_product")
 ]

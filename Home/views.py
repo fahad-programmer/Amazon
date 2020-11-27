@@ -29,11 +29,10 @@ def index(request):
 def SignIn(request):
     return render(request, 'home/login.html')
 
-def search_result(request):
-    return render(request, 'home/search.html')
 
 def product_view(request):
     return render(request, 'home/product.html')
+
 
 def signup(request):
     return render(request, 'home/signup.html')

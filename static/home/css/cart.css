@@ -1,0 +1,29 @@
+.cart__sections {
+  display: flex;
+}
+.section__one {
+  margin-top: 20px;
+  padding-right: 20px;
+}
+.main__banner {
+  background-color: #fff;
+  padding: 64px 20px 20px;
+  display: flex;
+  border-radius: 5px;
+}
+.image__sign {
+  width: 30%;
+  padding-right: 2%;
+}
+.content__sign {
+  width: 68%;
+}
+span.sign__head {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+span.sign__buttons {
+  display: flex;
+}
