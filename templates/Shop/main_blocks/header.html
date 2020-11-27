@@ -1,0 +1,259 @@
+{% load static%}
+<!-- Main Body -->
+<div class="app">
+    {% load cart_tag %}
+
+    <!--Header Of The Page-->
+    <div class="header">
+        <!-- Menu And Logo -->
+        <div class="header-menu-button" onclick="w3_open()">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill menu__button"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                style="color: white; width: 1.2rem; height: 1.2rem">
+                <path
+                    d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
+            </svg>
+        </div>
+        <div class="header_logo_div">
+            <a href="/">
+                <img class="header__logo" src="{% static 'home/img/logo.png' %}" />
+            </a>
+        </div>
+        <div class="right__gap"></div>
+
+        <!-- Search Bar -->
+        <div class="header__search">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">
+                    All
+                    <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+                </button>
+                <form method="POST" action="{% url 'search' %}">
+                    {% csrf_token %}
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#">Toys</a>
+                        <a href="#">Women Cloathes</a>
+                        <a href="#">Electronics</a>
+                    </div>
+            </div>
+            <input class="header__searchInput" placeholder="Search For Products" type="text" name="query" />
+            <input type="hidden" value="Electronics" name="category">
+
+            <i class="fa fa-search header__searchIcon" aria-hidden="true"></i>
+
+        </div>
+        </form>
+        <div class="header__nav">
+            <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()"
+                onmouseout="bg__light()">
+                <span class="header__optionLineOne" style="height: 10px"></span>
+                <span class="header__optionLineTwo dropbtn__country"><img
+                        src="{% static 'home\img\flags\united-states-of-america.png' %}" style="width: 25px" />
+                    <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+                </span>
+                <!-- Language and Country Dropdown Menu-->
+                <div class="dropdown-content__country" style="padding: 14px; width: 250px">
+                    <div class="dropdown__content">
+                        <div class="drop_label">
+                            <span class="drop_text" style="display: flex; align-items: center">
+                                <p class="drop_maintext">Change Language</p>
+                                <a href="#" class="card-shop-link drop_mainlink"
+                                    style="font-size: 11px; margin-left: 5px">Learn More</a>
+                            </span>
+                        </div>
+                        <div class="drop__languages"></div>
+                    </div>
+                </div>
+                <!-- Ends Here -->
+            </div>
+
+            <div class="header__option margin__left dropdown__country" onmouseover="bg__dark()"
+                onmouseout="bg__light()">
+                {% if user.is_authenticated %}
+                <span class="header__optionLineOne">Hello, {{user.username}}</span>
+                {% else %}
+                <span class="header__optionLineOne">Hello, Guest</span>
+                {% endif %}
+                <span class="header__optionLineTwo dropbtn__country">Account & Lists
+                    <i class="fa fa-caret-down" style="margin-left: 8px"></i>
+                </span>
+                <div class="dropdown-content__country" style="width: 470px; left: -150px; padding: 15px">
+                    {% if user.is_authenticated %}
+                    <a href="/accounts/profile">Profile</a>
+                    <a href="/accounts/logout">Logout</a>
+                    <a href="/cart">Cart</a>
+                    {% else %}
+                    <div class="product" style="margin: 0; padding: 0 120px">
+                        <button style="margin: 0">Sign in</button>
+                        <div style="display: flex; justify-content: center">
+                            <p class="drop_maintext" style="font-size: 11px">
+                                New customer?
+                            </p>
+                            <a href="#" class="card-shop-link drop_mainlink"
+                                style="font-size: 11px; margin-left: 5px">Start Here</a>
+                        </div>
+                    </div>
+                    <hr style="margin: 8px" />
+                    <div class="y__menu">
+                        <div class="y__content">
+                            <div class="y__title" id="">Your Lists</div>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Create a List </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Find a List or Registry </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Find a Gift </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Save Items from the Web </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Wedding Registry </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Baby Registry </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Friends &amp; Family Gifting </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> AmazonSmile Charity Lists </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Hearts </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Explore Idea Lists </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Explore Showroom </span>
+                            </a>
+                        </div>
+                        <div class="y__content" style="border-left: 1px solid #eaeaea">
+                            <div class="y__title" id="">Your Account</div>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Account </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Orders </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Recommendations </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text">
+                                    Memberships &amp; Subscriptions
+                                </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Garage </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Fanshop </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Pets </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Content and Devices </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Music Library </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Amazon Drive </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Prime Video </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Kindle Unlimited </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text"> Your Watchlist </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text">
+                                    Your Video Purchases &amp; Rentals
+                                </span>
+                            </a>
+                            <a href="#" class="y__item">
+                                <span class="y__text">
+                                    Your Android Apps &amp; Devices
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="header__option margin__left">
+                <span class="header__optionLineOne">Returns</span>
+                <span class="header__optionLineTwo">& Orders</span>
+            </div>
+
+            <div class="header__option margin__left">
+                <span class="header__optionLineOne">Your</span>
+                <span class="header__optionLineTwo">Prime</span>
+            </div>
+
+            <div class="header__optionBasket margin__left">
+                <a href="/shop/cart/cart-detail">
+                    <i class="fa fa-shopping-basket" aria-hidden="true" style="margin-right: 5px"></i></a>
+                {{request.session.cart|length}}
+                <span class="header__optionLineTwo header__basketCount"> </span>
+            </div>
+        </div>
+    </div>
+    <!--Ends Here-->
+
+    <div class="bg-mana" id="bg-changing" style="display: none"></div>
+    <div class="bg-mana__dropdown" id="bg-changing__dropdown" style="display: none"></div>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="width: 300px; z-index: 9999; display: none"
+        id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large xolo__butt" onclick="w3_close()">
+            Close &times;
+        </button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+
+    <!-- Second Header -->
+
+    <div class="sub-header">
+        <div class="left-header-side">
+            <div class="buyer-location">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" id="geo-marker" class="bi bi-geo-alt"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                    <path fill-rule="evenodd"
+                        d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                <div class="location-of-user">
+                    <p class="deliver">Deliver to</p>
+                    <p class="deliver-to">Pakistan</p>
+                </div>
+            </div>
+        </div>
+        <div class="center-header-side">
+            <div class="sub-header-menu">
+                <a href="#" class="obj-menu">Today's Deal</a>
+                <a href="#" class="obj-menu">Customer Service</a>
+                <a href="#" class="obj-menu">Gift Cards</a>
+                <a href="#" class="obj-menu">Sell</a>
+                <a href="#" class="obj-menu">Registry</a>
+            </div>
+        </div>
+        <div class="right-header-side">
+            <a href="#" class="obj-menu amz-covid">Amazon's response to COVID-19</a>
+        </div>
+    </div>
+
+    <!-- Ends Here-->
