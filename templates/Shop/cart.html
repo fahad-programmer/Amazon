@@ -160,7 +160,11 @@
         <div style="width: 100%;height: 100%;padding: 14px 18px 18px;">
           <div class="cart__sections">
               <div class="section__one">
-                  <div class="main__banner">
+                  <div class="main__banner" style="display: flex;">
+                      <!--
+                          The Below Section for the Non registered Users.
+                          The section after this section for those who are registered with us.
+                      -->
                     <div class="image__sign">
                         <img src="https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg" alt="Sign In First" class="sign__image">
                     </div>
@@ -183,13 +187,218 @@
                         </span>
                     </div>
                   </div>
-                  <div class="second__banner"></div>
+                  <div class="main__banner" style="padding: 20px 20px 20px;display: none;">
+                    <!-- 
+                        The Below Section for the Registered Users.
+                        just change the display style of main__banner to block and above section display to none.
+                    -->
+                    <div class="main__container__cart">
+                        <span class="main__cart__head">
+                            <h1 class="cart__head">Shopping Cart</h1>
+                        </span>
+                        <span class="main__cart__deall">
+                            <a href="#" class="card-shop-link">Deselect all items</a>
+                        </span>
+                        <div class="price__logan">Price</div>
+                        <div class="cart__added__products fi-sm">
+                            <div class="cart__added">
+                                <div class="check__mark__container">
+                                    <input type="checkbox" style="width: 15px;height: 15px;">
+                                </div>
+                                <div class="hero__image_cart">
+                                    <img src="https://m.media-amazon.com/images/I/615YaAiA-ML._AC_AA180_.jpg" alt="" class="sr-im">
+                                </div>
+                                <div class="hero__product__desc">
+                                    <span class="hero__title">
+                                        <a href="#" class="card-shop-link"
+                                        style="font-size: 18px!important;
+                                        line-height: 24px!important;
+                                        font-weight: 600;">
+                                            Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 64 GB 
+                                        </a>
+                                    </span>
+                                    <span class="hero__seller">By Oculus</span>
+                                    <span class="hero__cat">Video Games</span>
+                                    <span class="stock__status green">In stock</span>
+                                    <span class="hero__quantity">
+                                        <span class="hero__q__label">Quantity: </span>
+                                        <select name="quantity" class="hero__q__drop">
+                                            <option value="0">
+                                                0 (Delete)
+                                            </option>
+                                            <option value="1" selected="">
+                                                1
+                                            </option>
+                                            <option value="2">
+                                                2
+                                            </option>
+                                            <option value="3">
+                                                3
+                                            </option>
+                                            <option value="4">
+                                                4
+                                            </option>
+                                            <option value="5">
+                                                5
+                                            </option>
+                                            <option value="6">
+                                                6
+                                            </option>
+                                            <option value="7">
+                                                7
+                                            </option>
+                                            <option value="8">
+                                                8
+                                            </option>
+                                            <option value="9">
+                                                9
+                                            </option>
+                                            <option value="10">
+                                                10+
+                                            </option>
+                                        </select>
+                                    </span>
+                                    <span class="cart__ins"><a href="#" class="card-shop-link" style="font-size: 12px;">Delete</a></span>
+                                    <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Save for later</a></span>
+                                    <span class="cart__ins" style="border-right: none;padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Compare with similar items</a></span>
+                                </div>
+                                <div class="hero__price">
+                                    <span class="label__cart__price">$229.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__added__products">
+                            <div class="cart__added">
+                                <div class="check__mark__container">
+                                    <input type="checkbox" style="width: 15px;height: 15px;">
+                                </div>
+                                <div class="hero__image_cart">
+                                    <img src="https://m.media-amazon.com/images/I/615YaAiA-ML._AC_AA180_.jpg" alt="" class="sr-im">
+                                </div>
+                                <div class="hero__product__desc">
+                                    <span class="hero__title">
+                                        <a href="#" class="card-shop-link"
+                                        style="font-size: 18px!important;
+                                        line-height: 24px!important;
+                                        font-weight: 600;">
+                                            Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 64 GB 
+                                        </a>
+                                    </span>
+                                    <span class="hero__seller">By Oculus</span>
+                                    <span class="hero__cat">Video Games</span>
+                                    <span class="stock__status green">In stock</span>
+                                    <span class="hero__quantity">
+                                        <span class="hero__q__label">Quantity: </span>
+                                        <select name="quantity" class="hero__q__drop">
+                                            <option value="0">
+                                                0 (Delete)
+                                            </option>
+                                            <option value="1" selected="">
+                                                1
+                                            </option>
+                                            <option value="2">
+                                                2
+                                            </option>
+                                            <option value="3">
+                                                3
+                                            </option>
+                                            <option value="4">
+                                                4
+                                            </option>
+                                            <option value="5">
+                                                5
+                                            </option>
+                                            <option value="6">
+                                                6
+                                            </option>
+                                            <option value="7">
+                                                7
+                                            </option>
+                                            <option value="8">
+                                                8
+                                            </option>
+                                            <option value="9">
+                                                9
+                                            </option>
+                                            <option value="10">
+                                                10+
+                                            </option>
+                                        </select>
+                                    </span>
+                                    <span class="cart__ins"><a href="#" class="card-shop-link" style="font-size: 12px;">Delete</a></span>
+                                    <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Save for later</a></span>
+                                    <span class="cart__ins" style="border-right: none;padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Compare with similar items</a></span>
+                                </div>
+                                <div class="hero__price">
+                                    <span class="label__cart__price">$229.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtotal__cart">
+                            <span class="label__sub__one">Subtotal (2 item):&nbsp;</span>
+                            <span class="label__cart__price">$458.00</span>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="second__banner" style="height: auto;">
+                      <!-- 
+                          This is a Second Container. But it will remain invisible for Non-Registered User
+                        -->
+                        <div class="all__in__cont" style="display: none;padding-right: 20px;padding-left: 20px;">
+                            <span class="main__cart__head">
+                                <h1 class="cart__head" style="font-weight: 700;">Your items</h1>
+                            </span>
+                            <span class="main__cart__deall">
+                                1 Items which you have already bought<br>
+                            </span>
+                            <br>
+                            <div class="cart__added__products">
+                                <div class="cart__added">
+                                    <div class="hero__image_cart">
+                                        <img src="https://m.media-amazon.com/images/I/615YaAiA-ML._AC_AA180_.jpg" alt="" class="sr-im">
+                                    </div>
+                                    <div class="hero__product__desc">
+                                        <span class="hero__title">
+                                            <a href="#" class="card-shop-link"
+                                            style="font-size: 18px!important;
+                                            line-height: 24px!important;
+                                            font-weight: 600;">
+                                                Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 64 GB 
+                                            </a>
+                                        </span>
+                                        <span class="hero__seller">By Oculus</span>
+                                        <span class="hero__cat">Video Games</span>
+                                        <span class="stock__status green">In stock</span>
+                                        <br>
+                                        <span class="cart__ins"><a href="#" class="card-shop-link" style="font-size: 12px;">Delete</a></span>
+                                        <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Return to Cart</a></span>
+                                        <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Add to Wishlist</a></span>
+                                        <span class="cart__ins" style="border-right: none;padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Compare with similar items</a></span>
+                                    </div>
+                                    <div class="hero__price">
+                                        <span class="label__cart__price">$229.00</span>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                  </div>
                   <div class="label__banner">
                     <span class="label__cart">The price and availability of items at Amazon.com are subject to change. The Cart is a temporary place to store a list of your items and reflects each item's most recent price. Shopping Cart <a href="#" class="card-shop-link">Learn more</a></span>
                     <span class="label__cart">Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.</span>
                   </div>
               </div>
               <div class="section__two">
+                  <!-- This Section will be shown to Registered users-->
+                <div class="sidebar__cart" style="border-bottom: 8px solid #ddd;padding: 20px 18px 14px;">
+                    <div class="product" style="margin: 0;padding: 0;">
+                        <span class="label__sub__one">Subtotal (2 item):&nbsp;</span>
+                        <span class="label__cart__price">$458.00</span>
+                        <button>Proceed to checkout</button>
+                    </div>
+                </div>
+                  <!--
+                      Following Section is for both Registerd and Non-Registered users.
+                 -->
                 <div class="sidebar__cart">
                     <div class="head__side__cart">
                         <span class="main__head">Your recently viewed items</span>
