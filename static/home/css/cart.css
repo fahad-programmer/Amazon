@@ -4,12 +4,26 @@
 .section__one {
   margin-top: 20px;
   padding-right: 20px;
+  width: 75%;
+}
+.section__two {
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+.sidebar__cart {
+  padding: 14px 18px;
+}
+.head__side__cart {
+  margin-bottom: 12px;
 }
 .main__banner {
   background-color: #fff;
   padding: 64px 20px 20px;
   display: flex;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 .image__sign {
   width: 30%;
@@ -26,4 +40,113 @@ span.sign__head {
 }
 span.sign__buttons {
   display: flex;
+}
+span.label__cart {
+  display: block;
+  font-size: 12px;
+}
+.second__banner {
+  background: #fff;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  border-radius: 5px;
+}
+span.main__head {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+ul.main__list__items {
+  list-style: none;
+  padding: 0;
+}
+li.cart__list__items {
+  display: flex;
+  margin-bottom: 10px;
+}
+.cart__side__image {
+  margin-right: 10px;
+}
+.cart__side__info {
+  width: -webkit-fill-available;
+}
+span.cart__side__title {
+  display: block;
+}
+span.cart__side__cat {
+  font-size: 12px;
+}
+span.cart__side__seller {
+  display: block;
+}
+h1.cart__head {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 20px;
+}
+.price__logan {
+  float: right;
+}
+.cart__added__products {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.fi-sm {
+  margin-top: 10px;
+}
+.cart__added {
+  padding: 10px 0;
+  display: flex;
+}
+.check__mark__container {
+  align-self: center;
+  margin-right: 15px;
+}
+.hero__image_cart {
+  max-width: 180px;
+  max-height: 180px;
+  margin-right: 10px;
+}
+img.sr-im {
+  max-height: 180px;
+}
+span.label__cart__price {
+  float: right;
+  font-size: 18px!important;
+  line-height: 24px!important;
+  font-weight: 700;
+}
+.hero__price {
+  width: 30%;
+}
+span.hero__cat {
+  display: block;
+  font-size: 12px!important;
+  color: #565959;
+}
+span.stock__status.green {
+  font-size: 12px;
+  display: block;
+  color: green;
+}
+span.hero__quantity {
+  display: block;
+  padding: 10px 0 3px;
+}
+select.hero__q__drop {
+  width: 40px;
+}
+span.cart__ins {
+  border-right: 1px solid #ddd;
+  padding-right: 10px;
+}
+.subtotal__cart {
+  margin-top: 10px;
+  text-align: -webkit-right;
+}
+span.label__sub__one {
+    font-size: 18px!important;
+    line-height: 24px!important;
 }
