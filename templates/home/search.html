@@ -1265,7 +1265,7 @@
                  <div class="pagination">
     <span class="step-links">
         {% if products.has_previous %}
-            <a href="{{ products.previous_page_number }}">previous</a>
+            <a href="{{ products.previous_page_number }}">Previous</a>
         {% endif %}
 
         <span class="current">
@@ -1273,8 +1273,8 @@
         </span>
 
         {% if products.has_next %}
-            <a href="{{ products.next_page_number }}">next</a>
-            <a href="{{ products.paginator.num_pages }}">last &raquo;</a>
+            <a href="{{ products.next_page_number }}">Next</a>
+            <a href="{{ products.paginator.num_pages }}">Last &raquo;</a>
         {% endif %}
     </span>
 </div>
@@ -1299,14 +1299,15 @@
                         </div>
                         <div class="brand__related__cards">
                           <ul class="brands__cards">
+                              {% for main_prod in cat_prod %}
                             <li class="brand__card">
                               <div class="brand____container">
                                 <div class="main__brand__image">
-                                  <img class="camuta" src="https://images-na.ssl-images-amazon.com/images/S/gladiator-image-upload-prod/2/ATVPDKIKX0DER/474d15d7ce142f597f7af2caa583ccdf._CR0,0,400,400_AC_SX139_SY100_QL70_.jpg" alt="">
+                                  <img class="camuta" src="/media/{{main_prod.image}}" alt="">
                                 </div>
                                 <div class="main__brand__info">
                                   <span class="brand__product__desc">
-                                    iPhone 12 Pro. Hello 5G.
+                                    {{main_prod.name}}
                                   </span>
                                   <span class="brand__link">
                                     <a href="#" class="card-shop-link">Shop Apple > </a>
@@ -1314,6 +1315,7 @@
                                 </div>
                               </div>
                             </li>
+                            {% endfor %}
                             <li class="brand__card">
                               <div class="brand____container">
                                 <div class="main__brand__image">

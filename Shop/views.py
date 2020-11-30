@@ -82,16 +82,20 @@ def search(request, page_num):
         name__icontains=query, category=category)
 
     # Pagination
-    page_obj = Paginator(filtered_product, 1, allow_empty_first_page=False)
+    page_obj = Paginator(filtered_product, 16, allow_empty_first_page=False)
     main_page = page_obj.get_page(page_num)
-    print(main_page.count)
+
     # Only Sending Action When User Is (Authenticated)
     if request.user.is_authenticated:
         action.send(request.user, verb="User Has Searched",
                     description=f"{request.user} has searched the term {query} in the category {category}")
 
+    # category-products
+    category_products = Product.objects.filter(
+        category=category)[:1]
+
     # Context Used In The Template
-    params = {'products': main_page}
+    params = {'products': main_page, 'cat_prod': category_products}
     return render(request, 'home/search.html', params)
 
 # Main Function (Product- Page)
