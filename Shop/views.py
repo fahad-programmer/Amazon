@@ -70,6 +70,9 @@ def cart_clear(request):
 def cart_detail(request):
     return render(request, 'Shop/cart.html')
 
+@login_required(login_url="/account/login")
+def payout(request):
+    return render(request, 'Shop/payout.html')
 
 def search(request, page_num):
 
