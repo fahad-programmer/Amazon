@@ -29,6 +29,7 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- Styles -->
   <style>
@@ -632,7 +633,7 @@
                     </div>
                     <span class="buy__cart__button">
                       <div class="product" style="margin: 0;padding: 0;">
-                        <button style="margin-bottom: 10px;"><a href="{% url 'cart_add' products.id %}">Add To Cart</a></button>
+                        <button id="pr{{products.id}}" class="cart" style="margin-bottom: 10px;"><a href="{% url 'cart_add' products.id %}">Add To Cart</a></button>
                         <button
                           style="margin-top: 0px !important;background: linear-gradient(to bottom,#f6c88f,#ed9220);margin-bottom: 10px;">Buy
                           Now</button>
@@ -1408,6 +1409,8 @@
     <script src="{% static 'home/js/slider.js' %}"></script>
     <!--Ends Here-->
 
+     
+
     <!-- Scripts -->
     <script>
       function w3_open() {
@@ -1420,6 +1423,8 @@
         document.getElementById("bg-changing").style.display = "none";
       }
     </script>
+
+   
 
     <script>
       function bg__dark() {
