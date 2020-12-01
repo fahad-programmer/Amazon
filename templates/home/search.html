@@ -1175,9 +1175,10 @@
             </div>
             <div class="p__products__list">
                 <div class="main__search__results">
+                    {% for prods in products %}
                     <div class="main__product__s">
                         <div class="x-comm">
-                            {% for prods in products %}
+                            
                             <div class="main__pro__image">
                                 <div class="__image__container">
                                     <img src="media/{{prods.image}}"
@@ -1984,6 +1985,7 @@
                 document.getElementById("bg-changing").style.display = "none";
             }
         </script>
+     
 
         <script>
             function bg__dark() {

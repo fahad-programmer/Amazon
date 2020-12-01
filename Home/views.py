@@ -26,6 +26,10 @@ def index(request):
     return render(request, 'home/index.html')
 
 
+def error404handler(request, exception):
+    return render(request, 'home/404.html')
+
+
 def SignIn(request):
     return render(request, 'home/login.html')
 

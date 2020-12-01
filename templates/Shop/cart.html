@@ -3,6 +3,7 @@
 
 <head>
     {% load static %}
+    {% load cart_tag %}
     <!-- Title -->
     <title>
         Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books,
@@ -160,7 +161,8 @@
         <div style="width: 100%;height: 100%;padding: 14px 18px 18px;">
           <div class="cart__sections">
               <div class="section__one">
-                  <div class="main__banner" style="display: flex;">
+                {% if request.session.cart|length >= 1 %}
+                  <div class="main__banner" style="display: none;">
                       <!--
                           The Below Section for the Non registered Users.
                           The section after this section for those who are registered with us.
@@ -187,93 +189,53 @@
                         </span>
                     </div>
                   </div>
-                  <div class="main__banner" style="padding: 20px 20px 20px;display: none;">
+                  {% else %}
+                     <div class="main__banner" style="display: flex;">
+                      <!--
+                          The Below Section for the Non registered Users.
+                          The section after this section for those who are registered with us.
+                      -->
+                    <div class="image__sign">
+                        <img src="https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg" alt="Sign In First" class="sign__image">
+                    </div>
+                    <div class="content__sign">
+                        <span class="sign__head">Your Amazon Cart is empty</span>
+                        <span class="sign__link"><a href="#" class="card-shop-link">Shop today's deals</a></span>
+                        <span class="sign__buttons">
+                            <div class="product" style="padding: 10px 10px 10px 0;width: auto;margin: auto 0;">
+                                <button style="padding: 3px 7px;margin: 0;font-size: 16px;">Sign in to your account</button>
+                            </div>
+                            <div class="product" style="padding: 10px 10px 10px 0;width: auto;margin: auto 0;">
+                                <button style="margin-top: 0px !important;
+                                background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 0px;    
+                                text-align: center;
+                                padding-right: 10px;
+                                padding-left: 10px;
+                                font-size: 16px;
+                                padding: 3px 7px;">Sign up now</button>
+                            </div>
+                        </span>
+                    </div>
+                  </div>
+                  {% endif %}
+
+                  
+                  <div class="main__banner" style="padding: 20px 20px 20px;display: block;">
                     <!-- 
                         The Below Section for the Registered Users.
                         just change the display style of main__banner to block and above section display to none.
                     -->
                     <div class="main__container__cart">
                         <span class="main__cart__head">
-                            <h1 class="cart__head">Shopping Cart</h1>
+                            <h1 class="cart__head" style="margin-bottom: 15px">Shopping Cart</h1>
                         </span>
-                        <span class="main__cart__deall">
-                            <a href="#" class="card-shop-link">Deselect all items</a>
-                        </span>
-                        <div class="price__logan">Price</div>
-                        <div class="cart__added__products fi-sm">
-                            <div class="cart__added">
-                                <div class="check__mark__container">
-                                    <input type="checkbox" style="width: 15px;height: 15px;">
-                                </div>
-                                <div class="hero__image_cart">
-                                    <img src="https://m.media-amazon.com/images/I/615YaAiA-ML._AC_AA180_.jpg" alt="" class="sr-im">
-                                </div>
-                                <div class="hero__product__desc">
-                                    <span class="hero__title">
-                                        <a href="#" class="card-shop-link"
-                                        style="font-size: 18px!important;
-                                        line-height: 24px!important;
-                                        font-weight: 600;">
-                                            Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 64 GB 
-                                        </a>
-                                    </span>
-                                    <span class="hero__seller">By Oculus</span>
-                                    <span class="hero__cat">Video Games</span>
-                                    <span class="stock__status green">In stock</span>
-                                    <span class="hero__quantity">
-                                        <span class="hero__q__label">Quantity: </span>
-                                        <select name="quantity" class="hero__q__drop">
-                                            <option value="0">
-                                                0 (Delete)
-                                            </option>
-                                            <option value="1" selected="">
-                                                1
-                                            </option>
-                                            <option value="2">
-                                                2
-                                            </option>
-                                            <option value="3">
-                                                3
-                                            </option>
-                                            <option value="4">
-                                                4
-                                            </option>
-                                            <option value="5">
-                                                5
-                                            </option>
-                                            <option value="6">
-                                                6
-                                            </option>
-                                            <option value="7">
-                                                7
-                                            </option>
-                                            <option value="8">
-                                                8
-                                            </option>
-                                            <option value="9">
-                                                9
-                                            </option>
-                                            <option value="10">
-                                                10+
-                                            </option>
-                                        </select>
-                                    </span>
-                                    <span class="cart__ins"><a href="#" class="card-shop-link" style="font-size: 12px;">Delete</a></span>
-                                    <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Save for later</a></span>
-                                    <span class="cart__ins" style="border-right: none;padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Compare with similar items</a></span>
-                                </div>
-                                <div class="hero__price">
-                                    <span class="label__cart__price">$229.00</span>
-                                </div>
-                            </div>
-                        </div>
+                    
+                        
+                       {% for key,value in request.session.cart.items %}
                         <div class="cart__added__products">
                             <div class="cart__added">
-                                <div class="check__mark__container">
-                                    <input type="checkbox" style="width: 15px;height: 15px;">
-                                </div>
                                 <div class="hero__image_cart">
-                                    <img src="https://m.media-amazon.com/images/I/615YaAiA-ML._AC_AA180_.jpg" alt="" class="sr-im">
+                                    <img src="/media/{{value.image}}">
                                 </div>
                                 <div class="hero__product__desc">
                                     <span class="hero__title">
@@ -281,107 +243,33 @@
                                         style="font-size: 18px!important;
                                         line-height: 24px!important;
                                         font-weight: 600;">
-                                            Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 64 GB 
+                                            {{value.name}} 
                                         </a>
                                     </span>
-                                    <span class="hero__seller">By Oculus</span>
-                                    <span class="hero__cat">Video Games</span>
+                                    <span class="hero__seller">By Amazon</span>
                                     <span class="stock__status green">In stock</span>
                                     <span class="hero__quantity">
-                                        <span class="hero__q__label">Quantity: </span>
-                                        <select name="quantity" class="hero__q__drop">
-                                            <option value="0">
-                                                0 (Delete)
-                                            </option>
-                                            <option value="1" selected="">
-                                                1
-                                            </option>
-                                            <option value="2">
-                                                2
-                                            </option>
-                                            <option value="3">
-                                                3
-                                            </option>
-                                            <option value="4">
-                                                4
-                                            </option>
-                                            <option value="5">
-                                                5
-                                            </option>
-                                            <option value="6">
-                                                6
-                                            </option>
-                                            <option value="7">
-                                                7
-                                            </option>
-                                            <option value="8">
-                                                8
-                                            </option>
-                                            <option value="9">
-                                                9
-                                            </option>
-                                            <option value="10">
-                                                10+
-                                            </option>
-                                        </select>
+                                        <span class="hero__q__label">Quantity : {{value.quantity}} </span>
+                                      
                                     </span>
                                     <span class="cart__ins"><a href="#" class="card-shop-link" style="font-size: 12px;">Delete</a></span>
                                     <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Save for later</a></span>
-                                    <span class="cart__ins" style="border-right: none;padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Compare with similar items</a></span>
-                                </div>
+                                                                </div>
                                 <div class="hero__price">
-                                    <span class="label__cart__price">$229.00</span>
+                                    <span class="label__cart__price">{{value.price}}</span>
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
                         <div class="subtotal__cart">
-                            <span class="label__sub__one">Subtotal (2 item):&nbsp;</span>
-                            <span class="label__cart__price">$458.00</span>
+                            <span class="label__sub__one">Subtotal ({{request.session.cart|length}} item):&nbsp;</span>
+                            <span class="label__cart__price">${{ cart_total_amount}}</span>
                         </div>
                     </div>
                   </div>
-                  <div class="second__banner" style="height: auto;">
-                      <!-- 
-                          This is a Second Container. But it will remain invisible for Non-Registered User
-                        -->
-                        <div class="all__in__cont" style="display: none;padding-right: 20px;padding-left: 20px;">
-                            <span class="main__cart__head">
-                                <h1 class="cart__head" style="font-weight: 700;">Your items</h1>
-                            </span>
-                            <span class="main__cart__deall">
-                                1 Items which you have already bought<br>
-                            </span>
-                            <br>
-                            <div class="cart__added__products">
-                                <div class="cart__added">
-                                    <div class="hero__image_cart">
-                                        <img src="https://m.media-amazon.com/images/I/615YaAiA-ML._AC_AA180_.jpg" alt="" class="sr-im">
-                                    </div>
-                                    <div class="hero__product__desc">
-                                        <span class="hero__title">
-                                            <a href="#" class="card-shop-link"
-                                            style="font-size: 18px!important;
-                                            line-height: 24px!important;
-                                            font-weight: 600;">
-                                                Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 64 GB 
-                                            </a>
-                                        </span>
-                                        <span class="hero__seller">By Oculus</span>
-                                        <span class="hero__cat">Video Games</span>
-                                        <span class="stock__status green">In stock</span>
-                                        <br>
-                                        <span class="cart__ins"><a href="#" class="card-shop-link" style="font-size: 12px;">Delete</a></span>
-                                        <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Return to Cart</a></span>
-                                        <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Add to Wishlist</a></span>
-                                        <span class="cart__ins" style="border-right: none;padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Compare with similar items</a></span>
-                                    </div>
-                                    <div class="hero__price">
-                                        <span class="label__cart__price">$229.00</span>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-                  </div>
+                  
+                  
+                                  
                   <div class="label__banner">
                     <span class="label__cart">The price and availability of items at Amazon.com are subject to change. The Cart is a temporary place to store a list of your items and reflects each item's most recent price. Shopping Cart <a href="#" class="card-shop-link">Learn more</a></span>
                     <span class="label__cart">Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.</span>
@@ -391,8 +279,8 @@
                   <!-- This Section will be shown to Registered users-->
                 <div class="sidebar__cart" style="border-bottom: 8px solid #ddd;padding: 20px 18px 14px;">
                     <div class="product" style="margin: 0;padding: 0;">
-                        <span class="label__sub__one">Subtotal (2 item):&nbsp;</span>
-                        <span class="label__cart__price">$458.00</span>
+                        <span class="label__sub__one">Subtotal ({{request.session.cart|length}} item):&nbsp;</span>
+                        <span class="label__cart__price">${{ cart_total_amount}}</span>
                         <button>Proceed to checkout</button>
                     </div>
                 </div>
@@ -405,29 +293,42 @@
                     </div>
                     <div class="list__of__items">
                         <ul class="main__list__items">
+                            {% for items in userHistory %}
                             <li class="cart__list__items">
                                 <div class="cart__side__image">
-                                    <img src="https://images-na.ssl-images-amazon.com/images/I/615YaAiA-ML._AC_UL100_SR100,100_.jpg" alt="Oculus Quest" class="side__image">
+                                    <img src="media/{{items.image}}" class="side__image">
                                 </div>
                                 <div class="cart__side__info">
-                                    <span class="cart__side__title"><a href="#" class="card-shop-link">Oculus Quest 2...</a></span>
-                                    <span class="cart__side__cat">Oculus</span>
+                                    <span class="cart__side__title"><a href="#" class="card-shop-link">{{items.name |slice:"0:35"}}...</a></span>
+                                    <span class="cart__side__cat">Amazon</span>
                                     <span class="cart__side__rating">
                                         <span class="raiting__container">
                                             <div class="stars__contain" style="margin-right: 5px;">
+                                                {% if items.rating == 1 %}
+                                                <span class="fa fa-star checked"></span>
+                                                {% elif items.rating == 2 %}
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                {% elif items.rating == 3 %}
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
+                                                {% elif items.rating == 4 %}
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                {% else %}
+                                                <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+                                                {% endif %}
                                             </div>
                                             <div class="card-shop-link" style="font-size: 14px;">
-                                                87
+                                                {{items.number_of_ratings}}
                                             </div>
                                         </span>
                                     </span>
                                     <span class="cart__side__seller">Oculus</span>
-                                    <span class="cart__side__price main__label">$229.00</span>
+                                    <span class="cart__side__price main__label">{{items.price}}</span>
                                     <span class="cart__side__button">
                                         <div class="product" style="margin: 0;padding: 0;">
                                             <button style="margin: 0;font-size: 11px;
@@ -438,105 +339,8 @@
                                     </span>
                                 </div>
                             </li>
-                            <li class="cart__list__items">
-                                <div class="cart__side__image">
-                                    <img src="https://images-na.ssl-images-amazon.com/images/I/615YaAiA-ML._AC_UL100_SR100,100_.jpg" alt="Oculus Quest" class="side__image">
-                                </div>
-                                <div class="cart__side__info">
-                                    <span class="cart__side__title"><a href="#" class="card-shop-link">Oculus Quest 2...</a></span>
-                                    <span class="cart__side__cat">Oculus</span>
-                                    <span class="cart__side__rating">
-                                        <span class="raiting__container">
-                                            <div class="stars__contain" style="margin-right: 5px;">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div>
-                                            <div class="card-shop-link" style="font-size: 14px;">
-                                                87
-                                            </div>
-                                        </span>
-                                    </span>
-                                    <span class="cart__side__seller">Oculus</span>
-                                    <span class="cart__side__price main__label">$229.00</span>
-                                    <span class="cart__side__button">
-                                        <div class="product" style="margin: 0;padding: 0;">
-                                            <button style="margin: 0;font-size: 11px;
-                                            line-height: 20px;
-                                            padding: 0 6px 0 7px;
-                                            width: auto;">Add to Cart</button>
-                                        </div>
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="cart__list__items">
-                                <div class="cart__side__image">
-                                    <img src="https://images-na.ssl-images-amazon.com/images/I/615YaAiA-ML._AC_UL100_SR100,100_.jpg" alt="Oculus Quest" class="side__image">
-                                </div>
-                                <div class="cart__side__info">
-                                    <span class="cart__side__title"><a href="#" class="card-shop-link">Oculus Quest 2...</a></span>
-                                    <span class="cart__side__cat">Oculus</span>
-                                    <span class="cart__side__rating">
-                                        <span class="raiting__container">
-                                            <div class="stars__contain" style="margin-right: 5px;">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div>
-                                            <div class="card-shop-link" style="font-size: 14px;">
-                                                87
-                                            </div>
-                                        </span>
-                                    </span>
-                                    <span class="cart__side__seller">Oculus</span>
-                                    <span class="cart__side__price main__label">$229.00</span>
-                                    <span class="cart__side__button">
-                                        <div class="product" style="margin: 0;padding: 0;">
-                                            <button style="margin: 0;font-size: 11px;
-                                            line-height: 20px;
-                                            padding: 0 6px 0 7px;
-                                            width: auto;">Add to Cart</button>
-                                        </div>
-                                    </span>
-                                </div>
-                            </li>
-                            <li class="cart__list__items">
-                                <div class="cart__side__image">
-                                    <img src="https://images-na.ssl-images-amazon.com/images/I/615YaAiA-ML._AC_UL100_SR100,100_.jpg" alt="Oculus Quest" class="side__image">
-                                </div>
-                                <div class="cart__side__info">
-                                    <span class="cart__side__title"><a href="#" class="card-shop-link">Oculus Quest 2...</a></span>
-                                    <span class="cart__side__cat">Oculus</span>
-                                    <span class="cart__side__rating">
-                                        <span class="raiting__container">
-                                            <div class="stars__contain" style="margin-right: 5px;">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div>
-                                            <div class="card-shop-link" style="font-size: 14px;">
-                                                87
-                                            </div>
-                                        </span>
-                                    </span>
-                                    <span class="cart__side__seller">Oculus</span>
-                                    <span class="cart__side__price main__label">$229.00</span>
-                                    <span class="cart__side__button">
-                                        <div class="product" style="margin: 0;padding: 0;">
-                                            <button style="margin: 0;font-size: 11px;
-                                            line-height: 20px;
-                                            padding: 0 6px 0 7px;
-                                            width: auto;">Add to Cart</button>
-                                        </div>
-                                    </span>
-                                </div>
-                            </li>
+                            {% endfor %}
+                                                 
                         </ul>
                     </div>
                 </div>
@@ -545,345 +349,6 @@
         </div>
 
 
-        <!-- Related Products -->
-        <div class="related__con" style="background-color: #fff;padding-top: 10px;">
-            <!-- related -->
-            <div class="related__products">
-                <div class="head__related">
-                    <h2 class="main__heading">Customers Who Bought Items in Your Recent History Also Bought</h2>
-                </div>
-                <div class="related__products__items">
-                    <li class="product__list__related" style="margin-left: 0;">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                </div>
-            </div>
-            <!-- Inspired Through Browsing -->
-            <div class="related__products">
-                <div class="head__related">
-                    <h2 class="main__heading">Inspired by your browsing history</h2>
-                </div>
-                <div class="related__products__items">
-                    <li class="product__list__related" style="margin-left: 0;">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                        <span class="related__item__name">
-                            <a href="#" class="card-shop-link">
-                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
-                            </a>
-                        </span>
-                        <span class="raiting__container">
-                            <div class="stars__contain">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="card-shop-link" style="font-size: 14px;">
-                                87
-                            </div>
-                        </span>
-                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
-                    </li>
-                </div>
-            </div>
-            <!-- Browsing History-->
-            <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
-            <div class="related__products">
-                <div class="head__related">
-                    <h2 class="main__heading">Your Browsing History</h2>
-                </div>
-                <div class="related__products__items">
-                    <li class="product__list__related" style="margin-left: 0;">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                    </li>
-                    <li class="product__list__related">
-                        <span class="image__realted">
-                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
-                        </span>
-                    </li>
-                </div>
-            </div>
-        </div>
-        <!-- Related Products Ends Here-->
-
-        <!-- Main Body Ends Here -->
-
-        <!-- Kindle Section -->
 
         <div class="footer__kindle">
             <div class="content__handler">

@@ -68,7 +68,18 @@ def cart_clear(request):
 
 @login_required(login_url="/account/login")
 def cart_detail(request):
-    return render(request, 'Shop/cart.html')
+    
+    #Getting The User History    
+    prods = set()
+    filtering_history = Action.objects.filter(actor_object_id=request.user.id, verb="User Has Viewed Product").order_by('timestamp')[:3]
+    for items in filtering_history:
+        prods.add(items.action_object_object_id)
+    user_history = Product.objects.filter(id__in = prods)
+    
+    #Context Used In Template
+    params = {'userHistory' : user_history}
+
+    return render(request, 'Shop/cart.html', params)
 
 
 def search(request, page_num):
@@ -79,7 +90,7 @@ def search(request, page_num):
         category = request.POST['category']
 
     filtered_product = Product.objects.filter(
-        name__icontains=query, category=category)
+        name__icontains=query, category=category).order_by('id')
 
     # Pagination
     page_obj = Paginator(filtered_product, 16, allow_empty_first_page=False)
@@ -102,40 +113,42 @@ def search(request, page_num):
 
 
 def main_product(request, slug):
-    pass
-    # product = Product.objects.filter(slug=slug).first()
+    product = Product.objects.filter(slug=slug).first()
 
-    # Product_History = []
+    Product_History = []
 
-    # # Sponsered Products
-    # sponsered_product = Product.objects.filter(
-    #     category=product.category).exclude(slug=slug)[:2]
+    # Sponsered Products
+    sponsered_product = Product.objects.filter(
+        category=product.category).exclude(slug=slug)[:2]
 
-    # for items in sponsered_product:
-    #     Product_History.append(items.id)
+    for items in sponsered_product:
+        Product_History.append(items.id)
 
-    # # Json Data Related To Product
-    # json_data = product.data
+    # Json Data Related To Product
+    json_data = product.data
 
-    # # Products Related To The Same Sub-Categories
-    # # Sub_Category_Product = Product.objects.filter(
-    # #     sub_category=product.sub_category).exclude(id=Product_History[1])[:7]
+    # Products Related To The Same Sub-Categories
+    Sub_Category_Product = Product.objects.filter(
+        sub_category=product.sub_category).exclude(id__in=Product_History)[:7]
 
-    # # Products Related To The Same Category
-    # # Category_Products = Product.objects.filter(
-    # #     category=product.category).exclude(slug=slug)[:7]
+    # Products Related To The Same Category
+    Category_Products = Product.objects.filter(
+        category=product.category).exclude(slug=slug)[:7]
 
-    # # Products(User Viewed)
-    # user_history = Action.objects.filter(
-    #     actor_object_id=request.user.id, verb="User Has Viewed Product")[:7]
+    # Products(User Viewed)
+    prods = set()
+    filtering_history = Action.objects.filter(actor_object_id=request.user.id, verb="User Has Viewed Product").order_by('timestamp')[:6]
+    for items in filtering_history:
+        prods.add(items.action_object_object_id)
+    user_history = Product.objects.filter(id__in = prods)
 
-    # # Sending the action to the database
-    # if request.user.is_authenticated:
-    #     action.send(request.user, verb="User Has Viewed Product",
-    #                 description=f"{request.user} has viewed the product {product} with the slug {slug} and id of {product.id}", action_object=product, slug=slug, product_histotry=Product_History, product_data=json_data)
+    # Sending the action to the database
+    if request.user.is_authenticated:
+        action.send(request.user, verb="User Has Viewed Product",
+                    description=f"{request.user} has viewed the product {product} with the slug {slug} and id of {product.id}", action_object=product, slug=slug, product_histotry=Product_History, product_data=json_data)
 
-    # # Context Used In The Template
-    # params = {'products': product,
-    #           'jsonData': json_data, 'user_history': user_history, }
+    # Context Used In The Template
+    params = {'products': product,
+              'jsonData': json_data, 'user_history': user_history, }
 
-    # return render(request, 'home/product.html', params)
+    return render(request, 'home/product.html', params)

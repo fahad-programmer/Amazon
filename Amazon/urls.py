@@ -26,6 +26,9 @@ admin.site.site_header = "Amazon Control Panel"
 admin.site.site_title = "Amazon Control Panel"
 admin.site.index_title = "Welcome To Amazon Control Panel"
 
+#Custom 404 Page
+handler404 = 'Home.views.error404handler'
+
 
 # Sitemap Integration
 sitemaps = {

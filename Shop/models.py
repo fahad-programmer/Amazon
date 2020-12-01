@@ -14,6 +14,7 @@ class Product(models.Model):
     delievery_Date = models.CharField(default="", max_length=100)
     number_of_ratings = models.IntegerField(default=0)
     price = models.FloatField()
+    brand = models.CharField(max_length=200, default='Amazon')
     slug = models.SlugField(default="", max_length=100)
     image = models.ImageField(upload_to="Shop/images", default=None)
     image_two = models.ImageField(upload_to="Shop/images", default=None)
