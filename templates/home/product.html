@@ -621,6 +621,8 @@
                         <div class="prduct__section__count">
                           <span class="dropdpwn__product">
                             <label for="quantity">Qty: </label>
+                            <form method="POST" action="{% url 'cart_add' products.id %}">
+                              {% csrf_token %}
                             <select name="quantity" id="product__countselect">
                               <option value="1" selected="">1</option>
                               <option value="2">2</option>
@@ -633,7 +635,10 @@
                     </div>
                     <span class="buy__cart__button">
                       <div class="product" style="margin: 0;padding: 0;">
-                        <button id="pr{{products.id}}" class="cart" style="margin-bottom: 10px;"><a href="{% url 'cart_add' products.id %}">Add To Cart</a></button>
+                        <input type="hidden" name="color" value="white">
+                        <input type="hidden" name="size" value="Extra-Large">
+                        <button id="pr{{products.id}}" class="cart" style="margin-bottom: 10px;" type="submit">Add To Cart</button>
+                        </form>
                         <button
                           style="margin-top: 0px !important;background: linear-gradient(to bottom,#f6c88f,#ed9220);margin-bottom: 10px;">Buy
                           Now</button>

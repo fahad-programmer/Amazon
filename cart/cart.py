@@ -15,7 +15,7 @@ class Cart(object):
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart = cart
 
-    def add(self, product, quantity=1, action=None):
+    def add(self ,product, quantity, size, color, action=None):
         """
         Add a product to the cart or update its quantity.
         """
@@ -27,17 +27,20 @@ class Cart(object):
                 'userid': self.request.user.id,
                 'product_id': id,
                 'name': product.name,
-                'quantity': 1,
+                'quantity': quantity,
                 'price': str(product.price),
-                'image': product.image.url
-            }
+                'image': product.image.url,
+                'brand':product.brand,
+                'size':size,
+                'color': color,
+                }
         else:
             newItem = True
 
             for key, value in self.cart.items():
                 if key == str(product.id):
 
-                    value['quantity'] = value['quantity'] + 1
+                    value['quantity'] = value['quantity'] + quantity
                     newItem = False
                     self.save()
                     break
@@ -47,9 +50,13 @@ class Cart(object):
                     'userid': self.request,
                     'product_id': product.id,
                     'name': product.name,
-                    'quantity': 1,
+                    'quantity': quantity,
                     'price': str(product.price),
-                    'image': product.image.url
+                    'image': product.image.url,
+                    'brand':product.brand,
+                    'size':size,
+                    'color': color,
+                 
                 }
 
         self.save()

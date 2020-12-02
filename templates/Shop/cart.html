@@ -249,10 +249,15 @@
                                     <span class="hero__seller">By Amazon</span>
                                     <span class="stock__status green">In stock</span>
                                     <span class="hero__quantity">
-                                        <span class="hero__q__label">Quantity : {{value.quantity}} </span>
+                                        <span class="hero__q__label">Quantity : {{value.quantity}} | Color : {{value.color}} |
+                                        Size : {{value.size}} 
+                                        </span>
                                       
                                     </span>
-                                    <span class="cart__ins"><a href="#" class="card-shop-link" style="font-size: 12px;">Delete</a></span>
+
+                                      
+                                    </span>
+                                    <span class="cart__ins"><a href="{% url 'item_clear' value.product_id %}" class="card-shop-link" style="font-size: 12px;">Delete</a></span>
                                     <span class="cart__ins" style="padding-left: 10px;"><a href="#" class="card-shop-link" style="font-size: 12px;">Save for later</a></span>
                                                                 </div>
                                 <div class="hero__price">

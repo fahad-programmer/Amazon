@@ -15,13 +15,24 @@ from actstream.models import Action
 @login_required(login_url="/account/login")
 def cart_add(request, id):
     cart = Cart(request)
-    product = Product.objects.get(id=id)
-    cart.add(product=product)
+
+    #Getting The Values
+    if request.method == 'POST':
+        global product, color, size, quantity
+        product = Product.objects.get(id=id)
+        color = request.POST['color']
+        size = request.POST['size']
+        quantity = request.POST['quantity']
+
+    #Adding the products in cart
+    cart.add(product=product, color=color, size=size, quantity=int(quantity))
+
+    #Sending Action and Notification To The User
     action.send(request.user, verb="Product Has Been Added",
-                description=f"The User {request.user} has added the product {product} in his cart", action_object=product)
+                description=f"The User {request.user} has added the product {product} in his cart of the color {color} and size of {size} and quantity of {quantity}", action_object=product)
     notify.send(request.user, verb="Product Has Been Added In Your Cart",
                 recipient=request.user, level="success", action_object=product, description=f"The User {request.user} has added the product {product} in his cart")
-    print(request.user.notifications.unread())
+   
     return redirect("Home")
 
 
@@ -74,7 +85,7 @@ def cart_detail(request):
     filtering_history = Action.objects.filter(actor_object_id=request.user.id, verb="User Has Viewed Product").order_by('timestamp')[:3]
     for items in filtering_history:
         prods.add(items.action_object_object_id)
-    user_history = Product.objects.filter(id__in = prods)
+    user_history = Product.objects.filter(id__in = prods)[::-1]
     
     #Context Used In Template
     params = {'userHistory' : user_history}

@@ -28,6 +28,7 @@ class Product(models.Model):
     main_banner = models.ImageField(upload_to="Shop/images", default=None)
     pub_date = models.DateField()
 
+
     def __str__(self):
         return self.name
 

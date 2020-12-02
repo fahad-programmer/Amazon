@@ -30,6 +30,7 @@ admin.site.index_title = "Welcome To Amazon Control Panel"
 handler404 = 'Home.views.error404handler'
 
 
+
 # Sitemap Integration
 sitemaps = {
     'static': StaticViewSitemap,
@@ -61,5 +62,12 @@ urlpatterns = [
     # User Feedback
     path('tellme/', include("tellme.urls")),
 
+    path('api/', include('phone_verify.urls'))
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+
+
+
+#Phone Registration
