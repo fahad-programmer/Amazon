@@ -74,6 +74,10 @@ def cart_detail(request):
 def payout(request):
     return render(request, 'Shop/payout.html')
 
+@login_required(login_url="/account/login")
+def payout2(request):
+    return render(request, 'Shop/payout2.html')
+
 def search(request, page_num):
 
     if request.method == "POST":

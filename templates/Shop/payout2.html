@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <!-- Title -->
+    <title>
+        Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books,
+        DVDs & more
+    </title>
+    <!-- Meta Information -->
+    <meta name="description"
+        content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else." />
+    <meta name="keywords"
+        content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <link rel="canonical" href="https://www.amazon.com/" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta property="og:image"
+        content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+        xmlns:og="http://opengraphprotocol.org/schema/" />
+    <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+    <meta property="og:description"
+        content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+        xmlns:og="http://opengraphprotocol.org/schema/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/payout2.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .link-main:hover {
+            text-decoration: none !important;
+            color: #C7511F;
+        }
+
+        .link-main {
+            color: #0F1111;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        h2.main__heading {
+            color: #0F1111!important;
+            font-size: 21px!important;
+            font-weight: 700;
+            font-family: verdana,arial,helvetica,sans-serif!important;
+        }
+        .app {
+            background: #ffffff;
+        }
+    </style>
+    <style>
+        .dropdown {
+            overflow: hidden;
+            background-color: #f3f3f3;
+            color: #555;
+            height: 40px;
+            width: auto;
+            font-size: 12px;
+            border-radius: 10px 0 0 10px;
+            border-right: 1px solid #d0d0d0;
+        }
+
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 14px;
+            border: none;
+            color: #555;
+            padding: 11px 10px 11.5px 10px;
+            background-color: inherit;
+            font-family: inherit;
+            display: flex;
+            font-size: 12px;
+            align-items: center;
+        }
+
+        .dropdown:hover .dropbtn,
+        .dropbtn:focus {
+            background-color: #e4e4e4;
+            outline: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+
+    <style>
+        .dropdown__country {
+            position: relative;
+        }
+
+        .dropdown-content__country {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            margin-top: 45px;
+            margin-left: -5px;
+            left: -1px;
+            border-radius: 3px;
+        }
+
+        .dropdown-content__country a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown__country:hover .dropdown-content__country {
+            display: block;
+        }
+
+        .xolo__butt {
+            background: #131921;
+            color: #fff;
+            border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+        }
+    </style>
+</head>
+
+<body>
+        {% include './main_blocks/header.html'%}
+
+        <!-- Main Body Container -->
+
+        <div class="main__conatiner_">
+            <div class="payout_page_w">
+                <div class="f_w_s">
+                    <div class="m__heading">
+                        <h1 class="m__h">
+                            Choose your shipping options
+                        </h1>
+                    </div>
+                    <div class="product">
+                        <button>Continue</button>
+                    </div>
+                </div>
+                <div class="s_w_s">
+                    <div class="s__w__flex">
+                        <div class="h__one">
+                            <span class="wran__p__ship">
+                                Shipment 1 of 1
+                            </span>
+                            <span class="wran__h__ship">
+                                Shipping from Amazon.com&nbsp;
+                            </span>
+                            <span class="wran__l">
+                                (<a class="card-shop-link">Learn more</a>)
+                            </span>
+                            <span class="wran_address">
+                                Shipping to: Akbar Ali, Qtr J6/2,E-9 Islamabad, Pakistan, Islamabd, Islamabad Capital Territory, 44230 Pakistan
+                            </span>
+                            <span class="wran_products">
+                                <ul class="main__ulist">
+                                    <li class="sub__ulist">
+                                        <span class="pro__title">
+                                            Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 64 GB 
+                                        </span>
+                                        <span class="pro__price">
+                                            <span class="main__label">$299.00</span>
+                                            -
+                                            <span class="quant__wran">Quantity: 1</span>
+                                        </span>
+                                        <span class="wran__seller">
+                                            Soldby: Amazon Export Sales LLC
+                                        </span>
+                                    </li>
+                                </ul>
+                            </span>
+                            <span class="wran__go__back">
+                                <a href="#" class="card-shop-link">
+                                    Change quantities or delete
+                                </a>
+                            </span>
+                        </div>
+                        <div class="h__two">
+                            <span class="yts__age">
+                                Choose a delivery option:
+                            </span>
+                            <span class="yts__desc">
+                                You can track your shipment and view any applicable import fees deposit before placing your order. Note: If you select “Standard International shipping – no tracking” you cannot track your shipment and may be charged import fees ahead of delivery. <a href="#" class="card-shop-link">Learn more</a>
+                            </span>
+                            <span class="yts__shipping">
+                                <ul class="x__ana">
+                                    <li class="i__l__u">
+                                        <div class="chec__">
+                                            <input type="radio" name="shiiping" id="shipping" class="check__set">
+                                        </div>
+                                        <div class="__chec">
+                                            <span class="off__date">
+                                                Wednesday, Dec. 23 - Friday, Jan. 8
+                                            </span>
+                                            <span class="ship__price">
+                                                $65.25 - AmazonGlobal Priority Shipping
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="t_w_s">
+                    <div class="product">
+                        <button>Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Body Ends Here -->
+
+        <!-- Kindle Section -->
+
+        <div class="footer__kindle">
+            <div class="content__handler">
+                <div class="product" style="margin: 0;
+          padding: 20px 470px;
+          text-align: center;">
+                    <h2 style="line-height: 1;
+            margin: 0;
+            font-size: 20px;">Best Sellers In Kindle eBooks</h2>
+                    <button>Sign in to see Persnalized Recommendations</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ends Here-->
+
+        {% include "./main_blocks/footer.html" %}
+</body>
+
+</html>
