@@ -14,6 +14,7 @@ class Product(models.Model):
     delievery_Date = models.CharField(default="", max_length=100)
     number_of_ratings = models.IntegerField(default=0)
     price = models.FloatField()
+    brand = models.CharField(max_length=200, default='Amazon')
     slug = models.SlugField(default="", max_length=100)
     image = models.ImageField(upload_to="Shop/images", default=None)
     image_two = models.ImageField(upload_to="Shop/images", default=None)
@@ -26,6 +27,7 @@ class Product(models.Model):
     in_stock = models.BooleanField(default=True)
     main_banner = models.ImageField(upload_to="Shop/images", default=None)
     pub_date = models.DateField()
+
 
     def __str__(self):
         return self.name
@@ -42,7 +44,11 @@ class Order(models.Model):
     order_status = models.BooleanField()
 
     def __str__(self):
-        return self.city
+        return self.order_id
+
+
+    
+
 
 
 class WishList(models.Model):

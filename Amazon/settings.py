@@ -78,6 +78,12 @@ INSTALLED_APPS = [
 
     # User-Feedback
     'tellme',
+
+
+    #Mobile Authentication
+    "phone_verify",
+
+    'rest_framework'
 ]
 
 # Site Id
@@ -243,7 +249,7 @@ sentry_sdk.init(
     integrations=[DjangoIntegration()],
     traces_sample_rate=1.0,
 
-    # If you wish to associate users to errors (assuming you are using
+    # to associate users to errors (assuming you are using
     # django.contrib.auth) you may enable sending PII data.
     send_default_pii=True
 )
@@ -258,3 +264,23 @@ ACTSTREAM_SETTINGS = {
 
 # Adding Extra Data To Notification
 DJANGO_NOTIFICATIONS_CONFIG = {'USE_JSONFIELD': True}
+
+
+
+
+# In settings.py
+# Add settings for phone_verify to work
+PHONE_VERIFICATION = {
+    "BACKEND": "phone_verify.backends.twilio.TwilioBackend",
+    "OPTIONS": {
+        "SID": "ACdb84efb2452409796286622b88ad1abd",
+        "SECRET": "54dba5596fa2f786f93c52e648e78fb9",
+        "FROM": "+15052786084",
+        "SANDBOX_TOKEN": "123456",
+    },
+    "TOKEN_LENGTH": 6,
+    "MESSAGE": "Welcome to Amazon! Please use security code {security_code} to proceed.",
+    "APP_NAME": "Phone Verify",
+    "SECURITY_CODE_EXPIRATION_TIME": 3600,  # In seconds only
+    "VERIFY_SECURITY_CODE_ONLY_ONCE": False,  # If False, then a security code can be used multiple times for verification
+}

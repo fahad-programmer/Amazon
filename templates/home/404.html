@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script
+  src="https://browser.sentry-cdn.com/5.27.6/bundle.min.js"
+  integrity="sha384-rtZLZkLLKTQnK3HpcN1IG6wMYrx+O3GraPVH74SyT/gzvTfX6O/XLR7Ww65yd1w+"
+  crossorigin="anonymous"
+></script>
+	<title>4046456</title>
+</head>
+<body>
+	<button onClick=opendialog()>Click Me</button>
+<script>
+ function opendialog() {
+ 	 Sentry.init({ dsn: "https://de78fa71c1a64aea95cda70b2cfc97a9@o472385.ingest.sentry.io/5505935" });
+  Sentry.showReportDialog({
+    eventId: "{{ event_id }}",
+  });
+ }
+</script>
+</body>
+</html>
