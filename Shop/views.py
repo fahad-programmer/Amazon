@@ -78,6 +78,10 @@ def payout(request):
 def payout2(request):
     return render(request, 'Shop/payout2.html')
 
+@login_required(login_url="/account/login")
+def payout3(request):
+    return render(request, 'Shop/payout3.html')
+
 def search(request, page_num):
 
     if request.method == "POST":

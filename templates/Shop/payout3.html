@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <!-- Title -->
+    <title>
+        Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books,
+        DVDs & more
+    </title>
+    <!-- Meta Information -->
+    <meta name="description"
+        content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else." />
+    <meta name="keywords"
+        content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <link rel="canonical" href="https://www.amazon.com/" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta property="og:image"
+        content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+        xmlns:og="http://opengraphprotocol.org/schema/" />
+    <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+    <meta property="og:description"
+        content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+        xmlns:og="http://opengraphprotocol.org/schema/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/payout3.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .link-main:hover {
+            text-decoration: none !important;
+            color: #C7511F;
+        }
+
+        .link-main {
+            color: #0F1111;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        h2.main__heading {
+            color: #0F1111!important;
+            font-size: 21px!important;
+            font-weight: 700;
+            font-family: verdana,arial,helvetica,sans-serif!important;
+        }
+        .app {
+            background: #ffffff;
+        }
+    </style>
+    <style>
+        .dropdown {
+            overflow: hidden;
+            background-color: #f3f3f3;
+            color: #555;
+            height: 40px;
+            width: auto;
+            font-size: 12px;
+            border-radius: 10px 0 0 10px;
+            border-right: 1px solid #d0d0d0;
+        }
+
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 14px;
+            border: none;
+            color: #555;
+            padding: 11px 10px 11.5px 10px;
+            background-color: inherit;
+            font-family: inherit;
+            display: flex;
+            font-size: 12px;
+            align-items: center;
+        }
+
+        .dropdown:hover .dropbtn,
+        .dropbtn:focus {
+            background-color: #e4e4e4;
+            outline: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+
+    <style>
+        .dropdown__country {
+            position: relative;
+        }
+
+        .dropdown-content__country {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            margin-top: 45px;
+            margin-left: -5px;
+            left: -1px;
+            border-radius: 3px;
+        }
+
+        .dropdown-content__country a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown__country:hover .dropdown-content__country {
+            display: block;
+        }
+
+        .xolo__butt {
+            background: #131921;
+            color: #fff;
+            border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+        }
+    </style>
+</head>
+
+<body>
+        {% include './main_blocks/header.html'%}
+
+        <!-- Main Body Container -->
+
+        <div class="main__conatiner">
+            <div class="f__conom">
+                <div class="alpha__">
+                    <span class="main__page__title">
+                        Select a payment method
+                    </span>
+                    <div class="f__action">
+                        <div class="info__parti">
+                            <!-- For Those who did not add credit card info yet-->
+                            <div class="blue__nalal" style="display: none;">
+                                <i class="fa fa-info-circle" aria-hidden="true" style="    color: #497792;
+                                font-size: 24px;
+                                margin-left: 10px;"></i>
+                                <span class="slogna__">
+                                    Enter your credit card, we will save it here 
+                                </span>
+                            </div>
+                            <!-- For those who has added the info of their credit card-->
+                            <div class="black__nalal">
+                                <div class="upperinfo__star">
+                                    <div class="fir__fir">
+                                        <span class="fir__label">
+                                            Your credit and debit cards
+                                        </span>
+                                    </div>
+                                    <div class="sec__fir">
+                                        <span class="sec__label">
+                                            Name on card
+                                        </span>
+                                    </div>
+                                    <div class="thi__fir">
+                                        <span class="sec__label" style="float: right;">
+                                            Expires on
+                                        </span>
+                                    </div>
+                                </div>
+                                <hr style="margin: 6px 0;">
+                                <div class="orange__nalal">
+                                    <ul class="card__added">
+                                        <li class="main__cards">
+                                            <div class="section__786">
+                                                <input type="radio" name="shooping__Card" id="chop_card">
+                                                <img style="width: 40px;margin-right: 14px;" src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png" alt="" class="marry__photo">
+                                                <span class="card__name">Visa</span>
+                                                <span class="end__card">ending in 1327</span>
+                                            </div>
+                                            <div class="section__789">
+                                                <span class="card_name">Gabriel Edwards</span>
+                                            </div>
+                                            <div class="section__790">
+                                                <span class="exp__date" style="float: right;font-size: 13px;">10/2024</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="card__selected__curr">
+                                        <span class="currency">please tell us the currnecy of your card</span>
+                                                <span class="currency__selecter">
+                                                    <input type="radio" style="margin-right: 10px;" name="currency_EU" id="currency_EU">
+                                                    May card is in Euro
+                                                </span>
+                                                <span class="currency__selecter">
+                                                    <input type="radio" style="margin-right: 10px;" name="currency_US" id="currency_US">
+                                                    May card is in Dollar
+                                                </span>
+                                                <span class="currency__selecter">
+                                                    <input type="radio" style="margin-right: 10px;" name="currency_else" id="currency_else">
+                                                    May card is in different currency
+                                                </span>
+                                                <select name="currency" autocomplete="off" id="curr" class="a-native-dropdown"
+                                                style="width: 155px;
+                                                margin: 5px 20px 0;
+                                                padding: 5px;
+                                                border: 1px solid #b9b9b9;
+                                                background: -webkit-linear-gradient(top,#f7f8fa,#e7e9ec);
+                                                border-radius: 4px;
+                                                cursor: pointer;">
+                                                    <option class="a-prompt" value="">Select card currency</option>
+                                                    <optgroup>
+                                                        <option value="AUD">Australian Dollar (AUD)</option>
+                                                        <option value="EUR">Euro (EUR)</option>
+                                                        <option value="GBP">Pound Sterling (GBP)</option>
+                                                        <option value="USD">U.S. Dollar (USD)</option>
+                                                    </optgroup>
+                                                    <optgroup>
+                                                        <option value="AFN">Afghan Afghani (AFN)</option>
+                                                        <option value="ALL">Albanian Lek (ALL)</option>
+                                                        <option value="DZD">Algerian Dinar (DZD)</option>
+                                                        <option value="AOA">Angolan Kwanza (AOA)</option>
+                                                        <option value="ARS">Argentine Peso (ARS)</option>
+                                                        <option value="AMD">Armenian Dram (AMD)</option>
+                                                        <option value="AWG">Aruban Florin (AWG)</option>
+                                                        <option value="AUD">Australian Dollar (AUD)</option>
+                                                        <option value="AZN">Azerbaijani Manat (AZN)</option>
+                                                        <option value="BSD">Bahamian Dollar (BSD)</option>
+                                                        <option value="BHD">Bahraini Dinar (BHD)</option>
+                                                        <option value="BDT">Bangladeshi Taka (BDT)</option>
+                                                        <option value="BBD">Barbados Dollar (BBD)</option>
+                                                        <option value="BYR">Belarusian Ruble (BYR)</option>
+                                                        <option value="BZD">Belize Dollar (BZD)</option>
+                                                        <option value="BMD">Bermudian Dollar (BMD)</option>
+                                                        <option value="BTN">Bhutanese Ngultrum (BTN)</option>
+                                                        <option value="BOB">Bolivian Boliviano (BOB)</option>
+                                                        <option value="BAM">Bosnia and Herzegovina Convertible Mark (BAM)</option>
+                                                        <option value="BWP">Botswana Pula (BWP)</option>
+                                                        <option value="BRL">Brazilian Real (BRL)</option>
+                                                        <option value="BND">Brunei Dollar (BND)</option>
+                                                        <option value="BGN">Bulgarian Lev (BGN)</option>
+                                                        <option value="BIF">Burundi Franc (BIF)</option>
+                                                        <option value="XOF">CFA Franc BCEAO (XOF)</option>
+                                                        <option value="XAF">CFA Franc BEAC (XAF)</option>
+                                                        <option value="XPF">CFP Franc (XPF)</option>
+                                                        <option value="KHR">Cambodian Riel (KHR)</option>
+                                                        <option value="CAD">Canadian Dollar (CAD)</option>
+                                                        <option value="CVE">Cape Verde Escudo (CVE)</option>
+                                                        <option value="KYD">Cayman Islands Dollar (KYD)</option>
+                                                        <option value="CLP">Chilean Peso (CLP)</option>
+                                                        <option value="CNY">Chinese Yuan (CNY)</option>
+                                                        <option value="COP">Colombian Peso (COP)</option>
+                                                        <option value="KMF">Comoro Franc (KMF)</option>
+                                                        <option value="CDF">Congolese Franc (CDF)</option>
+                                                        <option value="CRC">Costa Rican Colon (CRC)</option>
+                                                        <option value="HRK">Croatian Kuna (HRK)</option>
+                                                        <option value="CZK">Czech Koruna (CZK)</option>
+                                                        <option value="DKK">Danish Krone (DKK)</option>
+                                                        <option value="DJF">Djibouti Franc (DJF)</option>
+                                                        <option value="DOP">Dominican Peso (DOP)</option>
+                                                        <option value="XCD">East Caribbean Dollar (XCD)</option>
+                                                        <option value="EGP">Egyptian Pound (EGP)</option>
+                                                        <option value="ERN">Eritrean Nakfa (ERN)</option>
+                                                        <option value="ETB">Ethiopian Birr (ETB)</option>
+                                                        <option value="EUR">Euro (EUR)</option>
+                                                        <option value="FKP">Falkland Islands Pound (FKP)</option>
+                                                        <option value="FJD">Fiji Dollar (FJD)</option>
+                                                        <option value="GMD">Gambian Dalasi (GMD)</option>
+                                                        <option value="GEL">Georgian Lari (GEL)</option>
+                                                        <option value="GHS">Ghana Cedi (GHS)</option>
+                                                        <option value="GIP">Gibraltar Pound (GIP)</option>
+                                                        <option value="GTQ">Guatemalan Quetzal (GTQ)</option>
+                                                        <option value="GNF">Guinean Franc (GNF)</option>
+                                                        <option value="GYD">Guyanese Dollar (GYD)</option>
+                                                        <option value="HTG">Haitian Gourde (HTG)</option>
+                                                        <option value="HNL">Honduran Lempira (HNL)</option>
+                                                        <option value="HKD">Hong Kong Dollar (HKD)</option>
+                                                        <option value="HUF">Hungarian Forint (HUF)</option>
+                                                        <option value="ISK">Iceland Krona (ISK)</option>
+                                                        <option value="INR">Indian Rupee (INR)</option>
+                                                        <option value="IDR">Indonesian Rupiah (IDR)</option>
+                                                        <option value="IQD">Iraqi Dinar (IQD)</option>
+                                                        <option value="ILS">Israeli New Shekel (ILS)</option>
+                                                        <option value="JMD">Jamaican Dollar (JMD)</option>
+                                                        <option value="JPY">Japanese Yen (JPY)</option>
+                                                        <option value="JOD">Jordanian Dinar (JOD)</option>
+                                                        <option value="KZT">Kazakhstani Tenge (KZT)</option>
+                                                        <option value="KES">Kenyan Shilling (KES)</option>
+                                                        <option value="KWD">Kuwaiti Dinar (KWD)</option>
+                                                        <option value="KGS">Kyrgyzstani Som (KGS)</option>
+                                                        <option value="LAK">Lao Kip (LAK)</option>
+                                                        <option value="LVL">Latvian Lats (LVL)</option>
+                                                        <option value="LBP">Lebanese Pound (LBP)</option>
+                                                        <option value="LSL">Lesotho Loti (LSL)</option>
+                                                        <option value="LRD">Liberian Dollar (LRD)</option>
+                                                        <option value="LYD">Libyan Dinar (LYD)</option>
+                                                        <option value="LTL">Lithuanian Litas (LTL)</option>
+                                                        <option value="MOP">Macanese Pataca (MOP)</option>
+                                                        <option value="MKD">Macedonian Denar (MKD)</option>
+                                                        <option value="MGA">Malagasy Ariary (MGA)</option>
+                                                        <option value="MWK">Malawian Kwacha (MWK)</option>
+                                                        <option value="MYR">Malaysian Ringgit (MYR)</option>
+                                                        <option value="MVR">Maldivian Rufiyaa (MVR)</option>
+                                                        <option value="MRO">Mauritanian Ouguiya (MRO)</option>
+                                                        <option value="MUR">Mauritian Rupee (MUR)</option>
+                                                        <option value="MXN">Mexican Peso (MXN)</option>
+                                                        <option value="MDL">Moldovan Leu (MDL)</option>
+                                                        <option value="MNT">Mongolian Tugrik (MNT)</option>
+                                                        <option value="MAD">Moroccan Dirham (MAD)</option>
+                                                        <option value="MZN">Mozambique Metical (MZN)</option>
+                                                        <option value="MMK">Myanma Kyat (MMK)</option>
+                                                        <option value="NAD">Namibian Dollar (NAD)</option>
+                                                        <option value="NPR">Nepalese Rupee (NPR)</option>
+                                                        <option value="ANG">Netherlands Antillean Guilder (ANG)</option>
+                                                        <option value="TWD">New Taiwan Dollar (TWD)</option>
+                                                        <option value="NZD">New Zealand Dollar (NZD)</option>
+                                                        <option value="NIO">Nicaraguan Cordoba Oro (NIO)</option>
+                                                        <option value="NGN">Nigerian Naira (NGN)</option>
+                                                        <option value="NOK">Norwegian Krone (NOK)</option>
+                                                        <option value="OMR">Omani Rial (OMR)</option>
+                                                        <option value="PKR">Pakistani Rupee (PKR)</option>
+                                                        <option value="PAB">Panamanian balboa (PAB)</option>
+                                                        <option value="PGK">Papua New Guinean Kina (PGK)</option>
+                                                        <option value="PYG">Paraguay Guarani (PYG)</option>
+                                                        <option value="PEN">Peruvian Nuevo Sol (PEN)</option>
+                                                        <option value="PHP">Philippine Peso (PHP)</option>
+                                                        <option value="PLN">Polish Zloty (PLN)</option>
+                                                        <option value="GBP">Pound Sterling (GBP)</option>
+                                                        <option value="QAR">Qatari Rial (QAR)</option>
+                                                        <option value="RON">Romanian New Leu (RON)</option>
+                                                        <option value="RUB">Russian Ruble (RUB)</option>
+                                                        <option value="RWF">Rwandan Franc (RWF)</option>
+                                                        <option value="SHP">Saint Helena Pound (SHP)</option>
+                                                        <option value="WST">Samoan Tala (WST)</option>
+                                                        <option value="STD">Sao Tome and Principe Dobra (STD)</option>
+                                                        <option value="SAR">Saudi Riyal (SAR)</option>
+                                                        <option value="RSD">Serbian Dinar (RSD)</option>
+                                                        <option value="SCR">Seychelles Rupee (SCR)</option>
+                                                        <option value="SLL">Sierra Leonean Leone (SLL)</option>
+                                                        <option value="SGD">Singapore Dollar (SGD)</option>
+                                                        <option value="SBD">Solomon Islands Dollar (SBD)</option>
+                                                        <option value="SOS">Somali Shilling (SOS)</option>
+                                                        <option value="ZAR">South African Rand (ZAR)</option>
+                                                        <option value="KRW">South Korean Won (KRW)</option>
+                                                        <option value="LKR">Sri Lankan Rupee (LKR)</option>
+                                                        <option value="SRD">Suriname Dollar (SRD)</option>
+                                                        <option value="SZL">Swazi Lilangeni (SZL)</option>
+                                                        <option value="SEK">Swedish Krona (SEK)</option>
+                                                        <option value="CHF">Swiss Franc (CHF)</option>
+                                                        <option value="TJS">Tajikistani Somoni (TJS)</option>
+                                                        <option value="TZS">Tanzanian Shilling (TZS)</option>
+                                                        <option value="THB">Thai Baht (THB)</option>
+                                                        <option value="TOP">Tongan Pa'anga (TOP)</option>
+                                                        <option value="TTD">Trinidad and Tobago Dollar (TTD)</option>
+                                                        <option value="TND">Tunisian Dinar (TND)</option>
+                                                        <option value="TRY">Turkish Lira (TRY)</option>
+                                                        <option value="TMT">Turkmenistan New Manat (TMT)</option>
+                                                        <option value="AED">U.A.E. Dirham (AED)</option>
+                                                        <option value="USD">U.S. Dollar (USD)</option>
+                                                        <option value="UGX">Ugandan Shilling (UGX)</option>
+                                                        <option value="UAH">Ukrainian Hryvnia (UAH)</option>
+                                                        <option value="UYU">Uruguayan Peso (UYU)</option>
+                                                        <option value="UZS">Uzbekistan Sum (UZS)</option>
+                                                        <option value="VUV">Vanuatu Vatu (VUV)</option>
+                                                        <option value="VEF">Venezuelan Bolivar Fuerte (VEF)</option>
+                                                        <option value="VND">Vietnamese Dong (VND)</option>
+                                                        <option value="YER">Yemeni Rial (YER)</option>
+                                                        <option value="ZMK">Zambian Kwacha (ZMK)</option>
+                                                    </optgroup>
+                                                </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__parti">
+                            <div class="product"
+                            style="max-width: 100%;
+                            background-color: #f7f7f7!important;
+                            border: 1px #ddd solid;
+                            border-radius: 4px;
+                            margin: 0;
+                            padding: 14px 20px;
+                            float: right;">
+                                <button
+                                style="margin: 0;">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="__beta">
+                    <div class="add_more__opt">
+                        <span class="slg__you">
+                            More payment options
+                        </span>
+                        <div class="options__to__add">
+                            <ul class="all__of__it">
+                                <hr style="border-color: #ddd;margin-bottom: 10px;">
+                                <li class="i_love___u">
+                                    <div class="laiba__sadaf">
+                                        <span class="laiba__heading">
+                                            Credit or debit cards
+                                        </span>
+                                        <span class="laiba__desc">
+                                            Amazon accepts major credit and debit cards
+                                        </span>
+                                        <div class="product" style="    margin: 0;
+                                        padding: 0;
+                                        width: 170px;
+                                        margin-top: 20px;
+                                        margin: 0;
+                                        padding: 0;">
+                                            <button
+                                              style="margin-top: 20px !important;
+                                              background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 10px;    
+                                              text-align: start;
+                                              padding-right: 10px;
+                                              padding-left: 10px;">Add a credit or debit card</button>
+                                        </div>
+                                    </div>
+                                    <div class="marry__mouser">
+                                        <ul class="marry__im__list">
+                                            <li class="marry__dil">
+                                                <img src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png" alt="" class="marry__photo">
+                                            </li>
+                                            <li class="marry__dil">
+                                                <img src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png" alt="" class="marry__photo">
+                                            </li>
+                                            <li class="marry__dil">
+                                                <img src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png" alt="" class="marry__photo">
+                                            </li>
+                                            <li class="marry__dil">
+                                                <img src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png" alt="" class="marry__photo">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Body Ends Here -->
+
+        
+
+        {% include "./main_blocks/footer.html" %}
+</body>
+
+</html>
