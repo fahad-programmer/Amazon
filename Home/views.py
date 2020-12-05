@@ -40,6 +40,9 @@ def signup(request):
 def numverify(request):
     return render(request, 'home/numverify.html')
 
+def forget(request):
+    return render(request, 'home/forget.html')
+
 
 def handlelogin(request):
     if request.method == 'POST':
