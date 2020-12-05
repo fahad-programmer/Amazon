@@ -43,6 +43,12 @@ def numverify(request):
 def forget(request):
     return render(request, 'home/forget.html')
 
+def terms(request):
+    return render(request, 'home/tems.html')
+
+def privacy(request):
+    return render(request, 'home/privacy.html')
+
 
 def handlelogin(request):
     if request.method == 'POST':
