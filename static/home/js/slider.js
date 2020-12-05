@@ -14,6 +14,9 @@ images[2] =
 images[3] =
   "https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg";
 
+images[4] = "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2020/HolidayDeals/Desktop/Fuji_TallHero_HolidayDeals_en_US_2x._CB414278671_.jpg"
+
+
 //Slider Logic
 // Change Image
 function changeImg() {

@@ -273,8 +273,8 @@ DJANGO_NOTIFICATIONS_CONFIG = {'USE_JSONFIELD': True}
 PHONE_VERIFICATION = {
     "BACKEND": "phone_verify.backends.twilio.TwilioBackend",
     "OPTIONS": {
-        "SID": "",
-        "SECRET": "",
+        "SID": "ACdb84efb2452409796286622b88ad1abd",
+        "SECRET": "54dba5596fa2f786f93c52e648e78fb9",
         "FROM": "+15052786084",
         "SANDBOX_TOKEN": "123456",
     },

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Api Check</title>
+</head>
+<body>
+<form method="POST" action="/api/phone/verify">
+	{% csrf_token %}
+	<input type="hidden" name="session_token" value="{{session_token}}">
+	<input type="hidden" name="phone_number" value="{{phonenumber.data.phone_number}}">
+	<input name="security_code" >
+	
+</form>
+</body>
+</html>

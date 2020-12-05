@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Api Check</title>
+</head>
+<body>
+<form method="POST" action="/api/phone/register">
+	{% csrf_token %}
+	<input name="phone_number">
+	
+</form>
+</body>
+</html>

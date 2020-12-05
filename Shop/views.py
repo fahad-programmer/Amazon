@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
 from Shop.models import Product
@@ -6,7 +6,7 @@ from actstream import action
 from notifications.signals import notify
 from django.core.paginator import Paginator
 from actstream.models import Action
-
+from rest_framework.response import Response
 # Create your views here.
 
 # Cart Views
@@ -93,7 +93,7 @@ def cart_detail(request):
     return render(request, 'Shop/cart.html', params)
 
 
-def search(request, page_num):
+def search(request, page_num, **filters):
 
     if request.method == "POST":
         global query, category
@@ -163,3 +163,11 @@ def main_product(request, slug):
               'jsonData': json_data, 'user_history': user_history, }
 
     return render(request, 'home/product.html', params)
+
+
+def api_check(request):
+    if HttpResponse == 200:
+        print("Good The Number Is Valid")
+    else:
+        print('The number is invalid')
+    return render(request, 'first.html')

@@ -44,7 +44,11 @@ class Order(models.Model):
     order_status = models.BooleanField()
 
     def __str__(self):
-        return self.city
+        return self.order_id
+
+
+    
+
 
 
 class WishList(models.Model):
