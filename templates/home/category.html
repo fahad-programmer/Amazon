@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <!-- Title -->
+    <title>
+        Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books,
+        DVDs & more
+    </title>
+    <!-- Meta Information -->
+    <meta name="description"
+        content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else." />
+    <meta name="keywords"
+        content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <link rel="canonical" href="https://www.amazon.com/" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta property="og:image"
+        content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+        xmlns:og="http://opengraphprotocol.org/schema/" />
+    <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+    <meta property="og:description"
+        content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+        xmlns:og="http://opengraphprotocol.org/schema/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/search.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .link-main:hover {
+            text-decoration: none !important;
+            color: #C7511F;
+        }
+
+        .link-main {
+            color: #0F1111;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .app {
+            background-color: #fff;
+        }
+    </style>
+
+    <style>
+        .dropdown__country {
+            position: relative;
+        }
+
+        .dropdown-content__country {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            margin-top: 45px;
+            margin-left: -5px;
+            left: -1px;
+            border-radius: 3px;
+        }
+
+        .dropdown-content__country a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown__country:hover .dropdown-content__country {
+            display: block;
+        }
+
+        .xolo__butt {
+            background: #131921;
+            color: #fff;
+            border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Body -->
+    <div class="app">
+        {% load cart_tag %}
+
+        <!--Header Of The Page-->
+        {% include './main_blocks/header.html'%}
+
+        <div class="search-header">
+            <div class="product__count">
+                <span class="num__search">1-16 of 200 results for</span>
+                <span class="main-red-one">"iphone"</span>
+                <span class="select__cat">
+                    <span class="drop__select">
+                        <span class="a-button-inner">
+                            <span class="a-dropdown-label">Sort by:</span>
+                        </span>
+                    </span>
+                    <select name="cat" id="catego-se">
+                        <option selected="">Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Avg. Customer Review</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+        <!-- Search Header Ends Here-->
+
+        <!-- Products -->
+        <div class="p__container">
+            <div class="p__sidebar">
+                <div class="p__sidebar__container">
+                    <div class="cont">
+                        <div id="condition">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Condition
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">Used</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">New</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">Renewed</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="departments">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Department
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">Cell Phones</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Carrier Cell Phones</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Unlocked Cell Phones</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Cell Phones & Accessories</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Electronics</a>
+                                </li>
+                                <li class="list__content sub__list">
+                                    <a href="#" class="link-main">Home & Kitchen</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="ratings">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Avg. Customer Review
+                                </span>
+                            </div>
+                            <div class="ratings__stars">
+                                <!-- 1 -->
+                                <span class="raiting__container">
+                                    <div class="stars__contain" style="margin-right: 10px;">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        <a href="#" class="link-main"> & up </a>
+                                    </div>
+                                </span>
+                                <!-- 2 -->
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        <a href="#" class="link-main"> & up </a>
+                                    </div>
+                                </span>
+                                <!-- 3 -->
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        <a href="#" class="link-main"> & up </a>
+                                    </div>
+                                </span>
+                                <!-- 4 -->
+                                <span class="raiting__container" style="margin-bottom: 15px;">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        <a href="#" class="link-main"> & up </a>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="brands">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Brand
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="apple">
+                                        </span>
+                                        <span class="brand__name">Apple</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="google">
+                                        </span>
+                                        <span class="brand__name">Google</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="samsung">
+                                        </span>
+                                        <span class="brand__name">SAMSUNG</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="samsung_electronics">
+                                        </span>
+                                        <span class="brand__name">SAMSUNG Electronics</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="oneplus">
+                                        </span>
+                                        <span class="brand__name">ONEPLUS</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="c-joy">
+                                        </span>
+                                        <span class="brand__name">C-JOY</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="motorola">
+                                        </span>
+                                        <span class="brand__name">Motorola</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="price">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Price
+                                </span>
+                            </div>
+                            <ul class="list__sidebar" style="margin-bottom: 5px;">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">Under $10</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">$10 to $25</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">$25 to $50</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">$50 to $100</a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">$100 & Above</a>
+                                </li>
+                            </ul>
+                            <div class="manual__price" style="margin-bottom: 15px;">
+                                <span class="doll-sign">$</span>
+                                <input type="number" name="min-num" id="min-pri" placeholder="Min" class="price-bar"
+                                    style="    margin-right: 12px;">
+                                <span class="doll-sign">$</span>
+                                <input type="number" name="max-num" id="max-pri" placeholder="Max" class="price-bar">
+                                <div class="product" style="margin: 0;padding: 0;min-width: 0;width: auto;">
+                                    <button style="margin-top: 0px !important;
+                                    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);margin-bottom: 0;    
+                                    text-align: start;
+                                    padding-right: 10px;
+                                    padding-left: 10px;" type="submit">Go</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="operating-sys">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Operating System
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="android">
+                                        </span>
+                                        <span class="brand__name">Android</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="blackberry">
+                                        </span>
+                                        <span class="brand__name">Blackberry</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="ios">
+                                        </span>
+                                        <span class="brand__name">IOS</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="camera-res">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Camera Resolution
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-2mp">
+                                        </span>
+                                        <span class="brand__name">Up to 2.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-4mp">
+                                        </span>
+                                        <span class="brand__name">3 to 4.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-7mp">
+                                        </span>
+                                        <span class="brand__name">5 to 7.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-12mp">
+                                        </span>
+                                        <span class="brand__name">8 to 12.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-19mp">
+                                        </span>
+                                        <span class="brand__name">13 to 19.9 MP</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-20mp">
+                                        </span>
+                                        <span class="brand__name">20 MP & Above</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="screen-size">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Screen Size
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-3in">
+                                        </span>
+                                        <span class="brand__name">Up to 3.9 in</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-4in">
+                                        </span>
+                                        <span class="brand__name">4 to 4.4 in</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-49in">
+                                        </span>
+                                        <span class="brand__name">4.5 to 4.9 in</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-5in">
+                                        </span>
+                                        <span class="brand__name">5 to 5.4 in</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="up-55in">
+                                        </span>
+                                        <span class="brand__name">5.5 in & Above</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="features">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Features
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="4k-video">
+                                        </span>
+                                        <span class="brand__name">4K Video Recording</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="bluetooth">
+                                        </span>
+                                        <span class="brand__name">Bluetooth Enabled</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="built-in-gps">
+                                        </span>
+                                        <span class="brand__name">Built-In GPS</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="camera">
+                                        </span>
+                                        <span class="brand__name">Camera</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="dual-camera">
+                                        </span>
+                                        <span class="brand__name">Dual Camera</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="fingerprint">
+                                        </span>
+                                        <span class="brand__name">Fingerprint Sensor</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="lte">
+                                        </span>
+                                        <span class="brand__name">LTE</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="smartphone">
+                                        </span>
+                                        <span class="brand__name">Smartphone</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="touchscreen">
+                                        </span>
+                                        <span class="brand__name">Touchscreen</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="no-contract">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    No-Contract Carrier
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="at-t">
+                                        </span>
+                                        <span class="brand__name">AT&T</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="cricket">
+                                        </span>
+                                        <span class="brand__name">Cricket</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="sprint">
+                                        </span>
+                                        <span class="brand__name">Sprint</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="t-mobile">
+                                        </span>
+                                        <span class="brand__name">T-Mobile</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="tracfone">
+                                        </span>
+                                        <span class="brand__name">TracFone</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="internal-storage">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Internal Storage Memory
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="-4gb">
+                                        </span>
+                                        <span class="brand__name">Under 4 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="4gb">
+                                        </span>
+                                        <span class="brand__name">4 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="8gb">
+                                        </span>
+                                        <span class="brand__name">8 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="16gb">
+                                        </span>
+                                        <span class="brand__name">16 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="32gb">
+                                        </span>
+                                        <span class="brand__name">32 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="64gb">
+                                        </span>
+                                        <span class="brand__name">64 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="128gb">
+                                        </span>
+                                        <span class="brand__name">128 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="256gb">
+                                        </span>
+                                        <span class="brand__name">256 GB & Above</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="internal-storage">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Prime Exclusive
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="-4gb">
+                                        </span>
+                                        <span class="brand__name">Under 4 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="4gb">
+                                        </span>
+                                        <span class="brand__name">4 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="8gb">
+                                        </span>
+                                        <span class="brand__name">8 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="16gb">
+                                        </span>
+                                        <span class="brand__name">16 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="32gb">
+                                        </span>
+                                        <span class="brand__name">32 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="64gb">
+                                        </span>
+                                        <span class="brand__name">64 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="128gb">
+                                        </span>
+                                        <span class="brand__name">128 GB</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="256gb">
+                                        </span>
+                                        <span class="brand__name">256 GB & Above</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="prime-exclusive">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Prime Exclusive
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="prime-exc">
+                                        </span>
+                                        <span class="brand__name">Prime Exclusive Phones</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="seller">
+                            <div class="heading__sidebar">
+                                <span class="headi__container">
+                                    Seller
+                                </span>
+                            </div>
+                            <ul class="list__sidebar">
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="gdoe">
+                                        </span>
+                                        <span class="brand__name">GLOBAL DISTRIBUTORS OF ELECTRONICS</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="us-s">
+                                        </span>
+                                        <span class="brand__name">US Seller/We ship from USA</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="amazon-off">
+                                        </span>
+                                        <span class="brand__name">Amazon.com</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="woodland">
+                                        </span>
+                                        <span class="brand__name">Woodland Cellular</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="vomach">
+                                        </span>
+                                        <span class="brand__name">Vomach Inc.</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="networkstore">
+                                        </span>
+                                        <span class="brand__name">Networkstore</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="ecoomsell">
+                                        </span>
+                                        <span class="brand__name">eCommSell</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="re-cell">
+                                        </span>
+                                        <span class="brand__name">RE-CELL</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="saveoncells">
+                                        </span>
+                                        <span class="brand__name">SaveonCells</span>
+                                    </a>
+                                </li>
+                                <li class="list__content">
+                                    <a href="#" class="link-main">
+                                        <span class="input__check">
+                                            <input type="checkbox" name="brand" id="elabra">
+                                        </span>
+                                        <span class="brand__name">elabra</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p__products__list">
+                
+            </div>
+        <!-- Product Ends Here -->
+
+        <!-- Related Products -->
+        <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
+        <div class="related__con">
+            <!-- related -->
+            <div class="related__products">
+                <div class="head__related">
+                    <h2 class="main__heading">Sponsored products related to this search</h2>
+                    <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
+                </div>
+                <div class="related__products__items">
+                    <li class="product__list__related" style="margin-left: 0;">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                </div>
+            </div>
+            <!-- Inspired Through Browsing -->
+            <div class="related__products">
+                <div class="head__related">
+                    <h2 class="main__heading">Inspired by your browsing history</h2>
+                    <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
+                </div>
+                <div class="related__products__items">
+                    <li class="product__list__related" style="margin-left: 0;">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                        <span class="related__item__name">
+                            <a href="#" class="card-shop-link">
+                                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                            </a>
+                        </span>
+                        <span class="raiting__container">
+                            <div class="stars__contain">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="card-shop-link" style="font-size: 14px;">
+                                87
+                            </div>
+                        </span>
+                        <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                    </li>
+                </div>
+            </div>
+            <!-- Browsing History-->
+            <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
+            <div class="related__products">
+                <div class="head__related">
+                    <h2 class="main__heading">Your Browsing History</h2>
+                </div>
+                <div class="related__products__items">
+                    <li class="product__list__related" style="margin-left: 0;">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                    <li class="product__list__related">
+                        <span class="image__realted">
+                            <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <!-- Related Products Ends Here-->
+
+        <!-- Main Body Ends Here -->
+
+        <!-- Kindle Section -->
+
+        <div class="footer__kindle">
+            <div class="content__handler">
+                <div class="product" style="margin: 0;
+          padding: 20px 470px;
+          text-align: center;">
+                    <h2 style="line-height: 1;
+            margin: 0;
+            font-size: 20px;">Best Sellers In Kindle eBooks</h2>
+                    <button>Sign in to see Persnalized Recommendations</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ends Here-->
+
+        <!-- Footer -->
+        {% include "./main_blocks/footer.html" %}
+
+</body>
+
+</html>

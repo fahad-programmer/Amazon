@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <!-- Title -->
+  <title>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more</title>
+  <!-- Meta Information -->
+  <meta name="description"
+    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else.">
+  <meta name="keywords"
+    content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL">
+  <meta name="google" content="nositelinkssearchbox">
+  <link rel="canonical" href="https://www.amazon.com/">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta property="og:image"
+    content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+    xmlns:og="http://opengraphprotocol.org/schema/">
+  <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+  <meta property="og:description"
+    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+    xmlns:og="http://opengraphprotocol.org/schema/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+  </style>
+
+  
+  <style>
+    .dropdown__country {
+      position: relative;
+    }
+
+    .dropdown-content__country {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      margin-top: 45px;
+      margin-left: -5px;
+      left: -1px;
+      border-radius: 3px;
+    }
+
+    .dropdown-content__country a {
+      text-decoration: none;
+      display: block;
+    }
+
+
+    .dropdown__country:hover .dropdown-content__country {
+      display: block;
+    }
+
+
+    .xolo__butt {
+      background: #131921;
+      color: #fff;
+      border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+    }
+  </style>
+
+</head>
+
+<body style="background-color: #fff;" lang="us-en">
+  <!-- Main Body -->
+    {% load cart_tag %}
+
+    <!--Header Of The Page-->
+    {% include './main_blocks/header.html'%}
+    <!-- Main Body -->
+
+    <!-- Ends Here-->
+    
+    <!-- Footer -->
+    {% include "./main_blocks/footer.html" %}
+</body>
+</html>

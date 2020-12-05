@@ -1,5 +1,5 @@
 from django.urls import path, include
-from Home.views import index, SignIn, signup, numverify,terms, privacy, forget, handleSignup, handlelogin, user_notification, product_view
+from Home.views import index, SignIn, signup,about,account,cat, numverify,terms, privacy, forget, handleSignup, handlelogin, user_notification, product_view
 
 
 urlpatterns = [
@@ -14,6 +14,9 @@ urlpatterns = [
     path('account/forget-password', forget, name="forget"),
     path('terms-and-conditions', terms, name="terms"),
     path('privacy-policy', privacy, name="privacy"),
+    path('cat', cat, name="cat"),
+    path('about', about, name="about"),
+    path('account', account, name="account"),
 
 
 

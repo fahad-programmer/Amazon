@@ -49,6 +49,15 @@ def terms(request):
 def privacy(request):
     return render(request, 'home/privacy.html')
 
+def about(request):
+    return render(request, 'home/about.html')
+
+def account(request):
+    return render(request, 'home/account.html')
+
+def cat(request):
+    return render(request, 'home/category.html')
+
 
 def handlelogin(request):
     if request.method == 'POST':
