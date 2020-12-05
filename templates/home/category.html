@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" goal="Fahad Aur Pathani Aik Bed Pe, Aik Bister Pe, Aik Qambal, Aik Doosre ki Ankhoon Main Dekhte Howe, Aik Dosre Ko jhapi Lagaye Howe, Kamre Main MonBatiya CHalaye Howe lete The jab Main Beech Main Aye aur age ap mujh se behter jante hain... And that was the moment he fucked up">
+<html lang="en">
 
 <head>
     {% load static %}
@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'home/css/search.css' %}" />
     <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/category.css' %}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -102,9 +103,9 @@
 
         <div class="search-header">
             <div class="product__count">
-                <span class="num__search">1-16 of 200 results for</span>
-                <span class="main-red-one">"iphone"</span>
-                <span class="select__cat">
+                <span class="num__search">Category</span>
+                <span class="main-red-one">"Computer And Accessories"</span>
+                <span class="select__cat"  style="display: none;">
                     <span class="drop__select">
                         <span class="a-button-inner">
                             <span class="a-dropdown-label">Sort by:</span>
@@ -860,169 +861,1115 @@
                     </div>
                 </div>
             </div>
+            <style>
+                .p__products__list {
+                    padding: 0 24px 0 12px;
+                    width: 80%;
+                }
+            </style>
             <div class="p__products__list">
-                <div class="main__search__results">
-                    {% for prods in products %}
-                    <div class="main__product__s">
-                        <div class="x-comm">
-                            
-                            <div class="main__pro__image">
-                                <div class="__image__container">
-                                    <img src="media/{{prods.image}}"
-                                        alt="Apple iPhone XS Max, 64GB, Gold - Fully Unlocked (Renewed)"
-                                        class="pro__image">
-                                </div>
-                            </div>
-                            <div class="main__pro__desc">
-                                <div class="__header__container">
-                                    <a class="link-main">
-                                        <span class="main__header__span">
-                                           {{prods.name}}
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="__rating__container">
-                                    <span class="raiting__container">
-                                        <div class="stars__contain" style="margin-right: 10px;">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-                                        <div class="card-shop-link" style="font-size: 14px;">
-                                            <a href="#" class="card-shop-link"> 4,458 </a>
-                                        </div>
+                <div class="jumanji__1">
+                    <span class="main__title__of__page">
+                        <h1 class="maint__title__label">
+                            Computers, Tablets and IT Accessories
+                        </h1>
+                    </span>
+                    <span class="main__slogan__of__page">
+                        Shop laptops, desktops, monitors, tablets, PC gaming, hard drives and storage, accessories and more
+                    </span>
+                </div>
+                <hr style="border-color: #ddd;margin-bottom: 5px;">
+                <div class="category__main__Section">
+                    <div class="i__love__you__laiba__sadaf">
+                        <span class="you__are__the__most__beautiful">
+                            SHOP BY CATEGORY
+                        </span>
+                    </div>
+                    <ul class="category__list">
+                        <li class="__category__list__item">
+                            <span class="list__item__title">
+                                COMPUTER ACCESSORIES
+                            </span>
+                            <div class="__category__image__contaienr">
+                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/amazonglobal/images/email/asins/DURM-244337D24F250BSI._V533746475_.jpg" alt="" class="really__i_will__fuck__you__hard">
+                            </div> 
+                        </li>
+                        <li class="__category__list__item">
+                            <span class="list__item__title">
+                                COMPUTER COMPONENTS
+                            </span>
+                            <div class="__category__image__contaienr">
+                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/amazonglobal/images/email/asins/DURM-2447E617EC5C463L._V533746472_.jpg" alt="" class="really__i_will__fuck__you__hard">
+                            </div> 
+                        </li>
+                        <li class="__category__list__item">
+                            <span class="list__item__title">
+                                COMPUTER & TABLETS
+                            </span>
+                            <div class="__category__image__contaienr">
+                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/amazonglobal/images/email/asins/DURM-244373AC9B3C4612._V533746474_.jpg" alt="" class="really__i_will__fuck__you__hard">
+                            </div> 
+                        </li>
+                        <li class="__category__list__item">
+                            <span class="list__item__title">
+                                NETWORKING PRODUCTS
+                            </span>
+                            <span class="main__most__important__item"
+                            style="display: none;">
+                                SEX TOYS FOR FAHAD
+                            </span>
+                            <div class="__category__image__contaienr">
+                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/amazonglobal/images/email/asins/DURM-24480C97FFA81710._V533746472_.jpg" alt="" class="really__i_will__fuck__you__hard">
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="category__result__">
+                    <div class="search-header">
+                        <div class="product__count">
+                            <span class="num__search">1 - 24 of over 100,000 results for </span>
+                            <span class="main-red-one">Computer</span>
+                            <span class="select__cat">
+                                <span class="drop__select">
+                                    <span class="a-button-inner">
+                                        <span class="a-dropdown-label">Sort by:</span>
                                     </span>
-                                </div>
-                                <div class="__color__container">
-                                    <a href="#" class="card-shop-link">
-                                        <b>Gold</b>
-                                    </a>
-                                </div>
-                                <div class="__price__container">
-                                    <span class="doll__sign">$</span>
-                                    <span class="official__product__price">544</span>
-                                    <span class="decimal__value">99</span>
-                                </div>
-                                <div class="__stock__notice__container no-display">
-                                    <span class="label__stock">Only 12 left in stock - order soon.</span>
-                                </div>
-                                <div class="__label__container">
-                                    <span class="main__pro__label">Price may vary by color</span>
-                                </div>
-                                <div class="__pro__colors__container">
-                                    <ul class="colors__list">
-                                        <li class="image__color__pro">
-                                            <img src="https://m.media-amazon.com/images/I/516zNBHjG8L._AC_US40_.jpg"
-                                                alt="Space Gray" class="image__color">
-                                        </li>
-                                        <li class="image__color__pro">
-                                            <img src="https://m.media-amazon.com/images/I/41TuhCqRKVL._AC_US40_.jpg"
-                                                alt="Silver" class="image__color">
-                                        </li>
-                                        <li class="image__color__pro">
-                                            <img src="https://m.media-amazon.com/images/I/41CwiQgqBsL._AC_US40_.jpg"
-                                                alt="Gray" class="image__color">
-                                        </li>
-                                        <li class="image__color__pro">
-                                            <img src="https://m.media-amazon.com/images/I/41FOooy0QxL._AC_US40_.jpg"
-                                                alt="Space Gray" class="image__color">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                                </span>
+                                <select name="cat" id="catego-se">
+                                    <option selected="">Featured</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                    <option>Avg. Customer Review</option>
+                                    <option>Newest Arrivals</option>
+                                </select>
+                            </span>
                         </div>
                     </div>
-                    {% endfor %}
-                  
-                <style>
-                .active__bread {
-                    background: white!important;
-                    border-color: #e77600!important;
-                    color: #e77600!important;
-                    font-weight: 700!important;
-                }
-
-                .active__bread:hover {
-                    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec)!important;
-                    border-color: #a88734 #9c7e31 #846a29!important;
-                }
-                </style>
-                <div class="__page__breadcrumbe">
-                 <div class="pagination">
-    <span class="step-links">
-        {% if products.has_previous %}
-            <a href="{{ products.previous_page_number }}">Previous</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ products.number }} of {{ products.paginator.num_pages }}.
-        </span>
-
-        {% if products.has_next %}
-            <a href="{{ products.next_page_number }}">Next</a>
-            <a href="{{ products.paginator.num_pages }}">Last &raquo;</a>
-        {% endif %}
-    </span>
-</div>
                 </div>
-                <style>
-                    .brand__related__cards {
-                        padding: 20px 0px;
-                    }
-                    li.brand__card {
-                        width: 482.5px;
-                    }
-                    span.brand__product__desc {
-                        font-size: 15px;
-                        font-weight: 600;
-                    }
-                </style>
-                <div class="__related__brands__container">
-                    <div class="related__brands">
-                        <div class="head__related">
-                          <h2 class="main__heading">Brands related to this category on Amazon</h2>
-                          <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
-                        </div>
-                        <div class="brand__related__cards">
-                          <ul class="brands__cards">
-                              {% for main_prod in cat_prod %}
-                            <li class="brand__card">
-                              <div class="brand____container">
-                                <div class="main__brand__image">
-                                  <img class="camuta" src="/media/{{main_prod.image}}" alt="">
-                                </div>
-                                <div class="main__brand__info">
-                                  <span class="brand__product__desc">
-                                    {{main_prod.name}}
-                                  </span>
-                                  <span class="brand__link">
-                                    <a href="#" class="card-shop-link">Shop Apple > </a>
-                                  </span>
-                                </div>
-                              </div>
-                            </li>
-                            {% endfor %}
-                            <li class="brand__card">
-                              <div class="brand____container">
-                                <div class="main__brand__image">
-                                  <img class="camuto" src="https://images-na.ssl-images-amazon.com/images/S/gladiator-image-upload-prod/3/ATVPDKIKX0DER/8e9d561c916cb24e766c8c6326aaefbb._CR0,0,0,0_AC_SX139_SY100_QL70_.jpg" alt="">
-                                </div>
-                                <div class="main__brand__info">
-                                  <span class="brand__product__desc">
-                                    Always Stay Connected
-                                  </span>
-                                  <span class="brand__link">
-                                    <a href="#" class="card-shop-link">Shop YCCSKY > </a>
-                                  </span>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                <div class="category__result">
+                    <ul class="polio__list">
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+                <hr style="border-color: #ddd">
+                <div class="category__result">
+                    <ul class="polio__list">
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr style="border-color: #ddd">
+                <div class="category__result">
+                    <ul class="polio__list">
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr style="border-color: #ddd">
+                <div class="category__result">
+                    <ul class="polio__list">
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr style="border-color: #ddd">
+                <div class="category__result">
+                    <ul class="polio__list">
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr style="border-color: #ddd">
+                <div class="category__result">
+                    <ul class="polio__list">
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr style="border-color: #ddd">
+                <div class="category__result">
+                    <ul class="polio__list">
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr style="border-color: #ddd">
+                <div class="category__result">
+                    <ul class="polio__list">
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="polio__item">
+                            <div class="__polio__image">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/41qR7C253KL._AC_US160_.jpg" alt="" class="main__image">
+                            </div>
+                            <div class="main__polio__info">
+                                <span class="__poilio__title">
+                                    <a href="#" class="card-shop-link">
+                                        Samsung SSD 860 EVO 1TB 2.5 Inch SATA III Internal SSD (MZ-76E1T0B/AM)
+                                    </a>
+                                </span>
+                                <span class="polio__seller">
+                                    by SAMSUNG
+                                </span>
+                                <span class="shiiping__polio">
+                                    Ships to Pakistan
+                                </span>
+                                <span class="price__poilio">
+                                    <span class="__polio__dollar">
+                                        $
+                                    </span>
+                                    <span class="__polio__real__price">
+                                        99
+                                    </span>
+                                    <span class="__polio__points">
+                                        99
+                                    </span>
+                                </span>
+                                <span class="raiting__container">
+                                    <div class="stars__contain">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="card-shop-link" style="font-size: 14px;">
+                                        87
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr style="border-color: #ddd">
             </div>
         </div>
         <!-- Product Ends Here -->

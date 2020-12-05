@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <!-- Title -->
+  <title>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more</title>
+  <!-- Meta Information -->
+  <meta name="description"
+    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else.">
+  <meta name="keywords"
+    content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL">
+  <meta name="google" content="nositelinkssearchbox">
+  <link rel="canonical" href="https://www.amazon.com/">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta property="og:image"
+    content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+    xmlns:og="http://opengraphprotocol.org/schema/">
+  <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+  <meta property="og:description"
+    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+    xmlns:og="http://opengraphprotocol.org/schema/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+  </style>
+
+  
+  <style>
+    .dropdown__country {
+      position: relative;
+    }
+
+    .dropdown-content__country {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      margin-top: 45px;
+      margin-left: -5px;
+      left: -1px;
+      border-radius: 3px;
+    }
+
+    .dropdown-content__country a {
+      text-decoration: none;
+      display: block;
+    }
+
+
+    .dropdown__country:hover .dropdown-content__country {
+      display: block;
+    }
+
+
+    .xolo__butt {
+      background: #131921;
+      color: #fff;
+      border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+    }
+  </style>
+
+  <style>
+    html {
+	 background: #f5f7f8;
+	 font-family: system-ui;
+	 -webkit-font-smoothing: antialiased;
+}
+.hycrotis {
+	 width: 90%;
+	 max-width: 1240px;
+	 margin: 0 auto;
+}
+ .band {
+	 width: 90%;
+	 max-width: 1240px;
+	 margin: 0 auto;
+	 display: grid;
+	 grid-template-columns: 1fr;
+	 grid-template-rows: auto;
+	 grid-gap: 20px;
+}
+ @media (min-width: 30em) {
+	 .band {
+		 grid-template-columns: 1fr 1fr;
+	}
+}
+ @media (min-width: 60em) {
+	 .band {
+		 grid-template-columns: repeat(4, 1fr);
+	}
+}
+ .card {
+	 background: white;
+	 text-decoration: none;
+	 color: #444;
+	 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	 display: flex;
+	 flex-direction: column;
+	 min-height: 100%;
+	 position: relative;
+	 top: 0;
+	 transition: all 0.1s ease-in;
+}
+ .card:hover {
+	 top: -2px;
+	 box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+ .card article {
+	 padding: 20px;
+	 flex: 1;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: space-between;
+}
+ .card h1 {
+	 font-size: 20px;
+	 margin: 0;
+	 color: #333;
+}
+ .card p {
+	 flex: 1;
+	 line-height: 1.4;
+}
+ .card span {
+	 font-size: 12px;
+	 font-weight: bold;
+	 color: #999;
+	 text-transform: uppercase;
+	 letter-spacing: 0.05em;
+	 margin: 2em 0 0 0;
+}
+ .card .thumb {
+	 padding-bottom: 60%;
+	 background-size: cover;
+	 background-position: center center;
+}
+ @media (min-width: 60em) {
+	 .item-1 {
+		 grid-column: 1 / span 2;
+	}
+	 .item-1 h1 {
+		 font-size: 24px;
+	}
+}
+ 
+  </style>
+
+</head>
+
+<body style="background-color: #fff;" lang="us-en">
+  <!-- Main Body -->
+    {% load cart_tag %}
+
+    <!--Header Of The Page-->
+    {% include './main_blocks/header.html'%}
+    <!-- Main Body -->
+    <div class="main__container" style="padding: 20px 0;">
+      <header class="hycrotis">
+        <h1>Who We Are</h1>
+      </header>
+      <div class="band">
+        <div class="item-1">
+          <a href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"></div>
+            <article>
+              <h1>International Artist Feature: Malaysia</h1>
+              <span>Mary Winkler</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-2">
+          <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png);"></div>
+            <article>
+              <h1>How to Conduct Remote Usability Testing</h1>
+              <span>Harry Brignull</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-3">
+          <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);"></div>
+            <article>
+              <h1>Created by You, July Edition</h1>
+              <p>Welcome to our monthly feature of fantastic tutorial results created by you, the Envato Tuts+ community! </p>
+              <span>Melody Nieves</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-4">
+          <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/landing.png);"></div>
+            <article>
+              <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+              <p>We’ll be putting things together so that as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.</p>
+              <span>Kezz Bracey</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-5">
+          <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/strange.jpg);"></div>
+            <article>
+              <h1>How to Create a “Stranger Things” Text Effect in Adobe Photoshop</h1>
+              <span>Rose</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-6">
+          <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg);"></div>
+            <article>
+              <h1>5 Inspirational Business Portraits and How to Make Your Own</h1>
+      
+              <span>Marie Gardiner</span>
+            </article>
+          </a>
+        </div>
+        <div class="item-7">
+          <a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281" class="card">
+            <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/china.png);"></div>
+            <article>
+              <h1>Notes From Behind the Firewall: The State of Web Design in China</h1>
+              <span>Kendra Schaefer</span>
+            </article>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Ends Here-->
+    
+    <!-- Footer -->
+    {% include "./main_blocks/footer.html" %}
+</body>
+</html>

@@ -111,6 +111,10 @@
   margin-bottom: 1px;
 }
 
+:focus {
+  outline: none !important;
+}
+
 .header-menu-button {
   border: 1px solid #5a5a5a;
   margin: auto -5px auto 10px;

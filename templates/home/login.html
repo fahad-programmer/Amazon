@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login To Your Account</title>
     <link rel="stylesheet" href="{% static 'home/css/login.css' %}" />
+    <meta
+      property="og:image"
+      content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+      xmlns:og="http://opengraphprotocol.org/schema/"
+    />
+    <link
+      rel="icon"
+      href="{% static 'home/img/amazon-logo-favicon.png' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'home/img/amazon-logo-favicon.png' %}"
+      type="image/x-icon"
+    />
+    <meta
+      property="og:description"
+      content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+      xmlns:og="http://opengraphprotocol.org/schema/"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div class="login">
@@ -23,7 +44,9 @@
           <input type="text" name="loginusername" required />
 
           <h5>Password</h5>
-          <input type="password" name="loginpassword" required />
+          <input type="password" style="margin-bottom: 0;" name="loginpassword" required />
+
+          <a href="#" class="card-shop-link">Forget password?</a>
 
           <button type="submit" class="login__signInButton">Sign In</button>
         </form>

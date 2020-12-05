@@ -99,8 +99,24 @@ def cart_detail(request):
 
     return render(request, 'Shop/cart.html', params)
 
+<<<<<<< HEAD
 @cache_page(CACHE_TTL)
 def search(request, page_num):
+=======
+@login_required(login_url="/account/login")
+def payout(request):
+    return render(request, 'Shop/payout.html')
+
+@login_required(login_url="/account/login")
+def payout2(request):
+    return render(request, 'Shop/payout2.html')
+
+@login_required(login_url="/account/login")
+def payout3(request):
+    return render(request, 'Shop/payout3.html')
+
+def search(request, page_num, **filters):
+>>>>>>> 353d222a1a50a6982cd9d1ccf095c18f475b667f
 
     if request.method == "POST":
 

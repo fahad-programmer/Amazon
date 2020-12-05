@@ -1,0 +1,67 @@
+.main__container {
+    width: 1000px;
+    margin: auto;
+}
+h1.header__label {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+.main__body__section {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+}
+ul.kinza {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 20px;
+}
+li.haroon {
+    width: 320px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 20px;
+    padding: 14px 18px;
+    display: flex;
+}
+.image__haroon {
+    width: 23.44%;
+    margin-right: 2%;
+}
+img.image__haroon__main {
+    width: 100%;
+}
+.haroon__desc {
+    width: 74.44%;
+}
+span.haroon__title {
+    display: block;
+    font-weight: 400!important;
+    color: #111;
+    font-size: 17px;
+}
+span.haroon__desc__label {
+    color: #565959!important;
+    font-size: 13px;
+}
+li.amjad {
+    width: 320px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 20px;
+    padding: 14px 18px;
+}
+ul.haniya {
+    margin-top: 4px;
+    list-style: none;
+    padding: 0;
+}
+span.jedi__title {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}

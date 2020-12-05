@@ -1,4 +1,60 @@
 {% load static%}
+
+<style>
+    .dropdown {
+        background-color: #f3f3f3;
+        color: #555;
+        height: 40px;
+        width: auto;
+        font-size: 12px;
+        border-radius: 10px 0 0 10px;
+        border-right: 1px solid #d0d0d0;
+    }
+
+    .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 14px;
+        border: none;
+        color: #555;
+        padding: 11px 10px 11.5px 10px;
+        background-color: inherit;
+        font-family: inherit;
+        display: flex;
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .dropdown:hover .dropbtn,
+    .dropbtn:focus {
+        background-color: #e4e4e4;
+        outline: none;
+    }
+
+    .dropdown-content {
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+
 <!-- Main Body -->
 <div class="app">
     {% load cart_tag %}
@@ -24,17 +80,47 @@
         <!-- Search Bar -->
         <div class="header__search">
             <div class="dropdown">
-                <button class="dropbtn" onclick="myFunction()">
-                    All
-                    <i class="fa fa-caret-down" style="margin-left: 8px"></i>
-                </button>
-                <form method="POST" action="/shop/search/product/1">
-                    {% csrf_token %}
-                    <div class="dropdown-content" id="myDropdown">
-                        <a href="#">Toys</a>
-                        <a href="#">Women Cloathes</a>
-                        <a href="#">Electronics</a>
-                    </div>
+                <select name="category" id="drop-btn" class="drop-btn"
+                style="cursor: pointer;
+                border: none;
+                color: #555;
+                padding: 11px 10px 11.5px 10px;
+                background-color: inherit;
+                font-family: inherit;
+                font-size: 12px;
+                align-items: center;
+                z-index: 111111111;
+                border-radius: 10px 0 0 10px;
+                max-width: 60px;">
+                    <option class="dropdown-content" selected="selected" value="search-alias=aps">All</option>
+                    <option class="dropdown-content" value="search-alias=arts-crafts-intl-ship">Arts &amp; Crafts</option>
+                    <option class="dropdown-content" value="search-alias=automotive-intl-ship">Automotive</option>
+                    <option class="dropdown-content" value="search-alias=baby-products-intl-ship">Baby</option>
+                    <option class="dropdown-content" value="search-alias=beauty-intl-ship">Beauty &amp; Personal Care</option>
+                    <option class="dropdown-content" value="search-alias=stripbooks-intl-ship">Books</option>
+                    <option class="dropdown-content" value="search-alias=computers-intl-ship">Computers</option>
+                    <option class="dropdown-content" value="search-alias=digital-music">Digital Music</option>
+                    <option class="dropdown-content" value="search-alias=electronics-intl-ship">Electronics</option>
+                    <option class="dropdown-content" value="search-alias=digital-text">Kindle Store</option>
+                    <option class="dropdown-content" value="search-alias=instant-video">Prime Video</option>
+                    <option class="dropdown-content" value="search-alias=fashion-womens-intl-ship">Women's Fashion</option>
+                    <option class="dropdown-content" value="search-alias=fashion-mens-intl-ship">Men's Fashion</option>
+                    <option class="dropdown-content" value="search-alias=fashion-girls-intl-ship">Girls' Fashion</option>
+                    <option class="dropdown-content" value="search-alias=fashion-boys-intl-ship">Boys' Fashion</option>
+                    <option class="dropdown-content" value="search-alias=deals-intl-ship">Deals</option>
+                    <option class="dropdown-content" value="search-alias=hpc-intl-ship">Health &amp; Household</option>
+                    <option class="dropdown-content" value="search-alias=kitchen-intl-ship">Home &amp; Kitchen</option>
+                    <option class="dropdown-content" value="search-alias=industrial-intl-ship">Industrial &amp; Scientific</option>
+                    <option class="dropdown-content" value="search-alias=luggage-intl-ship">Luggage</option>
+                    <option class="dropdown-content" value="search-alias=movies-tv-intl-ship">Movies &amp; TV</option>
+                    <option class="dropdown-content" value="search-alias=music-intl-ship">Music, CDs &amp; Vinyl</option>
+                    <option class="dropdown-content" value="search-alias=pets-intl-ship">Pet Supplies</option>
+                    <option class="dropdown-content" value="search-alias=software-intl-ship">Software</option>
+                    <option class="dropdown-content" value="search-alias=sporting-intl-ship">Sports &amp; Outdoors</option>
+                    <option class="dropdown-content" value="search-alias=tools-intl-ship">Tools &amp; Home Improvement</option>
+                    <option class="dropdown-content" value="search-alias=toys-and-games-intl-ship">Toys &amp; Games</option>
+                    <option class="dropdown-content" value="search-alias=videogames-intl-ship">Video Games</option>
+                </select>
             </div>
             <input class="header__searchInput" placeholder="Search For Products" type="text" name="query" />
             <input type="hidden" value="Electronics" name="category">
@@ -93,6 +179,7 @@
                                 style="font-size: 11px; margin-left: 5px">Start Here</a>
                         </div>
                     </div>
+                    {% endif %}
                     <hr style="margin: 8px" />
                     <div class="y__menu">
                         <div class="y__content">
@@ -186,7 +273,6 @@
                             </a>
                         </div>
                     </div>
-                    {% endif %}
                 </div>
             </div>
 

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <!-- Title -->
+  <title>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more</title>
+  <!-- Meta Information -->
+  <meta name="description"
+    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else.">
+  <meta name="keywords"
+    content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL">
+  <meta name="google" content="nositelinkssearchbox">
+  <link rel="canonical" href="https://www.amazon.com/">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta property="og:image"
+    content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+    xmlns:og="http://opengraphprotocol.org/schema/">
+  <link rel="icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'home/img/amazon-logo-favicon.png' %}" type="image/x-icon" />
+  <meta property="og:description"
+    content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+    xmlns:og="http://opengraphprotocol.org/schema/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+  <link rel="stylesheet" href="{% static 'home/css/account.css' %}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+  </style>
+
+  
+  <style>
+    .dropdown__country {
+      position: relative;
+    }
+
+    .dropdown-content__country {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      margin-top: 45px;
+      margin-left: -5px;
+      left: -1px;
+      border-radius: 3px;
+    }
+
+    .dropdown-content__country a {
+      text-decoration: none;
+      display: block;
+    }
+
+
+    .dropdown__country:hover .dropdown-content__country {
+      display: block;
+    }
+
+
+    .xolo__butt {
+      background: #131921;
+      color: #fff;
+      border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+    }
+  </style>
+
+</head>
+
+<body style="background-color: #fff;" lang="us-en">
+  <!-- Main Body -->
+    {% load cart_tag %}
+
+    <!--Header Of The Page-->
+    {% include './main_blocks/header.html'%}
+    <!-- Main Body -->
+
+    <div class="main__container">
+        <div class="main__header">
+            <h1 class="header__label">
+                Your Account
+            </h1>
+        </div>
+        <div class="main__body__section">
+            <ul class="kinza">
+                <li class="haroon">
+                    <div class="image__haroon">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/Box._CB485927553_.png" class="image__haroon__main"></img>
+                    </div>
+                    <div class="haroon__desc">
+                        <span class="haroon__title">Your Orders</span>
+                        <span class="haroon__desc__label">Track, return, or buy things again</span>
+                    </div>
+                </li>
+                <li class="haroon">
+                    <div class="image__haroon">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/sign-in-lock._CB485931485_.png" class="image__haroon__main"></img>
+                    </div>
+                    <div class="haroon__desc">
+                        <span class="haroon__title">Login & Security</span>
+                        <span class="haroon__desc__label">Edit login, name, and mobile number</span>
+                    </div>
+                </li>
+                <li class="haroon">
+                    <div class="image__haroon">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/Prime_clear-bg._CB423472251_.png" class="image__haroon__main"></img>
+                    </div>
+                    <div class="haroon__desc">
+                        <span class="haroon__title">prime</span>
+                        <span class="haroon__desc__label">View benefits and payments settings</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="kinza">
+                <li class="haroon">
+                    <div class="image__haroon">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/blackgc2._CB446992237_.png" class="image__haroon__main"></img>
+                    </div>
+                    <div class="haroon__desc">
+                        <span class="haroon__title">Gift cards</span>
+                        <span class="haroon__desc__label">View balance or redeem a card</span>
+                    </div>
+                </li>
+                <li class="haroon">
+                    <div class="image__haroon">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/Payments._CB485926332_.png" class="image__haroon__main"></img>
+                    </div>
+                    <div class="haroon__desc">
+                        <span class="haroon__title">Your Payments</span>
+                        <span class="haroon__desc__label">Manage payment methods and settings, view balances and offers</span>
+                    </div>
+                </li>
+                <li class="haroon">
+                    <div class="image__haroon">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/alexa_logo_ya._CB466291315_.png" class="image__haroon__main"></img>
+                    </div>
+                    <div class="haroon__desc">
+                        <span class="haroon__title">All things Alexa</span>
+                        <span class="haroon__desc__label">Get the most out of your Alexa-enabled devices</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="kinza">
+                <li class="haroon">
+                    <div class="image__haroon">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/cs/ya/images/manageYourDevices._CB456085159_.png" class="image__haroon__main"></img>
+                    </div>
+                    <div class="haroon__desc">
+                        <span class="haroon__title">Your devices and content</span>
+                        <span class="haroon__desc__label">Manage your Amazon devices and digital content</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <hr style="margin: 40px 0;border-width: 2px;">
+        <div class="main__body__section">
+            <ul class="kinza">
+                <li class="amjad">
+                    <span class="jedi__title">
+                        Ordering and shopping preferences
+                    </span>
+                    <ul class="haniya">
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your addresses
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Payments
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Amazon Profile
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Archived Orders
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Your LIst
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                1-Click Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Amazon Fresh Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Language prefrences
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Saved IDs
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Coupons
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Product Vouchers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="amjad">
+                    <span class="jedi__title">
+                        Ordering and shopping preferences
+                    </span>
+                    <ul class="haniya">
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your addresses
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Payments
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Amazon Profile
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Archived Orders
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Your LIst
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                1-Click Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Amazon Fresh Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Language prefrences
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Saved IDs
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Coupons
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Product Vouchers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="amjad">
+                    <span class="jedi__title">
+                        Ordering and shopping preferences
+                    </span>
+                    <ul class="haniya">
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your addresses
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Payments
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Amazon Profile
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Archived Orders
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Your LIst
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                1-Click Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Amazon Fresh Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Language prefrences
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Saved IDs
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Coupons
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Product Vouchers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="kinza">
+                <li class="amjad">
+                    <span class="jedi__title">
+                        Ordering and shopping preferences
+                    </span>
+                    <ul class="haniya">
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your addresses
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Payments
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Amazon Profile
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Archived Orders
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Your LIst
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                1-Click Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Amazon Fresh Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Language prefrences
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Saved IDs
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Coupons
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Product Vouchers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="amjad">
+                    <span class="jedi__title">
+                        Ordering and shopping preferences
+                    </span>
+                    <ul class="haniya">
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your addresses
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Payments
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Amazon Profile
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Archived Orders
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Your LIst
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                1-Click Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Amazon Fresh Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Language prefrences
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Saved IDs
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Coupons
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Product Vouchers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="amjad">
+                    <span class="jedi__title">
+                        Ordering and shopping preferences
+                    </span>
+                    <ul class="haniya">
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your addresses
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Payments
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Your Amazon Profile
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Archived Orders
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Your LIst
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                1-Click Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Amazon Fresh Settings
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Language prefrences
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Manage Saved IDs
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Coupons
+                            </a>
+                        </li>
+                        <li class="zohaib">
+                            <a href="#" class="card-shop-link">
+                                Product Vouchers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+
+    </div>
+
+    <!-- Ends Here-->
+
+    <hr style="border-color: #ddd;margin: 60px 0 20px;">
+
+    <div class="related__products">
+        <div class="head__related">
+          <h2 class="main__heading">More to consider from our brands</h2>
+        </div>
+        <div class="related__products__items">
+          <li class="product__list__related" style="margin-left: 0;">
+            <span class="image__realted">
+              <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+            </span>
+            <span class="related__item__name">
+              <a href="#" class="card-shop-link">
+                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+              </a>
+            </span>
+            <span class="raiting__container">
+              <div class="stars__contain">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="card-shop-link" style="font-size: 14px;">
+                87
+              </div>
+            </span>
+            <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+          </li>
+          <li class="product__list__related">
+            <span class="image__realted">
+              <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+            </span>
+            <span class="related__item__name">
+              <a href="#" class="card-shop-link">
+                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+              </a>
+            </span>
+            <span class="raiting__container">
+              <div class="stars__contain">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="card-shop-link" style="font-size: 14px;">
+                87
+              </div>
+            </span>
+            <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+          </li>
+          <li class="product__list__related">
+            <span class="image__realted">
+              <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+            </span>
+            <span class="related__item__name">
+              <a href="#" class="card-shop-link">
+                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+              </a>
+            </span>
+            <span class="raiting__container">
+              <div class="stars__contain">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="card-shop-link" style="font-size: 14px;">
+                87
+              </div>
+            </span>
+            <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+          </li>
+          <li class="product__list__related">
+            <span class="image__realted">
+              <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+            </span>
+            <span class="related__item__name">
+              <a href="#" class="card-shop-link">
+                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+              </a>
+            </span>
+            <span class="raiting__container">
+              <div class="stars__contain">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="card-shop-link" style="font-size: 14px;">
+                87
+              </div>
+            </span>
+            <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+          </li>
+          <li class="product__list__related">
+            <span class="image__realted">
+              <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+            </span>
+            <span class="related__item__name">
+              <a href="#" class="card-shop-link">
+                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+              </a>
+            </span>
+            <span class="raiting__container">
+              <div class="stars__contain">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="card-shop-link" style="font-size: 14px;">
+                87
+              </div>
+            </span>
+            <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+          </li>
+          <li class="product__list__related">
+            <span class="image__realted">
+              <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+            </span>
+            <span class="related__item__name">
+              <a href="#" class="card-shop-link">
+                Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+              </a>
+            </span>
+            <span class="raiting__container">
+              <div class="stars__contain">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="card-shop-link" style="font-size: 14px;">
+                87
+              </div>
+            </span>
+            <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+          </li>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    {% include "./main_blocks/footer.html" %}
+</body>
+</html>

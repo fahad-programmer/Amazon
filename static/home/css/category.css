@@ -1,0 +1,88 @@
+h1.maint__title__label {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+span.main__slogan__of__page {
+    margin-bottom: 14px;
+    font-size: 13px;
+}
+.i__love__you__laiba__sadaf {
+    text-align: -webkit-center;
+}
+span.you__are__the__most__beautiful {
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+    color: #333;
+}
+ul.category__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-top: 20px;
+}
+li.__category__list__item {
+    width: 23.5%;
+    text-align: center;
+    margin-right: 2%;
+}
+span.list__item__title {
+    color: #111!important;
+    font-weight: 500;
+}
+.__category__image__contaienr {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}img.really__i_will__fuck__you__hard {
+    width: 100%;
+}
+.category__result {
+    margin-top: 20px;
+}
+ul.polio__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+li.polio__item {
+    width: 33.3%;
+}
+.__polio__image {
+    width: 100%;
+}
+img.main__image {
+    max-width: 100%;
+}
+span.__poilio__title {
+    font-size: 15px;
+    display: block;
+}
+span.polio__seller {
+    display: block;
+    font-size: 12px;
+    color: #555!important;
+    margin-bottom: 10px;
+}
+span.shiiping__polio {
+    display: block;
+    font-size: 12px;
+}
+span.__polio__dollar {
+    top: -.5em;
+    font-size: 12px;
+    position: relative;
+    color: #111;
+}
+span.__polio__real__price {
+    font-size: 21px;
+}
+span.__polio__points {
+    top: -.5em;
+    font-size: 12px;
+    position: relative;
+    color: #111;
+}
