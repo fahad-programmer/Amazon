@@ -37,6 +37,9 @@ def product_view(request):
 def signup(request):
     return render(request, 'home/signup.html')
 
+def numverify(request):
+    return render(request, 'home/numverify.html')
+
 
 def handlelogin(request):
     if request.method == 'POST':
