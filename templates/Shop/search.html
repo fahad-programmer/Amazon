@@ -333,46 +333,7 @@
           
         <!--Ends Here-->
 
-         <!-- Scripts -->
-      <script>
-        function w3_open() {
-          document.getElementById("mySidebar").style.display = "block";
-          document.getElementById("bg-changing").style.display = "block";
-        }
-
-        function w3_close() {
-          document.getElementById("mySidebar").style.display = "none";
-          document.getElementById("bg-changing").style.display = "none";
-        }
-      </script>
-
-      <script>
-        function bg__dark() {
-          document.getElementById("bg-changing__dropdown").style.display = "block";
-        }
-
-        function bg__light() {
-          document.getElementById("bg-changing__dropdown").style.display = "none";
-        }
-      </script>
-
-      <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (e) {
-          if (!e.target.matches('.dropbtn')) {
-            var myDropdown = document.getElementById("myDropdown");
-            if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
-            }
-          }
-        }
-      </script>
+        {% include "./main_blocks/footer.html" %}
     
   </body>
 </html>
