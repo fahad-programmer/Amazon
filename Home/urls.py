@@ -10,7 +10,7 @@ urlpatterns = [
     path('account/login/handle', handlelogin, name="handlelogin"),
     path('product/', product_view, name="Product View"),
     path('user', user_notification, name="activity"),
-    path('number_verification', numverify, name="numverify"),
+    path('account/number_verification', numverify, name="numverify"),
 
 
 

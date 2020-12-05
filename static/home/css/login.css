@@ -39,6 +39,21 @@ button {
   margin-bottom: 5px;
 }
 
+.login__container > form > p {
+  margin-top: 5px;
+  font-size: 13px;
+}
+.card-shop-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #C7511F;
+}
+.card-shop-link {
+  text-decoration: none;
+  color: #007185;
+  font-size: 13px;
+}
+
 .login__container > form > input {
   height: 30px;
     margin-bottom: 10px;

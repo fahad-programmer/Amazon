@@ -34,41 +34,42 @@
         class="login__logo"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
       />
-
-      <div class="login__container">
-        <h1>Create account</h1>
+        <!-- This section wil be displayed to enter the number-->
+      <div class="login__container" style="display: block;">
+        <h1>Enter Your Number</h1>
 
         <form method="POST" action="{% url 'handlelogin' %}">
           {% csrf_token %}
-          <h5>UserName</h5>
+          <h5>Phone Number</h5>
           <input type="text" name="loginusername" required />
 
-          <h5>Password</h5>
-          <input type="password" name="loginpassword" required />
+          <p><b>Why we need you to verify number?</b></p>
 
-          <button type="submit" class="login__signInButton">Sign In</button>
+          <p style="font-size: 12px;">
+            By using your number we can verify your account when ever we feel someone other then you tries to login into account, or we can send you the alert messages if some intruder tries to login your account. You can also use this number to track you order. 
+          </p>
+
+          <button type="submit" class="login__signInButton">Verify</button>
         </form>
-        <br />
-        <a href="{% provider_login_url 'facebook' method='oauth2' %}">
-          <button style="width: 98%" class="loginBtn loginBtn--facebook">
-            Login with Facebook
-          </button>
-        </a>
-        <a href="{% provider_login_url 'google' %}">
-          <button class="loginBtn loginBtn--google" style="width: 98%">
-            Login with Google
-          </button>
-        </a>
-
-        <p>
-          By signing-in you agree to the AMAZON Conditions of Use & Sale. Please
-          see our Privacy Notice, our Cookies Notice and our Interest-Based Ads
-          Notice.
-        </p>
 
         <button class="login__registerButton">
-          Create your Amazon Account
+          Skip for Now
         </button>
+      </div>
+      <!-- This section will be displayed when the user have to enter the Pin
+            The upper section will be invisible-->
+      <div class="login__container" style="display: none;">
+        <h1>Enter 6 digit Pin</h1>
+
+        <form method="POST" action="{% url 'handlelogin' %}">
+          {% csrf_token %}
+          <h5>Pin</h5>
+          <input type="text" name="loginusername" required />
+
+
+          <p style="font-size: 12px;">You will recieve a  message with the 6 digit pin in it...</p>
+
+        </form>
       </div>
     </div>
   </body>
