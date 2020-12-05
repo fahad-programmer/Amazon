@@ -5,6 +5,7 @@ import uuid
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
+from django.contrib.auth.models import User
 
 
 class UUIDModel(models.Model):
@@ -31,6 +32,7 @@ class TimeStampedUUIDModel(UUIDModel):
 
 
 class SMSVerification(TimeStampedUUIDModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     security_code = models.CharField(_("Security Code"), max_length=120)
     phone_number = PhoneNumberField(_("Phone Number"))
     session_token = models.CharField(_("Device Session Token"), max_length=500)

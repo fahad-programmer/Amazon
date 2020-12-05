@@ -8,6 +8,8 @@ from django.utils.translation import ugettext as _
 from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
 
+
+
 # Phone Auth Stuff
 from .backends import get_sms_backend
 
@@ -38,12 +40,18 @@ class SMSVerificationSerializer(serializers.Serializer):
         )
 
         if verification is None:
-            raise serializers.ValidationError(_("Security code is not valid"))
+            print('Security code is not valid')
+
         elif token_validatation == backend.SESSION_TOKEN_INVALID:
-            raise serializers.ValidationError(_("Session Token mis-match"))
+            print('Session Token mis-match')
+
         elif token_validatation == backend.SECURITY_CODE_EXPIRED:
-            raise serializers.ValidationError(_("Security code has expired"))
+            print('Security code has expired')
+
         elif token_validatation == backend.SECURITY_CODE_VERIFIED:
-            raise serializers.ValidationError(_("Security code is already verified"))
+            print('Security code is already verified')
+
+        else:
+            print('Security Code Verified Successfully')
 
         return attrs

@@ -5,7 +5,6 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny
 from django.shortcuts import render
-from .base import response
 from .serializers import PhoneSerializer, SMSVerificationSerializer
 from .services import send_security_code_and_generate_session_token
 
@@ -18,6 +17,7 @@ class VerificationViewSet(viewsets.GenericViewSet):
         serializer_class=PhoneSerializer,
     )
     def register(self, request):
+        global serializer, session_token
         serializer = PhoneSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         session_token = send_security_code_and_generate_session_token(
@@ -34,4 +34,4 @@ class VerificationViewSet(viewsets.GenericViewSet):
     def verify(self, request):
         serializer = SMSVerificationSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        return render(request, 'testing.html')
+        return render(request, 'testing.html', {'session_token':session_token, 'phonenumber':serializer})

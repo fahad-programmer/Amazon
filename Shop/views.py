@@ -6,10 +6,16 @@ from actstream import action
 from notifications.signals import notify
 from django.core.paginator import Paginator
 from actstream.models import Action
-from rest_framework.response import Response
+from django.conf import settings
+from django.core.cache.backends.base import DEFAULT_TIMEOUT
+from django.views.decorators.cache import cache_page
+from django.core.cache import cache
+
 # Create your views here.
 
 # Cart Views
+
+CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 
 @login_required(login_url="/account/login")
@@ -77,6 +83,7 @@ def cart_clear(request):
     return redirect("cart_detail")
 
 
+@cache_page(CACHE_TTL)
 @login_required(login_url="/account/login")
 def cart_detail(request):
     
@@ -92,10 +99,11 @@ def cart_detail(request):
 
     return render(request, 'Shop/cart.html', params)
 
-
-def search(request, page_num, **filters):
+@cache_page(CACHE_TTL)
+def search(request, page_num):
 
     if request.method == "POST":
+
         global query, category
         query = request.POST['query']
         category = request.POST['category']
@@ -104,7 +112,8 @@ def search(request, page_num, **filters):
         name__icontains=query, category=category).order_by('id')
 
     # Pagination
-    page_obj = Paginator(filtered_product, 16, allow_empty_first_page=False)
+    page_obj = Paginator(filtered_product, 16, allow_empty_first_page=True
+        )
     main_page = page_obj.get_page(page_num)
 
     # Only Sending Action When User Is (Authenticated)
@@ -122,8 +131,9 @@ def search(request, page_num, **filters):
 
 # Main Function (Product- Page)
 
-
+@cache_page(CACHE_TTL)
 def main_product(request, slug):
+
     product = Product.objects.filter(slug=slug).first()
 
     Product_History = []

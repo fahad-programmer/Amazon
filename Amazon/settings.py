@@ -83,7 +83,9 @@ INSTALLED_APPS = [
     #Mobile Authentication
     "phone_verify",
 
-    'rest_framework'
+    'rest_framework',
+
+ 
 ]
 
 # Site Id
@@ -283,4 +285,18 @@ PHONE_VERIFICATION = {
     "APP_NAME": "Phone Verify",
     "SECURITY_CODE_EXPIRATION_TIME": 3600,  # In seconds only
     "VERIFY_SECURITY_CODE_ONLY_ONCE": False,  # If False, then a security code can be used multiple times for verification
+}
+
+#Cache To Store Data
+
+CACHE_TTL = 60 * 115
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
 }
