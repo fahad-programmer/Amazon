@@ -16,7 +16,13 @@ class Profile(models.Model):
 class Address(models.Model):
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
     country = models.CharField(max_length=100, default="Pakistan")
-    address_line_1 = models.CharField(max_length=500)
-    address_line_2 = models.CharField(max_length=500, blank=True)
     zip_code = models.CharField(max_length=20, default=1)
     building_details = models.CharField(max_length=500)
+
+class Addresses(models.Model):
+    addresses = models.ForeignKey(
+        'Address',
+        on_delete=models.CASCADE,
+        )
+    address_line_1 = models.CharField(max_length=500, null=False)
+    address_line_2 = models.CharField(max_length=500, blank=True)

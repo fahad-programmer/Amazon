@@ -49,7 +49,7 @@ def signup(request):
     return render(request, 'home/signup.html')
 
 
-@login_required('account/login')
+@login_required(login_url='account/login')
 def numverify(request):
     return render(request, 'home/numverify.html')
 
