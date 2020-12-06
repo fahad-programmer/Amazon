@@ -16,6 +16,7 @@ CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 # import geoip2.database
 # import socket
 
+
 @cache_page(CACHE_TTL)
 def index(request):
     # products = Product.objects.all()[:3]
@@ -47,23 +48,31 @@ def product_view(request):
 def signup(request):
     return render(request, 'home/signup.html')
 
+
+@login_required('account/login')
 def numverify(request):
     return render(request, 'home/numverify.html')
+
 
 def forget(request):
     return render(request, 'home/forget.html')
 
+
 def terms(request):
     return render(request, 'home/tems.html')
+
 
 def privacy(request):
     return render(request, 'home/privacy.html')
 
+
 def about(request):
     return render(request, 'home/about.html')
 
+
 def account(request):
     return render(request, 'home/account.html')
+
 
 def cat(request):
     return render(request, 'home/category.html')

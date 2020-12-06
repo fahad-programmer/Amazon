@@ -23,7 +23,7 @@ class VerificationViewSet(viewsets.GenericViewSet):
         session_token = send_security_code_and_generate_session_token(
             str(serializer.validated_data["phone_number"])
         )
-        return render(request, 'testing.html', {'session_token':session_token, 'phonenumber':serializer})
+        return render(request, 'home/enter-pin.html', {'session_token': session_token, 'phonenumber': serializer})
 
     @action(
         detail=False,
@@ -34,4 +34,4 @@ class VerificationViewSet(viewsets.GenericViewSet):
     def verify(self, request):
         serializer = SMSVerificationSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        return render(request, 'testing.html', {'session_token':session_token, 'phonenumber':serializer})
+        return render(request, 'home/enter-pin.html', {'session_token': session_token, 'phonenumber': serializer})

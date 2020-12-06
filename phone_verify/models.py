@@ -32,11 +32,11 @@ class TimeStampedUUIDModel(UUIDModel):
 
 
 class SMSVerification(TimeStampedUUIDModel):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     security_code = models.CharField(_("Security Code"), max_length=120)
     phone_number = PhoneNumberField(_("Phone Number"))
     session_token = models.CharField(_("Device Session Token"), max_length=500)
-    is_verified = models.BooleanField(_("Security Code Verified"), default=False)
+    is_verified = models.BooleanField(
+        _("Security Code Verified"), default=False)
 
     class Meta:
         db_table = "sms_verification"

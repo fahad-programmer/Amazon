@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% load static %} {% load socialaccount %}
+      {% load static %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login To Your Account</title>
+    <title>Enter The Pin</title>
     <link rel="stylesheet" href="{% static 'home/css/login.css' %}" />
     <meta
       property="og:image"
@@ -29,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <div class="login">
+     <div class="login">
       <img
         class="login__logo"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
@@ -38,23 +38,26 @@
       <div class="login__container" style="display: block">
         <h1>Enter Your Number</h1>
 
-        <form method="POST" action="/api/phone/register">
+        <form method="POST" action="/api/phone/verify">
           {% csrf_token %}
-          <h5>Phone Number</h5>
-          <input type="text" name="phone_number" required />
+          <h5>Pin</h5>
+          <input type="number" name="security_code" required />
+             <input type="hidden" name="session_token" value="{{session_token}}" />
+      <input
+        type="hidden"
+        name="phone_number"
+        value="{{phonenumber.data.phone_number}}"
+      />
+      <input type="hidden" name="user_id" value="{{request.user}}" />
 
-          <p><b>Why we need you to verify number?</b></p>
+          <p><b>Information About Pin</b></p>
 
           <p style="font-size: 12px">
-            By using your number we can verify your account when ever we feel
-            someone other then you tries to login into account, or we can send
-            you the alert messages if some intruder tries to login your account.
+            A 6 digit pin has been sent to your number. The pin is only valid for an hour and then you will have to request another pin.
+            
           </p>
           <button type="submit" class="login__signInButton">Verify</button>
         </form>
       </div>
-      <!-- This section will be displayed when the user have to enter the Pin
-            The upper section will be invisible-->
-     
   </body>
 </html>

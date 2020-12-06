@@ -80,12 +80,12 @@ INSTALLED_APPS = [
     'tellme',
 
 
-    #Mobile Authentication
+    # Mobile Authentication
     "phone_verify",
 
     'rest_framework',
 
- 
+
 ]
 
 # Site Id
@@ -147,6 +147,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # User Tracking Middleware
     'user_visit.middleware.UserVisitMiddleware',
+
+    # Caches
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 ROOT_URLCONF = 'Amazon.urls'
@@ -268,15 +273,13 @@ ACTSTREAM_SETTINGS = {
 DJANGO_NOTIFICATIONS_CONFIG = {'USE_JSONFIELD': True}
 
 
-
-
 # In settings.py
 # Add settings for phone_verify to work
 PHONE_VERIFICATION = {
     "BACKEND": "phone_verify.backends.twilio.TwilioBackend",
     "OPTIONS": {
         "SID": "ACdb84efb2452409796286622b88ad1abd",
-        "SECRET": "54dba5596fa2f786f93c52e648e78fb9",
+        "SECRET": "a22abd6945ab460fa08dd7e871166fc1",
         "FROM": "+15052786084",
         "SANDBOX_TOKEN": "123456",
     },
@@ -284,19 +287,20 @@ PHONE_VERIFICATION = {
     "MESSAGE": "Welcome to Amazon! Please use security code {security_code} to proceed.",
     "APP_NAME": "Phone Verify",
     "SECURITY_CODE_EXPIRATION_TIME": 3600,  # In seconds only
-    "VERIFY_SECURITY_CODE_ONLY_ONCE": False,  # If False, then a security code can be used multiple times for verification
+    # If False, then a security code can be used multiple times for verification
+    "VERIFY_SECURITY_CODE_ONLY_ONCE": False,
 }
 
-#Cache To Store Data
+# Cache To Store Data
 
 CACHE_TTL = 60 * 115
 
 CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'django_cache',
+        'OPTIONS': {
+            'MAX_ENTRIES': 10000
         }
     }
 }

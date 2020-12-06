@@ -22,7 +22,7 @@ CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 def cart_add(request, id):
     cart = Cart(request)
 
-    #Getting The Values
+    # Getting The Values
     if request.method == 'POST':
         global product, color, size, quantity
         product = Product.objects.get(id=id)
@@ -30,15 +30,15 @@ def cart_add(request, id):
         size = request.POST['size']
         quantity = request.POST['quantity']
 
-    #Adding the products in cart
+    # Adding the products in cart
     cart.add(product=product, color=color, size=size, quantity=int(quantity))
 
-    #Sending Action and Notification To The User
+    # Sending Action and Notification To The User
     action.send(request.user, verb="Product Has Been Added",
                 description=f"The User {request.user} has added the product {product} in his cart of the color {color} and size of {size} and quantity of {quantity}", action_object=product)
     notify.send(request.user, verb="Product Has Been Added In Your Cart",
                 recipient=request.user, level="success", action_object=product, description=f"The User {request.user} has added the product {product} in his cart")
-   
+
     return redirect("Home")
 
 
@@ -86,37 +86,37 @@ def cart_clear(request):
 @cache_page(CACHE_TTL)
 @login_required(login_url="/account/login")
 def cart_detail(request):
-    
-    #Getting The User History    
+
+    # Getting The User History
     prods = set()
-    filtering_history = Action.objects.filter(actor_object_id=request.user.id, verb="User Has Viewed Product").order_by('timestamp')[:3]
+    filtering_history = Action.objects.filter(
+        actor_object_id=request.user.id, verb="User Has Viewed Product").order_by('timestamp')[:3]
     for items in filtering_history:
         prods.add(items.action_object_object_id)
-    user_history = Product.objects.filter(id__in = prods)[::-1]
-    
-    #Context Used In Template
-    params = {'userHistory' : user_history}
+    user_history = Product.objects.filter(id__in=prods)[::-1]
+
+    # Context Used In Template
+    params = {'userHistory': user_history}
 
     return render(request, 'Shop/cart.html', params)
 
-<<<<<<< HEAD
-@cache_page(CACHE_TTL)
-def search(request, page_num):
-=======
+
 @login_required(login_url="/account/login")
 def payout(request):
     return render(request, 'Shop/payout.html')
+
 
 @login_required(login_url="/account/login")
 def payout2(request):
     return render(request, 'Shop/payout2.html')
 
+
 @login_required(login_url="/account/login")
 def payout3(request):
     return render(request, 'Shop/payout3.html')
 
+
 def search(request, page_num, **filters):
->>>>>>> 353d222a1a50a6982cd9d1ccf095c18f475b667f
 
     if request.method == "POST":
 
@@ -129,7 +129,7 @@ def search(request, page_num, **filters):
 
     # Pagination
     page_obj = Paginator(filtered_product, 16, allow_empty_first_page=True
-        )
+                         )
     main_page = page_obj.get_page(page_num)
 
     # Only Sending Action When User Is (Authenticated)
@@ -146,6 +146,7 @@ def search(request, page_num, **filters):
     return render(request, 'home/search.html', params)
 
 # Main Function (Product- Page)
+
 
 @cache_page(CACHE_TTL)
 def main_product(request, slug):
@@ -174,10 +175,11 @@ def main_product(request, slug):
 
     # Products(User Viewed)
     prods = set()
-    filtering_history = Action.objects.filter(actor_object_id=request.user.id, verb="User Has Viewed Product").order_by('timestamp')[:6]
+    filtering_history = Action.objects.filter(
+        actor_object_id=request.user.id, verb="User Has Viewed Product").order_by('timestamp')[:6]
     for items in filtering_history:
         prods.add(items.action_object_object_id)
-    user_history = Product.objects.filter(id__in = prods)
+    user_history = Product.objects.filter(id__in=prods)
 
     # Sending the action to the database
     if request.user.is_authenticated:

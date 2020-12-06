@@ -7,7 +7,8 @@ import logging
 from django.utils.translation import ugettext as _
 from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
-
+from Home.models import Profile
+from django.contrib.auth.models import User
 
 
 # Phone Auth Stuff
@@ -23,14 +24,16 @@ class PhoneSerializer(serializers.Serializer):
 class SMSVerificationSerializer(serializers.Serializer):
     phone_number = PhoneNumberField(required=True)
     session_token = serializers.CharField(required=True)
+    user_id = serializers.CharField(required=True)
     security_code = serializers.CharField(required=True)
 
     def validate(self, attrs):
         attrs = super().validate(attrs)
         phone_number = attrs.get("phone_number", None)
-        security_code, session_token = (
+        security_code, session_token, user = (
             attrs.get("security_code", None),
             attrs.get("session_token", None),
+            attrs.get("user_id", None)
         )
         backend = get_sms_backend(phone_number=phone_number)
         verification, token_validatation = backend.validate_security_code(
@@ -53,5 +56,8 @@ class SMSVerificationSerializer(serializers.Serializer):
 
         else:
             print('Security Code Verified Successfully')
+            get_user = User.objects.get(username=user)
+            user_num = Profile(phone_number=phone_number, user=get_user)
+            user_num.save()
 
         return attrs
