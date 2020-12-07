@@ -1,5 +1,5 @@
 from django.urls import path
-from Shop.views import CategorySearch, cart_add, payout, payout2, payout3, cart_clear, cart_detail, item_clear, item_decrement, item_increment, search, main_product, api_check, CategorySearch
+from Shop.views import CategorySearch, cart_add, payout, payout2, payout3, cart_clear, cart_detail, item_clear, item_decrement, item_increment, search, main_product,  CategorySearch
 
 urlpatterns = [
     # Cart Urls
@@ -23,8 +23,6 @@ urlpatterns = [
     # Product Urls
     path('product/<str:slug>', main_product, name="main_product"),
 
-    # Phone Api
-    path('test', api_check, name='api'),
 
     # Category Search
     path('category', CategorySearch, name="cat"),

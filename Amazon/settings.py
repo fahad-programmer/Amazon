@@ -293,14 +293,14 @@ PHONE_VERIFICATION = {
 
 # Cache To Store Data
 
-CACHE_TTL = 60 * 115
+# CACHE_TTL = 60 * 115
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': 'django_cache',
-        'OPTIONS': {
-            'MAX_ENTRIES': 10000
-        }
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+#         'LOCATION': 'django_cache',
+#         'OPTIONS': {
+#             'MAX_ENTRIES': 10000
+#         }
+#     }
+# }
