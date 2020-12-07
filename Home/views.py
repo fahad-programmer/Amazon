@@ -37,6 +37,7 @@ def error404handler(request, exception):
     return render(request, 'home/404.html')
 
 
+@cache_page(CACHE_TTL)
 def SignIn(request):
     return render(request, 'home/login.html')
 
@@ -45,37 +46,40 @@ def product_view(request):
     return render(request, 'home/product.html')
 
 
+@cache_page(CACHE_TTL)
 def signup(request):
     return render(request, 'home/signup.html')
 
 
-@login_required('account/login')
+@cache_page(CACHE_TTL)
+@login_required(login_url="/account/login")
 def numverify(request):
     return render(request, 'home/numverify.html')
 
 
+@cache_page(CACHE_TTL)
 def forget(request):
     return render(request, 'home/forget.html')
 
 
+@cache_page(CACHE_TTL)
 def terms(request):
     return render(request, 'home/tems.html')
 
 
+@cache_page(CACHE_TTL)
 def privacy(request):
     return render(request, 'home/privacy.html')
 
 
+@cache_page(CACHE_TTL)
 def about(request):
     return render(request, 'home/about.html')
 
 
+@cache_page(CACHE_TTL)
 def account(request):
     return render(request, 'home/account.html')
-
-
-def cat(request):
-    return render(request, 'home/category.html')
 
 
 def handlelogin(request):
