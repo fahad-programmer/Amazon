@@ -20,6 +20,10 @@ class Address_Admin(admin.ModelAdmin):
 	]
 	inlines = [AddressInline]
 
+	# List Display Format
+
+	list_display = ['profile', 'country', 'zip_code']
+
 # Modal registry
 
 admin.site.register(Profile)

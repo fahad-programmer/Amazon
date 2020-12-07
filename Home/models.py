@@ -20,9 +20,9 @@ class Address(models.Model):
     building_details = models.CharField(max_length=500)
 
 class Addresses(models.Model):
-    addresses = models.ForeignKey(
+    address = models.ForeignKey(
         'Address',
         on_delete=models.CASCADE,
         )
-    address_line_1 = models.CharField(max_length=500, null=False)
+    address_line_1 = models.CharField(max_length=500)
     address_line_2 = models.CharField(max_length=500, blank=True)
