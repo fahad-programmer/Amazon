@@ -199,3 +199,15 @@ def api_check(request):
     else:
         print('The number is invalid')
     return render(request, 'first.html')
+
+
+def CategorySearch(request, category, page_num):
+    product = Product.objects.filter(category=category)
+
+    # Pagination
+    page_obj = Paginator(product, 16, allow_empty_first_page=True
+                         )
+    main_page = page_obj.get_page(page_num)
+
+    context = {}
+    return render(request, 'home/category.html', context)
