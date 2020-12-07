@@ -279,7 +279,7 @@ PHONE_VERIFICATION = {
     "BACKEND": "phone_verify.backends.twilio.TwilioBackend",
     "OPTIONS": {
         "SID": "ACdb84efb2452409796286622b88ad1abd",
-        "SECRET": "a22abd6945ab460fa08dd7e871166fc1",
+        "SECRET": "2453000b44ea241ba4ed3c8efc9a586e",
         "FROM": "+15052786084",
         "SANDBOX_TOKEN": "123456",
     },
