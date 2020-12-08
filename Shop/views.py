@@ -1,3 +1,4 @@
+from Shop.filters import ProductFilter
 from django.shortcuts import render, redirect, HttpResponse
 from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
@@ -115,11 +116,11 @@ def payout3(request):
 
 def search(request, page_num):
 
-    if request.method == "POST":
+    if request.method == "GET":
 
         global query, category
-        query = request.POST['query']
-        category = request.POST['category']
+        query = request.GET['query']
+        category = request.GET['category']
 
     if category == "All":
         global filtered_product
@@ -149,6 +150,11 @@ def search(request, page_num):
     return render(request, 'home/search.html', params)
 
 # Main Function (Product- Page)
+
+
+def SearchFilters(request):
+    filter = ProductFilter(request.GET)
+    return render(request, 'filter.html', {'filter': filter})
 
 
 def main_product(request, slug):

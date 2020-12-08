@@ -1,5 +1,5 @@
 from django.urls import path
-from Shop.views import CategorySearch, cart_add, payout, payout2, payout3, cart_clear, cart_detail, item_clear, item_decrement, item_increment, search, main_product,  CategorySearch
+from Shop.views import CategorySearch, cart_add, payout, payout2, payout3, cart_clear, cart_detail, item_clear, item_decrement, item_increment, search, main_product,  CategorySearch, SearchFilters
 
 urlpatterns = [
     # Cart Urls
@@ -25,6 +25,8 @@ urlpatterns = [
 
 
     # Category Search
-    path('category', CategorySearch, name="cat"),
+    path('category/<str:category>/<int:page_num>',
+         CategorySearch, name="category"),
 
+    path('list', SearchFilters)
 ]

@@ -79,6 +79,8 @@ INSTALLED_APPS = [
     # User-Feedback
     'tellme',
 
+    'django_filters',
+
 
     # Mobile Authentication
     "phone_verify",
