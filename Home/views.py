@@ -76,6 +76,10 @@ def privacy(request):
 def about(request):
     return render(request, 'home/about.html')
 
+@cache_page(CACHE_TTL)
+def profile(request):
+    return render(request, 'home/profile.html')
+
 
 @cache_page(CACHE_TTL)
 def account(request):
