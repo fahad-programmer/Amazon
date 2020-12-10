@@ -113,82 +113,19 @@
 
     <!-- Main Body Container-->
     <div class="main__container">
-      <div class="profile__page__section">
-        <div class="main__section">
-          <div class="First__Section">
-            <div class="main__heading__container">
-              <span class="main__heading">
-                Complete your public profile
-              </span>
+      <div class="main__profile__section">
+        <div class="banner__container">
+          <div class="banner__main">
+            <div class="banner__image">
+              <img alt="" src="/avatar/cover/default/amzn1.account.AFR7I53SD4H3WE6LGH65DGSS6CLA" class="banner__img">
             </div>
           </div>
-          <div class="Second__Section">
-            <div class="profile__editing">
-              <span class="main__profile__label">
-                Public Profile allows you to share a little about yourself with other Amazon customers. This is how you’ll be shown to other shoppers on Amazon when you post Reviews, Q&A, Lists, and more.
-              </span>
-              <br>
-              <span class="upload__pricture__label">
-                Upload a public profile picture
-              </span>
-              <span class="optional__label">
-                (optional)
-              </span>
-              <div class="profile__image__contianer">
-                <input type="file"  accept="image/gif, image/jpeg, image/png" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
-                <label for="file" style="cursor: pointer;">
-                  <img src="https://i.ibb.co/GsxjHns/profile-dummy.jpg" alt="Profile Dummy Image" class="profile__image">
-                  <img id="output" rc="https://i.ibb.co/GsxjHns/profile-dummy.jpg" alt="Profile Dummy Image" class="profile__image" style="display: none;">
-                </label>
-              </div>
-              <script>
-                var loadFile = function(event) {
-                  var image = document.getElementById('output');
-                  image.src = URL.createObjectURL(event.target.files[0]);
-                };
-              </script>
-              <div class="profile__credial__input">
-                <span class="hydo__1">
-                  Public Name
-                </span>
-                <span class="hydo__2">
-                  (required)
-                </span>
-                <span class="info__hydo">
-                  This is required but can be different to the name associated with your account (Akbar Ali) <a href="#" class="card-shop-link" style="font-size: 13px;">Learn More</a>
-                </span>
-                <span class="input__continainer">
-                  <input type="text" name="UserName" id="off__name">
-                </span>
-                <span class="hydo__1">
-                  Location
-                </span>
-                <span class="hydo__2">
-                  (optional)
-                </span>
-                <span class="input__continainer">
-                  <input type="text" name="location" id="off__name" placeholder="City, State">
-                </span>
-                <div class="confirm__action">
-                  <div class="product" style="margin: 0 10px 0 20px;
-                    padding: 0;">
-                      <button
-                        style="background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
-                        margin-bottom: 10px;
-                        padding-right: 10px;
-                        padding-left: 10px;">
-                        Not now
-                      </button>
-                  </div>
-                  <div class="product"
-                    style="margin: 0 20px 0 10px;
-                    padding: 0;">
-                      <button style="margin: 10px 0;">Submit</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div class="profile__info__container">
+
+        </div>
+        <div class="deep__profile__container">
+
         </div>
       </div>
     </div>
