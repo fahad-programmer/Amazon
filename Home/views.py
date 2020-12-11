@@ -67,7 +67,7 @@ def privacy(request):
 def about(request):
     return render(request, 'home/about.html')
 
-@cache_page(CACHE_TTL)
+
 @login_required(login_url="/account/login")
 def profile(request):
     return render(request, 'home/profile.html')
@@ -77,7 +77,7 @@ def main_profile(request):
     return render(request, 'home/profile_main.html')
 
 
-@cache_page(CACHE_TTL)
+
 @login_required(login_url="/account/login")
 def account(request):
     return render(request, 'home/account.html')

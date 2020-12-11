@@ -117,15 +117,119 @@
         <div class="banner__container">
           <div class="banner__main">
             <div class="banner__image">
-              <img alt="" src="/avatar/cover/default/amzn1.account.AFR7I53SD4H3WE6LGH65DGSS6CLA" class="banner__img">
+              <img alt="" src="https://images-na.ssl-images-amazon.com/images/S/amazon-cover-photo/default.png" class="banner__img">
             </div>
+          </div>
+          <div class="profile__pic__contianer">
+            <div class="profile__image__">
+              <input type="file"  accept="image/gif, image/jpeg, image/png" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+              <label for="file" style="cursor: pointer;">
+                <img src="https://i.ibb.co/GsxjHns/profile-dummy.jpg" alt="Profile Dummy Image" class="profile__image">
+                <img id="output" rc="https://i.ibb.co/GsxjHns/profile-dummy.jpg" alt="Profile Dummy Image" class="profile__image" style="display: none;">
+              </label>
+            </div>
+            <script>
+              var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+              };
+            </script>
           </div>
         </div>
         <div class="profile__info__container">
-
+          <div class="main__user__info">
+            <div class="name__user">
+              <span class="tele__name">Imran Akbar</span>
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </div>
+            <div class="button__user">
+              <div class="product"
+                style="margin: 0 20px 0 10px;
+                padding: 0;">
+                  <button style="margin: 10px 0;">Submit</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="deep__profile__container">
-
+          <div class="sidebar__profile">
+            <div class="desktop__card__profile">
+              <div class="first__row__a">
+                <span class="about__label">About</span>
+                <span class="status__label">Public</span>
+              </div>
+              <div class="sec__row__a">
+                <a href="#" class="card-shop-link">Add couple of words about yourself</a>
+              </div>
+            </div>
+            <div class="desktop__card__profile">
+              <div class="first__row__a">
+                <span class="about__label">Shopping lists and wish lists</span>
+              </div>
+              <div class="sec__row__a">
+                <b><a href="#" class="card-shop-link">Create multiple lists for yourself and others</a></b>
+              </div>
+            </div>
+            <div class="desktop__card__profile">
+              <div class="first__row__a">
+                <span class="about__label">Account</span>
+                <span class="status__label">Always Private</span>
+              </div>
+              <div class="sec__row__a">
+                <span class="account__label">Check orders, add payments options, manage your password and more.</span>
+                <b><a href="#" class="card-shop-link">Goto your Account</a></b>
+              </div>
+            </div>
+            <div class="desktop__card__profile">
+              <div class="first__row__a">
+                <span class="about__label">Household</span>
+                <span class="status__label">Always Private</span>
+              </div>
+              <div class="sec__row__a">
+                <span class="account__label">Connect and share Prime benefits and digital content with your whole family</span>
+                <b><a href="#" class="card-shop-link">Create your household</a></b>
+              </div>
+            </div>
+          </div>
+          <div class="main__rigtbar">
+            <div class="staitics">
+              <div class="state__head">
+                <span class="main__stat about__label">Insigts</span>
+              </div>
+              <div class="list__container__stats">
+                <ul class="stats__list__cont">
+                  <li class="statls__list__tiem">
+                    <span class="num__stat">
+                      0
+                    </span>
+                    <span class="account__label">helpful votes</span>
+                    <span class="status__label">Public</span>
+                  </li>
+                  <li class="statls__list__tiem">
+                    <span class="num__stat">
+                      0
+                    </span>
+                    <span class="account__label">reviews</span>
+                    <span class="status__label">Public</span>
+                  </li>
+                  <li class="statls__list__tiem">
+                    <span class="num__stat">
+                      0
+                    </span>
+                    <span class="account__label">hearts</span>
+                    <span class="status__label">Public</span>
+                  </li>
+                  <li class="statls__list__tiem">
+                    <span class="num__stat">
+                      0
+                    </span>
+                    <span class="account__label">followers</span>
+                    <span class="status__label">Private</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
