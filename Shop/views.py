@@ -1,3 +1,4 @@
+from Shop.filters import ProductFilter
 from django.shortcuts import render, redirect, HttpResponse
 from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
@@ -14,8 +15,6 @@ from django.core.cache import cache
 # Create your views here.
 
 # Cart Views
-
-CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 
 @login_required(login_url="/account/login")
@@ -83,7 +82,6 @@ def cart_clear(request):
     return redirect("cart_detail")
 
 
-@cache_page(CACHE_TTL)
 @login_required(login_url="/account/login")
 def cart_detail(request):
 
@@ -116,16 +114,21 @@ def payout3(request):
     return render(request, 'Shop/payout3.html')
 
 
-def search(request, page_num, **filters):
+def search(request, page_num):
 
-    if request.method == "POST":
+    if request.method == "GET":
 
         global query, category
-        query = request.POST['query']
-        category = request.POST['category']
+        query = request.GET['query']
+        category = request.GET['category']
 
-    filtered_product = Product.objects.filter(
-        name__icontains=query, category=category).order_by('id')
+    if category == "All":
+        global filtered_product
+        filtered_product = Product.objects.filter(
+            name__icontains=query).order_by('id')
+    else:
+        filtered_product = Product.objects.filter(
+            name__icontains=query, category=category).order_by('id')
 
     # Pagination
     page_obj = Paginator(filtered_product, 16, allow_empty_first_page=True
@@ -142,13 +145,18 @@ def search(request, page_num, **filters):
         category=category)[:1]
 
     # Context Used In The Template
-    params = {'products': main_page, 'cat_prod': category_products}
+    params = {'products': main_page,
+              'cat_prod': category_products, 'query': query, 'total_product': len(filtered_product)}
     return render(request, 'home/search.html', params)
 
 # Main Function (Product- Page)
 
 
-@cache_page(CACHE_TTL)
+def SearchFilters(request):
+    filter = ProductFilter(request.GET)
+    return render(request, 'filter.html', {'filter': filter})
+
+
 def main_product(request, slug):
 
     product = Product.objects.filter(slug=slug).first()
@@ -191,14 +199,6 @@ def main_product(request, slug):
               'jsonData': json_data, 'user_history': user_history, }
 
     return render(request, 'home/product.html', params)
-
-
-def api_check(request):
-    if HttpResponse == 200:
-        print("Good The Number Is Valid")
-    else:
-        print('The number is invalid')
-    return render(request, 'first.html')
 
 
 def CategorySearch(request, category, page_num):

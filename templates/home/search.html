@@ -102,8 +102,8 @@
 
         <div class="search-header">
             <div class="product__count">
-                <span class="num__search">1-16 of 200 results for</span>
-                <span class="main-red-one">"iphone"</span>
+                <span class="num__search">{{total_product}} results for</span>
+                <span class="main-red-one">"{{query}}"</span>
                 <span class="select__cat">
                     <span class="drop__select">
                         <span class="a-button-inner">
@@ -862,8 +862,18 @@
             </div>
             <div class="p__products__list">
                 <div class="main__search__results">
+                 {% if products|length < 1 %}
+                    <h4>Your Term "{{query}}" matched no result try searching a common term</h4>
+                        <ul style="margin-bottom: 15px;">
+                            <li style="margin-bottom: 5px;">Try searching for a more common term.</li>
+                            
+                            <li>If you keep facing problem contact us.</li>
+                        </ul>
+                    {% else %}
                     {% for prods in products %}
-                    <div class="main__product__s">
+                   
+                    
+                                        <div class="main__product__s">
                         <div class="x-comm">
                             
                             <div class="main__pro__image">
@@ -875,7 +885,7 @@
                             </div>
                             <div class="main__pro__desc">
                                 <div class="__header__container">
-                                    <a class="link-main">
+                                    <a class="link-main" href="/shop/product/{{prods.slug}}">
                                         <span class="main__header__span">
                                            {{prods.name}}
                                         </span>
@@ -934,7 +944,9 @@
                             </div>
                         </div>
                     </div>
+                    
                     {% endfor %}
+                    {% endif %}
                   
                 <style>
                 .active__bread {

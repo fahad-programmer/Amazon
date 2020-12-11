@@ -79,6 +79,8 @@ INSTALLED_APPS = [
     # User-Feedback
     'tellme',
 
+    'django_filters',
+
 
     # Mobile Authentication
     "phone_verify",
@@ -279,7 +281,7 @@ PHONE_VERIFICATION = {
     "BACKEND": "phone_verify.backends.twilio.TwilioBackend",
     "OPTIONS": {
         "SID": "ACdb84efb2452409796286622b88ad1abd",
-        "SECRET": "a22abd6945ab460fa08dd7e871166fc1",
+        "SECRET": "2453000b44ea241ba4ed3c8efc9a586e",
         "FROM": "+15052786084",
         "SANDBOX_TOKEN": "123456",
     },
@@ -293,14 +295,14 @@ PHONE_VERIFICATION = {
 
 # Cache To Store Data
 
-CACHE_TTL = 60 * 115
+# CACHE_TTL = 60 * 115
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': 'django_cache',
-        'OPTIONS': {
-            'MAX_ENTRIES': 10000
-        }
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+#         'LOCATION': 'django_cache',
+#         'OPTIONS': {
+#             'MAX_ENTRIES': 10000
+#         }
+#     }
+# }
