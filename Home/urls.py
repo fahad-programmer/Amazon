@@ -1,5 +1,5 @@
 from django.urls import path, include
-from Home.views import index, SignIn, signup, about, account, numverify, terms, privacy, forget, handleSignup, handlelogin, user_notification, product_view, profile, main_profile
+from Home.views import index, SignIn, signup, about, account, numverify, terms, privacy, forget, handleSignup, handlelogin, user_notification, product_view, profile, main_profile, edit_profile
 
 
 urlpatterns = [
@@ -18,4 +18,5 @@ urlpatterns = [
     path('account', account, name="account"),
     path('account/profile', profile, name="profile"),
     path('account/profile/user=username', main_profile, name="main_profile"),
+    path('account/profile/edit-profile-setting', edit_profile, name="edit_profile"),
 ]

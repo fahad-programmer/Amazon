@@ -75,6 +75,10 @@ def profile(request):
 @login_required(login_url="/account/login")
 def main_profile(request):
     return render(request, 'home/profile_main.html')
+    
+@login_required(login_url="/account/login")
+def edit_profile(request):
+    return render(request, 'home/profile_edit.html')
 
 
 
