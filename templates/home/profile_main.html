@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Title -->
+    <title>
+      Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books,
+      DVDs & more
+    </title>
+    <!-- Meta Information -->
+    <meta
+      name="description"
+      content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+    />
+    <meta
+      name="keywords"
+      content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL"
+    />
+    <meta name="google" content="nositelinkssearchbox" />
+    <link rel="canonical" href="https://www.amazon.com/" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      property="og:image"
+      content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+      xmlns:og="http://opengraphprotocol.org/schema/"
+    />
+    <link
+      rel="icon"
+      href="{% static 'home/img/amazon-logo-favicon.png' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'home/img/amazon-logo-favicon.png' %}"
+      type="image/x-icon"
+    />
+    <meta
+      property="og:description"
+      content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+      xmlns:og="http://opengraphprotocol.org/schema/"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/profile.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/main_pro.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Styles -->
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      .app {
+        background: #fff;
+      }
+      .main__container {
+        max-width: 1200px;
+        margin: auto;
+      }
+    </style>
+    
+
+    <style>
+      .dropdown__country {
+        position: relative;
+      }
+
+      .dropdown-content__country {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        margin-top: 45px;
+        margin-left: -5px;
+        left: -1px;
+        border-radius: 3px;
+      }
+
+      .dropdown-content__country a {
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown__country:hover .dropdown-content__country {
+        display: block;
+      }
+
+      .xolo__butt {
+        background: #131921;
+        color: #fff;
+        border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Main Body -->
+    {% load cart_tag %}
+
+    <!--Header Of The Page-->
+    {% include './main_blocks/header.html'%}
+
+    <!-- Main Body Container-->
+    <div class="main__container">
+      <div class="main__profile__section">
+        <div class="banner__container">
+          <div class="banner__main">
+            <div class="banner__image">
+              <img alt="" src="https://images-na.ssl-images-amazon.com/images/S/amazon-cover-photo/default.png" class="banner__img">
+            </div>
+          </div>
+          <div class="profile__pic__contianer">
+            <div class="profile__image__">
+              <input type="file"  accept="image/gif, image/jpeg, image/png" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+              <label for="file" style="cursor: pointer;">
+                <img src="https://i.ibb.co/GsxjHns/profile-dummy.jpg" alt="Profile Dummy Image" class="profile__image">
+                <img id="output" rc="https://i.ibb.co/GsxjHns/profile-dummy.jpg" alt="Profile Dummy Image" class="profile__image" style="display: none;">
+              </label>
+            </div>
+            <script>
+              var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+              };
+            </script>
+          </div>
+        </div>
+        <div class="profile__info__container">
+          <div class="main__user__info">
+            <div class="name__user">
+              <span class="tele__name">Imran Akbar</span>
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </div>
+            <div class="button__user">
+              <div class="product"
+                style="margin: 0;
+                padding: 0;
+                text-align: -webkit-right;">
+                  <button style="margin:0;width: 40%;">Edit your public profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="deep__profile__container">
+          <div class="sidebar__profile">
+            <div class="desktop__card__profile">
+              <div class="first__row__a">
+                <span class="about__label">About</span>
+                <span class="status__label">Public</span>
+              </div>
+              <div class="sec__row__a">
+                <a href="#" class="card-shop-link">Add couple of words about yourself</a>
+              </div>
+            </div>
+            <div class="desktop__card__profile">
+              <div class="first__row__a">
+                <span class="about__label">Shopping lists and wish lists</span>
+              </div>
+              <div class="sec__row__a">
+                <b><a href="#" class="card-shop-link">Create multiple lists for yourself and others</a></b>
+              </div>
+            </div>
+            <div class="desktop__card__profile">
+              <div class="first__row__a">
+                <span class="about__label">Account</span>
+                <span class="status__label">Always Private</span>
+              </div>
+              <div class="sec__row__a">
+                <span class="account__label">Check orders, add payments options, manage your password and more.</span>
+                <b><a href="#" class="card-shop-link">Goto your Account</a></b>
+              </div>
+            </div>
+            <div class="desktop__card__profile">
+              <div class="first__row__a">
+                <span class="about__label">Household</span>
+                <span class="status__label">Always Private</span>
+              </div>
+              <div class="sec__row__a">
+                <span class="account__label">Connect and share Prime benefits and digital content with your whole family</span>
+                <b><a href="#" class="card-shop-link">Create your household</a></b>
+              </div>
+            </div>
+          </div>
+          <div class="main__rigtbar">
+            <div class="staitics desktop__card__profile">
+              <div class="state__head">
+                <span class="main__stat about__label">Insigts</span>
+              </div>
+              <div class="list__container__stats">
+                <ul class="stats__list__cont">
+                  <li class="statls__list__tiem">
+                    <span class="num__stat">
+                      0
+                    </span>
+                    <span class="account__label">helpful votes</span>
+                    <span class="status__label">Public</span>
+                  </li>
+                  <li class="statls__list__tiem">
+                    <span class="num__stat">
+                      0
+                    </span>
+                    <span class="account__label">reviews</span>
+                    <span class="status__label">Public</span>
+                  </li>
+                  <li class="statls__list__tiem">
+                    <span class="num__stat">
+                      0
+                    </span>
+                    <span class="account__label">hearts</span>
+                    <span class="status__label">Public</span>
+                  </li>
+                  <li class="statls__list__tiem">
+                    <span class="num__stat">
+                      0
+                    </span>
+                    <span class="account__label">followers</span>
+                    <span class="status__label">Private</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ends Here -->
+
+    <!-- Related Products -->
+    <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
+    <div class="related__con">
+        <!-- related -->
+        <div class="related__products">
+            <div class="head__related">
+                <h2 class="main__heading">Sponsored products related to this search</h2>
+                <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
+            </div>
+            <div class="related__products__items">
+                <li class="product__list__related" style="margin-left: 0;">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+            </div>
+        </div>
+        <!-- Inspired Through Browsing -->
+        <div class="related__products">
+            <div class="head__related">
+                <h2 class="main__heading">Inspired by your browsing history</h2>
+                <p class="main__sponsor"><a href="#" class="sponsor__link">Sponsored</a></p>
+            </div>
+            <div class="related__products__items">
+                <li class="product__list__related" style="margin-left: 0;">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                    <span class="related__item__name">
+                        <a href="#" class="card-shop-link">
+                            Wireless Controller for PS4, Dual Vibration Wireless Gamepad Controller Remote
+                        </a>
+                    </span>
+                    <span class="raiting__container">
+                        <div class="stars__contain">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="card-shop-link" style="font-size: 14px;">
+                            87
+                        </div>
+                    </span>
+                    <span class="price__contain main__label" style="font-size: 18px;">$64.98 </span>
+                </li>
+            </div>
+        </div>
+        <!-- Browsing History-->
+        <hr style="border-top: 1px solid #ccc;margin-bottom: 10px;">
+        <div class="related__products">
+            <div class="head__related">
+                <h2 class="main__heading">Your Browsing History</h2>
+            </div>
+            <div class="related__products__items">
+                <li class="product__list__related" style="margin-left: 0;">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                </li>
+                <li class="product__list__related">
+                    <span class="image__realted">
+                        <img src="https://m.media-amazon.com/images/I/41g1y1envyL._AC_UL160_SR160,160_.jpg" alt="">
+                    </span>
+                </li>
+            </div>
+        </div>
+    </div>
+    <!-- Related Products Ends Here-->
+
+    <!-- Footer -->
+    {% include "./main_blocks/footer.html" %}
+  </body>
+</html>
+

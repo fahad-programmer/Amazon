@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Title -->
+    <title>
+      Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books,
+      DVDs & more
+    </title>
+    <!-- Meta Information -->
+    <meta
+      name="description"
+      content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+    />
+    <meta
+      name="keywords"
+      content="Amazon, Amazon.com, Books, Online Shopping, Book Store, Magazine, Subscription, Music, CDs, DVDs, Videos, Electronics, Video Games, Computers, Cell Phones, Toys, Games, Apparel, Accessories, Shoes, Jewelry, Watches, Office Products, Sports & Outdoors, Sporting Goods, Baby Products, Health, Personal Care, Beauty, Home, Garden, Bed & Bath, Furniture, Tools, Hardware, Vacuums, Outdoor Living, Automotive Parts, Pet Supplies, Broadband, DSL"
+    />
+    <meta name="google" content="nositelinkssearchbox" />
+    <link rel="canonical" href="https://www.amazon.com/" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      property="og:image"
+      content="http://g-ec2.images-amazon.com/images/G/01/social/api-share/amazon_logo_500500._V323939215_.png"
+      xmlns:og="http://opengraphprotocol.org/schema/"
+    />
+    <link
+      rel="icon"
+      href="{% static 'home/img/amazon-logo-favicon.png' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'home/img/amazon-logo-favicon.png' %}"
+      type="image/x-icon"
+    />
+    <meta
+      property="og:description"
+      content="Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software, apparel & accessories, shoes, jewelry, tools & hardware, housewares, furniture, sporting goods, beauty & personal care, groceries & just about anything else."
+      xmlns:og="http://opengraphprotocol.org/schema/"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/profile.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/main_pro.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/product.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Styles -->
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      .app {
+        background: #fff;
+      }
+      .main__container {
+        max-width: 1200px;
+        margin: auto;
+      }
+      .card-shop-link {
+          font-size: 13px !important;
+      }
+    </style>
+    
+
+    <style>
+      .dropdown__country {
+        position: relative;
+      }
+
+      .dropdown-content__country {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        margin-top: 45px;
+        margin-left: -5px;
+        left: -1px;
+        border-radius: 3px;
+      }
+
+      .dropdown-content__country a {
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown__country:hover .dropdown-content__country {
+        display: block;
+      }
+
+      .xolo__butt {
+        background: #131921;
+        color: #fff;
+        border-top: 1px solid rgba(225, 225, 225, 0.1) !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Main Body -->
+    {% load cart_tag %}
+
+    <!--Header Of The Page-->
+    {% include './main_blocks/header.html'%}
+
+    <!-- Main Body Container-->
+    <div class="main__container">
+        <div class="profile__settings">
+            <div class="main__header">
+                <h1 class="profile__setting__heading">
+                    Profile page settings
+                </h1>
+            </div>
+            <div class="main__setting__form__container">
+                <div class="top__label___form">
+                    <div class="first__set">
+                        <span class="first__set__label">
+                            Edit public profile
+                        </span>
+                    </div>
+                    <div class="second__set">
+
+                    </div>
+                </div>
+                <div class="main__form__cont">
+                    <div class="first__section">
+                        <h2 class="name__label">
+                            Your public name
+                        </h2>
+                        <input type="text" name="username" id="user__name" class="set__user" placeholder="Imran Akbar">
+                        <span class="zxcv__label">This will not change the name associated with your account (Akbar Ali) <a href="#" class="card-shop-link">Edit</a></span>
+                        <span class="zxcv__label">Your public name will be visible on your public profile page and elsewhere on Amazon.</span>
+                        <a href="#" class="card-shop-link">Learn more about your public name</a>
+                    </div>
+                    <div class="second__section">
+                        <div class="first__section jacoba">
+                            <h2 class="name__label">
+                                Your public information (optional)
+                            </h2>
+                            <div class="ulvi">
+                                <span class="form__label">
+                                    Bio
+                                </span>
+                                <textarea name="bio" id="bio" rows="4" placeholder="Share a little something about you" class="bio__textarea"></textarea>
+                                <span class="form__label">
+                                    Location
+                                </span>
+                                <input type="text" name="loaction" id="location" class="uixc__input" placeholder="Share where you live">
+                            </div>
+                            <div class="ulvi">
+                                <span class="form__label">
+                                    Occupation
+                                </span>
+                                <input type="text" name="occupation" id="occupation" class="uixc__input" placeholder="Share your current job">
+                                <span class="form__label">
+                                    Website
+                                </span>
+                                <input type="text" name="website" id="website" class="uixc__input" placeholder="Share your website">
+                            </div>
+                        </div>
+                        <div class="first__section jacoba">
+                            <h2 class="name__label">
+                                Add social links to your public profile (optional)
+                            </h2>
+                            <div class="ulvi">
+                                <span class="form__label">
+                                    Facebook
+                                </span>
+                                <input type="text" name="facebook" id="facebook" class="uixc__input" placeholder="Share where you live">
+                                <span class="form__label">
+                                    Twitter
+                                </span>
+                                <input type="text" name="twitter" id="twitter" class="uixc__input" placeholder="">
+                                <span class="form__label">
+                                    Youtube
+                                </span>
+                                <input type="text" name="youtube" id="youtube" class="uixc__input" placeholder="">
+                            </div>
+                            <div class="ulvi">
+                                <span class="form__label">
+                                    Pinterest
+                                </span>
+                                <input type="text" name="pinterest" id="pinterest" class="uixc__input" placeholder="">
+                                <span class="form__label">
+                                    Instagram
+                                </span>
+                                <input type="text" name="instagram" id="instagram" class="uixc__input" placeholder="">
+                            </div>
+                        </div>
+                        <span class="zxcv__label">Your public information will be visible on your public profile page.</span>
+                        <span class="zxcv__label">We will never share what you browse or purchase on Amazon. Amazon will never ask for your account login or password, billing information, or any other account details via your Public Profile page.</span>
+                        <a href="#" class="card-shop-link">Learn more about your public information</a>
+                    </div>
+                    <div class="third__section">
+                        <div class="confirm__action">
+                            <div class="product" style="margin: 0 10px 0 20px;
+                              padding: 0;">
+                                <button
+                                  style="background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+                                  margin-bottom: 10px;
+                                  padding-right: 10px;
+                                  padding-left: 10px;">
+                                  Not now
+                                </button>
+                            </div>
+                            <div class="product"
+                              style="margin: 0 20px 0 10px;
+                              padding: 0;">
+                                <button style="margin: 10px 0;">Submit</button>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    {% include "./main_blocks/footer.html" %}
+  </body>
+</html>
+
