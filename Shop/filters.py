@@ -9,10 +9,8 @@ class ProductFilter(django_filters.FilterSet):
     price__lt = django_filters.NumberFilter(
         field_name='price', lookup_expr='lt')
 
-    rating__gt = django_filters.NumberFilter(
-        field_name='rating', lookup_expr='gt')
     rating__lt = django_filters.NumberFilter(
-        field_name='rating', lookup_expr='lt')
+        field_name='rating', lookup_expr='gt')
 
     brand = django_filters.CharFilter(lookup_expr='icontains')
 

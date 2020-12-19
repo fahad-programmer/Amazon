@@ -14,7 +14,8 @@ urlpatterns = [
 
     # Search Urls
     path('product/search/<int:page_num>', search, name='search'),
-    path('product/<str:slug>', main_product, name="main_product"),
+
+    # Payout Pages
     path('payout/', payout, name="payout"),
     path('payout2/', payout2, name="payout2"),
     path('payout3/', payout3, name="payout3"),

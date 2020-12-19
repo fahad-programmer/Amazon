@@ -36,7 +36,10 @@ def error404handler(request, exception):
 
 
 def SignIn(request):
-    return render(request, 'home/login.html')
+    if request.user.is_authenticated:
+        return redirect('/')
+    else:
+        return render(request, 'home/login.html')
 
 
 def product_view(request):
@@ -44,7 +47,10 @@ def product_view(request):
 
 
 def signup(request):
-    return render(request, 'home/signup.html')
+    if request.user.is_authenticated:
+        return redirect('/')
+    else:
+        return render(request, 'home/signup.html')
 
 
 @login_required(login_url="/account/login")
@@ -52,6 +58,7 @@ def numverify(request):
     return render(request, 'home/numverify.html')
 
 
+@login_required(login_url="/account/login")
 def forget(request):
     return render(request, 'home/forget.html')
 
