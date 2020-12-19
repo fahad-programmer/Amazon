@@ -1,5 +1,5 @@
 Search-System
--> Filters (Not Implemented Till) (Important) done
+-> Filters (Important) done
 -> Simple Filtering (category and query)
 -> Pagination
 
