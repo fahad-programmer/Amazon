@@ -154,6 +154,7 @@ MIDDLEWARE = [
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'Amazon.urls'
@@ -187,9 +188,9 @@ WSGI_APPLICATION = 'Amazon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'main',
+        'NAME': 'amazon-django',
         'USER': 'postgres',
-        'PASSWORD': 'fahad',
+        'PASSWORD': 'imranakbar',
         'HOST': 'localhost',
         'PORT':'5432'
     }

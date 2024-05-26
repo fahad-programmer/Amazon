@@ -4,7 +4,7 @@
 import logging
 
 # Third Party Stuff
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
 from Home.models import Profile
